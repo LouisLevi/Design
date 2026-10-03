@@ -42,3 +42,7 @@ npx skills@latest add emilkowalski/skills
 git clone --depth 1 https://github.com/emilkowalski/skill /tmp/emil-skill
 cp -r /tmp/emil-skill/skills/<name> .claude/skills/
 ```
+
+## Projekte
+
+- [`planungsbuero-guenther/`](planungsbuero-guenther/) – neue Website für das Planungsbüro Günther, Kassel (statisches HTML/CSS/JS, Details im dortigen README).
