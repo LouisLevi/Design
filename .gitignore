@@ -1,0 +1,4 @@
+# Lokale Secrets (API-Keys für Stitch / Gemini) nie committen
+.env
+.env.*
+.claude/settings.local.json
