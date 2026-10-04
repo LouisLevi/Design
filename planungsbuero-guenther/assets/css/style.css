@@ -156,6 +156,11 @@ p { margin: 0; text-wrap: pretty; }
   .nav a::after { display: none; }
   .nav .btn { margin: 18px 0 0; justify-content: center; }
 }
+@media (max-width: 380px) {
+  .site-header .wrap { gap: 12px; }
+  .brand { gap: 10px; }
+  .menu-toggle { justify-content: center; width: 44px; height: 40px; padding: 0; font-size: 0; letter-spacing: 0; }
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -261,7 +266,7 @@ p { margin: 0; text-wrap: pretty; }
 .page-head { padding-block: clamp(48px, 7vw, 96px) clamp(32px, 4vw, 56px); border-bottom: 1px solid var(--line-soft); }
 .page-head .wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: end; }
 .page-head .eyebrow { grid-column: 1 / -1; }
-.page-head h1 { grid-column: 1 / span 8; font-size: clamp(2.4rem, 5.6vw, 4.6rem); font-weight: 400; font-stretch: 110%; letter-spacing: -0.035em; }
+.page-head h1 { grid-column: 1 / span 8; font-size: clamp(2.4rem, 5.6vw, 4.6rem); font-weight: 400; font-stretch: 110%; letter-spacing: -0.035em; overflow-wrap: break-word; }
 .page-head p { grid-column: 9 / -1; color: var(--graphite); }
 @media (max-width: 860px) { .page-head h1, .page-head p { grid-column: 1 / -1; } }
 
@@ -460,8 +465,8 @@ p { margin: 0; text-wrap: pretty; }
 .lph-groups span { font-family: var(--f-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--graphite); border-top: 1px solid var(--graphite); padding-top: 8px; }
 .lph-detail { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; border-top: 1px solid var(--line); padding-top: 28px; }
 .lph-detail .lph-num { grid-column: 1 / span 3; font: 300 clamp(4rem, 9vw, 7.5rem)/0.85 var(--f-display); font-stretch: 115%; color: var(--accent); letter-spacing: -0.05em; }
-.lph-detail .lph-text { grid-column: 4 / span 6; display: grid; gap: 12px; align-content: start; }
-.lph-detail h3 { font-size: var(--t-2xl); font-weight: 500; }
+.lph-detail .lph-text { grid-column: 4 / span 6; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; }
+.lph-detail h3 { font-size: var(--t-2xl); font-weight: 500; hyphens: auto; overflow-wrap: break-word; }
 .lph-detail p { color: var(--graphite); }
 .lph-detail .lph-meta { grid-column: 10 / -1; display: grid; gap: 8px; align-content: start; }
 .lph-meta .mono { color: var(--graphite); }
@@ -476,7 +481,7 @@ p { margin: 0; text-wrap: pretty; }
 .service-block { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; padding-block: clamp(40px, 6vw, 72px); border-top: 1px solid var(--line); }
 .service-block:first-child { border-top: 0; padding-top: 0; }
 .service-block .sb-code { grid-column: 1 / span 2; font-family: var(--f-mono); font-size: var(--t-xs); color: var(--graphite); letter-spacing: 0.06em; padding-top: 10px; }
-.service-block .sb-text { grid-column: 3 / span 5; display: grid; gap: 16px; align-content: start; }
+.service-block .sb-text { grid-column: 3 / span 5; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; }
 .service-block h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 400; font-stretch: 104%; hyphens: auto; overflow-wrap: break-word; }
 .service-block p { color: var(--graphite); max-width: 52ch; }
 .service-block ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 1px solid var(--line-soft); }
@@ -614,7 +619,7 @@ fieldset.field { border: 0; margin: 0; border-bottom: 1px solid var(--line-soft)
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-grid > :first-child { grid-column: 1 / -1; } }
 
 /* ---------- Rechtstexte ---------- */
-.legal { max-width: 74ch; display: grid; gap: 18px; }
+.legal { max-width: 74ch; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; overflow-wrap: break-word; hyphens: auto; }
 .legal h2 { font-size: var(--t-xl); font-weight: 500; margin-top: 22px; }
 .legal h3 { font-size: var(--t-lg); font-weight: 500; font-family: var(--f-body); letter-spacing: 0; margin-top: 8px; }
 .legal p, .legal li { color: var(--graphite); }
