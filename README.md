@@ -44,7 +44,7 @@ sondern kommen aus Umgebungsvariablen:
 | Server | Wofür | Auth |
 | --- | --- | --- |
 | `stitch` | Google Stitch – UI-Designs generieren | `STITCH_API_KEY` (stitch.withgoogle.com → Profil → Stitch settings → API key) |
-| `nano-banana` | Bilder mit Gemini (Nano Banana) erzeugen/bearbeiten | `GEMINI_API_KEY` (aistudio.google.com/apikey) |
+| `nano-banana` | Bilder mit Gemini (Nano Banana) erzeugen/bearbeiten | `GEMINI_API_KEY` (aistudio.google.com/apikey) – Bilderzeugung nur mit hinterlegter Zahlungsart, siehe unten |
 | `vercel` | Website deployen, Projekte & Logs | OAuth – in Claude Code `/mcp` → `vercel` → Login |
 
 Einrichtung lokal:
@@ -59,6 +59,35 @@ claude          # Projekt-MCP-Server beim ersten Start bestätigen
 Hinweis: Falls Claude Code bei Stitch trotz Header einen OAuth-Login versucht
 (bekanntes Problem), Stitch stattdessen global hinzufügen:
 `claude mcp add stitch --transport http https://stitch.googleapis.com/mcp --header "X-Goog-Api-Key: $STITCH_API_KEY" -s user`
+
+### Bilder ohne Gemini-Abrechnung
+
+Die Gemini-API hat für Bilderzeugung kein kostenloses Kontingent: Nano Banana
+funktioniert erst, wenn im Google-Projekt eine Zahlungsart hinterlegt ist.
+Kostenlose Alternative ist `tools/bild.py`. Das Skript erzeugt Bilder mit FLUX
+über Cloudflare Workers AI mit einem Gratis-Kontingent von 10.000 „Neurons“ pro
+Tag, ohne Kreditkarte.
+
+1. Kostenloses Konto auf dash.cloudflare.com anlegen.
+2. Workers AI → „REST API“: Account-ID kopieren und einen API-Token mit
+   „Workers AI“-Berechtigung erstellen.
+3. Als Umgebungsvariablen setzen (in der Cloud-Umgebung unter „Edit“):
+   `CLOUDFLARE_ACCOUNT_ID` und `CLOUDFLARE_API_TOKEN`.
+
+```bash
+python3 tools/bild.py "architectural visualization, modern house, white render, flat roof, evening light" \
+  -o entwurf.webp --breite 1600 --hoehe 900
+```
+
+| Modell | Bilder pro Tag gratis (1024 × 1024, ca.) | Hinweis |
+| --- | --- | --- |
+| `klein-4b` | 90 | Standard, beliebiges Format bis 1920 px |
+| `schnell` | 100 | nur quadratisch 1024 × 1024 |
+| `klein-9b` | 7 | detailreicher |
+| `dev` | 2–3 | beste Qualität, rechnet pro Schritt ab |
+
+Größere Formate verbrauchen entsprechend mehr. `.webp` als Ziel wird mit Pillow
+oder ImageMagick umgewandelt.
 
 ## Nutzung
 
