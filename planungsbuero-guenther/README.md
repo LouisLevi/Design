@@ -88,10 +88,27 @@ Adresse des Formulardienstes eintragen (Versand als JSON per POST) und die Daten
 - `prefers-reduced-motion` wird beachtet; Filme starten erst auf Klick.
 - `sitemap.xml`, `robots.txt` und `404.html` werden mitgebaut.
 
+## Veröffentlichung (Netlify)
+
+Die Einstellungen stehen in `netlify.toml` im Hauptordner des Repos (veröffentlicht wird dieser Ordner,
+ohne `_src/` und `entwurf/`). Einrichtung einmalig:
+
+1. Konto auf netlify.com anlegen (am besten mit dem GitHub-Konto anmelden).
+2. „Add new project“ → „Import an existing project“ → GitHub → Repository `louislevi/design` wählen.
+3. Branch auswählen, auf dem die Website liegt; alle übrigen Felder kommen aus `netlify.toml` → „Deploy“.
+4. Die Seite ist unter einer Adresse `…netlify.app` erreichbar – dort testen.
+5. Unter „Team settings → Data Processing Agreement“ den Auftragsverarbeitungsvertrag (DPA) abschließen.
+6. Domain verbinden: „Domain management → Add a domain“ → `www.planungsbuero-guenther.de`.
+   Netlify zeigt die DNS-Werte an; diese bei IONOS eintragen (nur Einträge für `@` und `www`,
+   **MX-Einträge für E-Mail nicht ändern**). HTTPS richtet Netlify automatisch ein.
+7. Erst wenn die neue Seite unter der Domain läuft, das Wix-Abo kündigen.
+
+Jede Änderung, die auf den Branch gepusht wird, ist danach automatisch online.
+
 ## Vor dem Livegang
 
-1. Hosting festlegen und in der Datenschutzerklärung eintragen (markierte Stellen: Anbieter, Löschfrist der Logfiles).
+1. Bilder für Schritt 1 und 3 sowie Original-Logo einsetzen (siehe oben).
 2. Impressum prüfen: Inhalte stammen von der bisherigen Seite; Rechtsgrundlage auf DDG aktualisiert, Hinweis auf die
    abgeschaltete EU-Streitschlichtungsplattform entfernt, Anschrift der Architektenkammer ergänzt.
-3. Bilder für Schritt 1 und 3 sowie Original-Logo einsetzen (siehe oben).
-4. Formulardienst anbinden (optional, siehe oben).
+3. Auftragsverarbeitungsvertrag mit Netlify abschließen (siehe oben).
+4. Formulardienst anbinden (optional, z. B. Netlify Forms) und Datenschutzerklärung ergänzen.
