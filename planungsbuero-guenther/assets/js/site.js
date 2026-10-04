@@ -13,6 +13,17 @@
   }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
+  /* ---------- Vorschau ohne Server (index.html per Doppelklick geöffnet) ----------
+     Links wie "../kontakt/" zeigen dann sonst nur den Ordner – hier wird index.html ergänzt. */
+  if (location.protocol === "file:") {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a[href]");
+      if (!a) return;
+      var m = a.getAttribute("href").match(/^([^#?]*)(.*)$/);
+      if (m[1] && /\/$/.test(m[1]) && !/^[a-z]+:/i.test(m[1])) a.setAttribute("href", m[1] + "index.html" + m[2]);
+    }, true);
+  }
+
   /* ---------- Menü (Handy) ---------- */
   var mnav = $("#mnav"), opener = $("[data-open-menu]");
   function menu(open) {
