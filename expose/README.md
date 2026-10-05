@@ -14,4 +14,4 @@ python3 expose/build.py            # schreibt expose.html und rendert das PDF (P
   (Grundrisse ohne Text, Raumnamen werden neu gesetzt). Nur nötig, wenn sich die Pläne ändern.
 - Bilder: `renderings/fotorealistisch/auswahl/` (Innenansicht 3:2 beschnitten, Luftansicht freigestellt).
 - Schriften: Newsreader und IBM Plex Sans (SIL Open Font License), als statische Schnitte eingebettet.
-- Offene Angaben sind im PDF rot als `[FEHLT: …]` markiert.
+- Offene Angaben werden mit `missing()` rot als `[FEHLT: …]` markiert (aktuell keine). Nebenkosten stehen bewusst auf „auf Anfrage“; die Effizienzklasse A+ ist als Prognose gekennzeichnet, bis der Energieausweis vorliegt.

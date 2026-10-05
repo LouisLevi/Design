@@ -11,6 +11,11 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 PLANS = json.loads((ROOT / "assets" / "plans" / "plans.json").read_text())
 ADDRESS = "Altenbaunaer Straße 26"
+CITY = "34134 Kassel"
+MOVE_IN = "Januar 2027"
+CONTACT = {"name": "Carsten Günther", "phone": "0179 2199 100", "tel": "+491792199100",
+           "mail": "buero@planungsbuero-guenther.de"}
+EFFICIENCY = "A+"  # Prognose für den Neubau, kein Wert aus einem Energieausweis
 NB = " "  # geschütztes Leerzeichen
 
 
@@ -26,9 +31,16 @@ def eur(v):
     return f"{v}{NB}€"
 
 
+def deposit(rent, months=3):
+    """Kaution als Vielfaches der Kaltmiete, deutsch formatiert."""
+    from decimal import Decimal
+    v = Decimal(rent.replace(".", "").replace(",", ".")) * months
+    return f"{v:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") + NB + "€"
+
+
 UNITS = [
     {
-        "n": 1, "area": "53,03", "rent": "742,42", "sqm": "14,00", "outdoor": None,
+        "n": 1, "floor": "Erdgeschoss", "floor_short": "EG", "area": "53,03", "rent": "742,42", "sqm": "14,00", "outdoor": None,
         "lead": "Zwei Zimmer auf 53,03" + NB + "m²",
         "text": [
             "Der Wohn-, Koch- und Essbereich ist mit 29,70" + NB + "m² der größte Raum der Wohnung "
@@ -43,7 +55,7 @@ UNITS = [
         "plans": ["w1"], "luft_h": 125,
     },
     {
-        "n": 2, "area": "71,17", "rent": "996,31", "sqm": "14,00", "outdoor": ("Terrasse", "6,13"),
+        "n": 2, "floor": "Erdgeschoss", "floor_short": "EG", "area": "71,17", "rent": "996,31", "sqm": "14,00", "outdoor": ("Terrasse", "6,13"),
         "lead": "Zwei Zimmer und Terrasse, 71,17" + NB + "m²",
         "text": [
             "Die größte der Zweizimmerwohnungen im Haus. Wohnen, Kochen und Essen teilen sich 43,19" + NB + "m²; "
@@ -58,7 +70,7 @@ UNITS = [
         "plans": ["w2"], "luft_h": 118,
     },
     {
-        "n": 3, "area": "190,95", "rent": "2.577,76", "sqm": "13,50", "outdoor": ("Balkon und Terrasse", "14,51"),
+        "n": 3, "floor": "1. Obergeschoss (Eingangsebene)", "floor_short": "1. OG", "area": "190,95", "rent": "2.577,76", "sqm": "13,50", "outdoor": ("Balkon und Terrasse", "14,51"),
         "lead": "Maisonette über zwei Ebenen, 190,95" + NB + "m²",
         "text": [
             "Die größte Wohnung des Hauses. Auf der Eingangsebene liegt ein offener Wohn-, Koch- und Essbereich "
@@ -74,7 +86,7 @@ UNITS = [
         "plans": ["w3-eg", "w3-og"], "luft_h": 98,
     },
     {
-        "n": 4, "area": "49,00", "rent": "735,00", "sqm": "15,00", "outdoor": None,
+        "n": 4, "floor": "1. Obergeschoss", "floor_short": "1. OG", "area": "49,00", "rent": "735,00", "sqm": "15,00", "outdoor": None,
         "lead": "Zwei Zimmer auf 49,00" + NB + "m²",
         "text": [
             "Der Eingang führt direkt in den Wohn-, Koch- und Essbereich mit 33,33" + NB + "m² und Fenstern "
@@ -88,7 +100,7 @@ UNITS = [
         "plans": ["w4"], "luft_h": 125,
     },
     {
-        "n": 5, "area": "44,70", "rent": "670,43", "sqm": "15,00", "outdoor": ("Terrasse", "4,17"),
+        "n": 5, "floor": "2. Obergeschoss", "floor_short": "2. OG", "area": "44,70", "rent": "670,43", "sqm": "15,00", "outdoor": ("Terrasse", "4,17"),
         "lead": "Zwei Zimmer und Terrasse, 44,70" + NB + "m²",
         "text": [
             "Der Wohn-, Koch- und Essbereich mit 26,48" + NB + "m² öffnet sich zur vorgelagerten Terrasse.",
@@ -102,7 +114,7 @@ UNITS = [
         "plans": ["w5"], "luft_h": 125,
     },
     {
-        "n": 6, "area": "33,24", "rent": "498,60", "sqm": "15,00", "outdoor": None,
+        "n": 6, "floor": "Erdgeschoss", "floor_short": "EG", "area": "33,24", "rent": "498,60", "sqm": "15,00", "outdoor": None,
         "lead": "Einzimmerwohnung, 33,24" + NB + "m²",
         "text": [
             "Wohnen, Essen und Schlafen teilen sich einen Raum mit 20,76" + NB + "m² und zwei Fenstern "
@@ -190,7 +202,9 @@ def build():
         '<div style="position:absolute;left:22mm;right:18mm;top:18mm" class="kicker">Exposé zur Vermietung</div>'
         '<div style="position:absolute;left:22mm;top:58mm;width:150mm">'
         '<h1 class="display" style="font-size:54pt;line-height:56pt;letter-spacing:-0.02em">Altenbaunaer<br>Straße 26</h1>'
-        f'<p class="lead" style="margin-top:9mm;color:var(--graphite)">Sechs Mietwohnungen von 33 bis 191{NB}m²</p></div>'
+        f'<p class="lead" style="margin-top:9mm">{CITY}</p>'
+        f'<p class="lead" style="color:var(--graphite)">Sechs Mietwohnungen von 33 bis 191{NB}m², '
+        f'Erstbezug ab {MOVE_IN}</p></div>'
         '<div class="rule-accent" style="position:absolute;left:22mm;width:14.5mm;top:52mm"></div>'
         '<div class="caption" style="position:absolute;right:18mm;bottom:133mm;text-align:right">'
         'Außenansicht. Visualisierung</div>',
@@ -198,7 +212,7 @@ def build():
 
     # 2 — Auf einen Blick
     rows = "".join(
-        f'<tr><td class="nr">{u["n"]}</td><td>{u["split"]}</td>'
+        f'<tr><td class="nr">{u["n"]}</td><td>{u["floor_short"]}</td><td>{u["split"]}</td>'
         f'<td>{(u["outdoor"][0] + " " + m2(u["outdoor"][1])) if u["outdoor"] else "–"}</td>'
         f'<td class="r num">{m2(u["area"])}</td><td class="r num">{eur(u["rent"])}</td>'
         f'<td class="r num" style="color:var(--graphite)">{unit_pages[u["n"]]:02d}</td></tr>' for u in UNITS)
@@ -206,13 +220,16 @@ def build():
         '<div class="kicker" style="grid-column:1/13">Das Haus</div>'
         '<h1 class="display" style="grid-column:1/8;margin-top:6mm">Auf einen Blick</h1>'
         '<div style="grid-column:1/6;margin-top:12mm">'
-        '<p class="lead">In der Altenbaunaer Straße 26 entstehen sechs Mietwohnungen zwischen 33 und '
+        '<p class="lead">Im Neubau Altenbaunaer Straße 26 entstehen sechs Mietwohnungen zwischen 33 und '
         f'191{NB}m² – vom Einzimmerapartment bis zur Maisonette über zwei Ebenen.</p>'
         '<p class="body" style="margin-top:5mm">Jede Wohnung erhält eine neue Einbauküche, ein Bad mit '
         'bodengleicher Dusche und Fußbodenheizung in allen Räumen. Wärme liefert eine Luft-Wasser-Wärmepumpe, '
         'Strom eine hauseigene Photovoltaikanlage mit Speicher.</p></div>'
         '<div style="grid-column:7/13;margin-top:12mm">' + facts([
-            ("Wohnungen", "6"),
+            ("Objekt", f"Neubau, {CITY}"),
+            ("Baujahr", "2027"),
+            ("Erstbezug", f"ab {MOVE_IN}"),
+            ("Wohnungen", "6, im Erdgeschoss bis 2. OG"),
             ("Wohnflächen", f"33,24 – 190,95{NB}m²"),
             ("Kaltmieten", f"498,60 – 2.577,76{NB}€"),
             ("Kaltmiete je m²", f"13,50 – 15,00{NB}€"),
@@ -225,7 +242,7 @@ def build():
         bottom=(
         '<div class="kicker" style="grid-column:1/13">Die Wohnungen</div>'
         '<table class="overview" style="grid-column:1/13;margin-top:3mm"><thead><tr>'
-        '<th style="width:9mm">Nr.</th><th>Aufteilung</th><th style="width:34mm">Freifläche</th>'
+        '<th style="width:9mm">Nr.</th><th style="width:15mm">Geschoss</th><th>Aufteilung</th><th style="width:32mm">Freifläche</th>'
         '<th class="r" style="width:22mm">Wohnfläche</th><th class="r" style="width:22mm">Kaltmiete</th>'
         f'<th class="r" style="width:12mm">Seite</th></tr></thead><tbody>{rows}</tbody></table>'
         '<p class="small" style="grid-column:1/9;margin-top:4mm">Flächen laut Planung, Balkon und Terrassen '
@@ -322,7 +339,8 @@ def build():
                     ("Kaltmiete", eur(u["rent"]), True),
                     ("Kaltmiete je m²", eur(u["sqm"])),
                     ("Freifläche", outdoor),
-                    ("Geschoss", missing("Geschoss")),
+                    ("Geschoss", u["floor"]),
+                    ("Bezugsfrei ab", MOVE_IN),
                 ]) + '</div>'
                 f'<div><div class="kicker" style="margin-bottom:2mm">Räume</div>'
                 f'<table class="rooms">{room_rows}</table></div></div>'),
@@ -344,36 +362,49 @@ def build():
                 title = PLAN_TITLES.get(key, "Grundriss") + f" · Wohnung {n}"
             d.add("", content=top, bottom=plan_section(key, title))
 
-    # Konditionen
+    # Konditionen und Kontakt
     cond_rows = "".join(
-        f'<tr><td class="nr">{u["n"]}</td><td class="r num">{m2(u["area"])}</td><td class="r num">{eur(u["rent"])}</td>'
-        f'<td class="r">{missing("NK")}</td><td class="r">{missing("Kaution")}</td><td class="r">{missing("Datum")}</td></tr>'
-        for u in UNITS)
+        f'<tr><td class="nr">{u["n"]}</td><td>{u["floor"].split(" (")[0]}</td>'
+        f'<td class="r num">{m2(u["area"])}</td><td class="r num">{eur(u["rent"])}</td>'
+        f'<td class="r num">{deposit(u["rent"])}</td></tr>' for u in UNITS)
+    scale = "".join(f'<i class="{"on" if c == EFFICIENCY else ""}">{c}</i>'
+                    for c in ["A+", "A", "B", "C", "D", "E", "F", "G", "H"])
     d.add("", content=(
         '<div class="kicker" style="grid-column:1/13">Konditionen und Kontakt</div>'
         '<h1 class="display" style="grid-column:1/8;margin-top:6mm">Konditionen</h1>'
-        '<table class="overview" style="grid-column:1/13;margin-top:12mm"><thead><tr>'
-        '<th style="width:12mm">Nr.</th><th class="r">Wohnfläche</th><th class="r">Kaltmiete</th>'
-        '<th class="r">Nebenkosten</th><th class="r">Kaution</th><th class="r">Bezugsfrei ab</th></tr></thead>'
+        '<table class="overview" style="grid-column:1/13;margin-top:10mm"><thead><tr>'
+        '<th style="width:12mm">Nr.</th><th>Geschoss</th><th class="r">Wohnfläche</th><th class="r">Kaltmiete</th>'
+        '<th class="r">Kaution (3 Kaltmieten)</th></tr></thead>'
         f'<tbody>{cond_rows}</tbody></table>'
-        '<div style="grid-column:1/6;margin-top:18mm">'
-        '<h2 class="h2" style="margin-bottom:4mm">Energieausweis</h2>' + facts([
-            ("Art des Ausweises", missing("Bedarf/Verbrauch")),
-            ("Endenergie", missing("kWh/(m²·a)")),
-            ("Effizienzklasse", missing("Klasse")),
-            ("Energieträger", "Strom (Wärmepumpe)"),
-            ("Baujahr", missing("Baujahr")),
+        '<div style="grid-column:1/6;margin-top:14mm">'
+        '<h2 class="h2" style="margin-bottom:4mm">Mietbedingungen</h2>' + facts([
+            ("Objekt", f"{ADDRESS},<br>{CITY}"),
+            ("Bezugsfrei ab", f"{MOVE_IN}, Erstbezug"),
+            ("Kaution", "drei Kaltmieten"),
+            ("Nebenkosten", "auf Anfrage"),
+            ("Stellplätze", "nach Absprache"),
         ]) + '</div>'
-        '<div style="grid-column:7/13;margin-top:18mm">'
-        '<h2 class="h2" style="margin-bottom:4mm">Objekt und Kontakt</h2>' + facts([
-            ("Adresse", f'{ADDRESS},<br>{missing("PLZ Ort")}'),
-            ("Ansprechpartner", missing("Name")),
-            ("Telefon", missing("Telefon")),
-            ("E-Mail", missing("E-Mail")),
-        ]) + '</div>'),
+        '<div style="grid-column:7/13;margin-top:14mm">'
+        '<h2 class="h2" style="margin-bottom:4mm">Energie</h2>' + facts([
+            ("Energieausweis", "liegt noch nicht vor"),
+            ("Art", "Bedarfsausweis, nach Fertigstellung"),
+            ("Energieträger", "Strom, Luft-Wasser-Wärmepumpe"),
+            ("Baujahr", "2027"),
+        ]) +
+        '<div class="kicker" style="margin-top:6mm">Effizienzklasse · Prognose</div>'
+        f'<div class="eff">{scale}</div>'
+        '<p class="small" style="margin-top:2.5mm">Erwartete Klasse auf Basis der Planung (Neubau, Wärmepumpe, '
+        'Photovoltaik, hoher Dämmstandard). Verbindlich sind die Werte des Energieausweises, der nach '
+        'Fertigstellung vorliegt.</p></div>'),
         bottom=(
-        '<div class="rule-accent" style="grid-column:1/2;margin-bottom:4mm"></div>'
-        '<p class="small" style="grid-column:1/9">Alle Visualisierungen und Grundrisse zeigen '
+        '<div style="grid-column:1/6">'
+        '<div class="kicker">Ihr Ansprechpartner</div>'
+        f'<p class="display" style="font-size:24pt;line-height:28pt;margin-top:3mm">{CONTACT["name"]}</p></div>'
+        '<div class="contact" style="grid-column:7/13">'
+        f'<a href="tel:{CONTACT["tel"]}">Telefon {CONTACT["phone"].replace(" ", NB)}</a>'
+        f'<a href="mailto:{CONTACT["mail"]}">{CONTACT["mail"]}</a></div>'
+        '<div class="rule" style="grid-column:1/13;margin:10mm 0 4mm"></div>'
+        '<p class="small" style="grid-column:1/10">Alle Visualisierungen und Grundrisse zeigen '
         'Einrichtungsbeispiele. Flächen laut Planung, Balkon und Terrassen in der Wohnfläche enthalten; '
         'Abweichungen in der Ausführung möglich. Dieses Exposé ist kein Vertragsangebot.</p>'))
 
