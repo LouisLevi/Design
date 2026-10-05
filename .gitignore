@@ -2,3 +2,6 @@
 .env
 .env.*
 .claude/settings.local.json
+
+# Python-Cache
+__pycache__/
