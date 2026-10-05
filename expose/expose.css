@@ -1,0 +1,102 @@
+/* Statische Schnitte (aus den variablen Google-Fonts erzeugt), damit Chromium sie als
+   TrueType statt Type 3 ins PDF einbettet */
+@font-face { font-family: "NR Display"; src: url("assets/fonts/NewsreaderDisplay-Light.ttf") format("truetype"); font-weight: 300; }
+@font-face { font-family: "NR Text"; src: url("assets/fonts/NewsreaderText-Book.ttf") format("truetype"); font-weight: 350; }
+@font-face { font-family: "NR Text"; src: url("assets/fonts/NewsreaderText-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Plex"; src: url("assets/fonts/IBMPlexSans-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Plex"; src: url("assets/fonts/IBMPlexSans-Medium.ttf") format("truetype"); font-weight: 500; }
+
+@page { size: A4; margin: 0; }
+
+:root {
+  --ink: #1b1a18;
+  --graphite: #67625b;
+  --mute: #8f8980;
+  --rule: #d9d3c9;
+  --accent: #7a5840;
+  --missing: #b4321e;
+  --col: 10.5mm;
+  --gut: 4mm;
+  --bl: 14pt;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #e9e6e1; font-family: "Plex", sans-serif; color: var(--ink); font-size: 9.5pt; line-height: var(--bl); font-kerning: normal; }
+
+.page {
+  width: 210mm; height: 297mm; position: relative; overflow: hidden; background: #fff;
+  break-after: page; margin: 0 auto;
+}
+@media screen { .page { margin: 10mm auto; box-shadow: 0 0 0 0.3mm #d4cfc7; } }
+
+/* Satzspiegel: recto innen links, verso innen rechts */
+.content { position: absolute; top: 18mm; bottom: 22mm; display: grid; grid-template-columns: repeat(12, var(--col)); column-gap: var(--gut); align-content: start; }
+.content-bottom { top: auto; bottom: 22mm; align-items: end; }
+.col-split { display: flex; flex-direction: column; justify-content: space-between; }
+.recto .content { left: 22mm; right: 18mm; }
+.verso .content { left: 18mm; right: 22mm; }
+
+.folio { position: absolute; bottom: 11mm; display: flex; gap: 5mm; align-items: baseline; font-size: 6.8pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--graphite); }
+.folio b { font-weight: 500; color: var(--accent); letter-spacing: 0.04em; font-feature-settings: "tnum"; }
+.recto .folio { right: 18mm; }
+.verso .folio { left: 18mm; flex-direction: row-reverse; }
+
+/* Typografie */
+.kicker { font-size: 7pt; line-height: var(--bl); font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--graphite); }
+.kicker .n { color: var(--accent); }
+.display { font-family: "NR Display", serif; font-weight: 300; font-size: 34pt; line-height: 38pt; letter-spacing: -0.012em; }
+.h2 { font-family: "NR Text", serif; font-weight: 400; font-size: 14pt; line-height: 18pt; }
+.lead { font-family: "NR Text", serif; font-weight: 350; font-size: 13pt; line-height: 19pt; color: var(--ink); }
+p { text-wrap: pretty; hyphens: manual; }
+p + p { margin-top: 7pt; }
+.body { font-size: 9.5pt; line-height: var(--bl); color: #2b2926; }
+.small { font-size: 7.6pt; line-height: 11pt; color: var(--graphite); }
+.caption { font-size: 7pt; line-height: 10pt; color: var(--graphite); }
+.caption b { font-weight: 500; color: var(--ink); }
+.num { font-feature-settings: "tnum", "lnum"; }
+.missing { color: var(--missing); font-weight: 500; font-size: 0.92em; letter-spacing: 0.01em; }
+.rule { border-top: 0.5pt solid var(--rule); }
+.rule-accent { border-top: 0.75pt solid var(--accent); }
+
+/* Tabellen */
+table { border-collapse: collapse; width: 100%; font-feature-settings: "tnum", "lnum"; }
+.facts td { font-size: 8.6pt; line-height: 13pt; padding: 2.4pt 0 2.2pt; border-bottom: 0.5pt solid var(--rule); vertical-align: baseline; }
+.facts tr:first-child td { border-top: 0.75pt solid var(--ink); }
+.facts td:first-child { color: var(--graphite); padding-right: 4mm; white-space: nowrap; }
+.facts td:last-child { text-align: right; }
+.facts .strong td:last-child { font-weight: 500; }
+.rooms td { font-size: 8.2pt; line-height: 12pt; padding: 1.8pt 0; border-bottom: 0.5pt solid var(--rule); }
+.rooms td:last-child { text-align: right; }
+.rooms tr.sum td { border-bottom: none; border-top: 0.75pt solid var(--ink); font-weight: 500; padding-top: 3pt; }
+
+/* Bilder */
+.bleed-top { position: absolute; left: 0; top: 0; width: 210mm; display: block; object-fit: cover; }
+img { display: block; }
+
+/* Grundriss */
+.plan { position: relative; }
+.plan img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.plan .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; white-space: nowrap; font-size: 6.4pt; line-height: 8pt; color: var(--ink); background: #fff; padding: 0.5mm 1mm; }
+.plan .lab span { display: block; font-weight: 400; color: var(--graphite); font-feature-settings: "tnum"; }
+.plan .lab b { font-weight: 500; letter-spacing: 0.01em; }
+.plan .entry { position: absolute; font-size: 5.6pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 500; white-space: nowrap; }
+.scale { display: flex; align-items: flex-end; gap: 0; }
+.scale i { display: block; width: 10mm; height: 1.4mm; border: 0.5pt solid var(--ink); border-right: none; }
+.scale i:nth-child(odd) { background: var(--ink); }
+.scale i:last-of-type { border-right: 0.5pt solid var(--ink); }
+.scale-wrap { display: flex; flex-direction: column; gap: 1.2mm; font-size: 6pt; color: var(--graphite); }
+.scale-nums { display: flex; width: 40mm; justify-content: space-between; font-feature-settings: "tnum"; margin-left: -0.6mm; }
+
+/* Übersicht */
+.overview td { font-size: 8.4pt; line-height: 12.5pt; padding: 4pt 0 3.6pt; border-bottom: 0.5pt solid var(--rule); vertical-align: top; }
+.overview th { font-size: 6.6pt; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--graphite); text-align: left; padding-bottom: 3pt; border-bottom: 0.75pt solid var(--ink); }
+.overview .r { text-align: right; }
+.overview .nr { font-family: "NR Display", serif; font-size: 15pt; line-height: 12.5pt; font-weight: 300; color: var(--accent); }
+
+/* Spezifikationsliste */
+.spec { display: grid; grid-template-columns: 22mm 1fr; column-gap: 0; }
+.spec dd { padding-left: 3mm !important; }
+.spec dt, .spec dd { font-size: 8.8pt; line-height: 13pt; padding: 3pt 0 3pt; border-bottom: 0.5pt solid var(--rule); }
+.spec dt { color: var(--graphite); }
+.spec dt:first-of-type, .spec dt:first-of-type + dd { border-top: 0.75pt solid var(--ink); }

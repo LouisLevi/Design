@@ -1,0 +1,309 @@
+{
+ "w1": {
+  "width_m": 10.372,
+  "height_m": 8.367,
+  "labels": [
+   {
+    "name": "Bad",
+    "area": "4,71",
+    "pos": [
+     53.03,
+     31.86
+    ]
+   },
+   {
+    "name": "Abstl.",
+    "area": "2,60",
+    "pos": [
+     46.83,
+     77.66
+    ]
+   },
+   {
+    "name": "Wohnen · Kochen · Essen",
+    "area": "29,70",
+    "pos": [
+     77.13,
+     47.71
+    ]
+   },
+   {
+    "name": "Schlafen",
+    "area": "12,67",
+    "pos": [
+     14.34,
+     33.67
+    ]
+   }
+  ],
+  "entry": [
+   27.66,
+   56.61
+  ]
+ },
+ "w2": {
+  "width_m": 13.198,
+  "height_m": 9.666,
+  "labels": [
+   {
+    "name": "Wohnen · Kochen · Essen",
+    "area": "43,19",
+    "pos": [
+     65.84,
+     42.08
+    ]
+   },
+   {
+    "name": "Schlafen",
+    "area": "13,52",
+    "pos": [
+     81.59,
+     69.06
+    ]
+   },
+   {
+    "name": "Abstl.",
+    "area": "1,49",
+    "pos": [
+     33.78,
+     54.31
+    ]
+   },
+   {
+    "name": "Bad",
+    "area": "4,15",
+    "pos": [
+     31.08,
+     72.09
+    ]
+   },
+   {
+    "name": "Terrasse",
+    "area": "6,13",
+    "pos": [
+     16.07,
+     30.75
+    ]
+   }
+  ],
+  "entry": [
+   45.27,
+   94.2
+  ]
+ },
+ "w3-eg": {
+  "width_m": 15.947,
+  "height_m": 11.356,
+  "labels": [
+   {
+    "name": "Gäste-Bad",
+    "area": "3,58",
+    "pos": [
+     12.559999999999999,
+     90.38
+    ]
+   },
+   {
+    "name": "Abstl.",
+    "area": "2,05",
+    "pos": [
+     13.31,
+     21.46
+    ]
+   },
+   {
+    "name": "Wohnen · Kochen · Essen",
+    "area": "97,57",
+    "pos": [
+     51.47,
+     42.41
+    ]
+   },
+   {
+    "name": "Balkon",
+    "area": "7,22",
+    "pos": [
+     91.94,
+     49.39
+    ]
+   }
+  ],
+  "entry": [
+   13.23,
+   61.4
+  ]
+ },
+ "w3-og": {
+  "width_m": 13.577,
+  "height_m": 10.157,
+  "labels": [
+   {
+    "name": "Schlafen",
+    "area": "15,50",
+    "pos": [
+     84.37,
+     68.56
+    ]
+   },
+   {
+    "name": "Ankleide",
+    "area": "21,88",
+    "pos": [
+     55.09,
+     74.72
+    ]
+   },
+   {
+    "name": "Büro",
+    "area": "11,62",
+    "pos": [
+     57.06,
+     38.09
+    ]
+   },
+   {
+    "name": "Bad",
+    "area": "7,07",
+    "pos": [
+     13.15,
+     80.1
+    ]
+   },
+   {
+    "name": "Terrasse",
+    "area": "7,29",
+    "pos": [
+     84.24,
+     29.24
+    ]
+   }
+  ],
+  "entry": null
+ },
+ "w4": {
+  "width_m": 10.157,
+  "height_m": 7.329,
+  "labels": [
+   {
+    "name": "Bad",
+    "area": "3,47",
+    "pos": [
+     13.35,
+     23.47
+    ]
+   },
+   {
+    "name": "Schlafen",
+    "area": "12,20",
+    "pos": [
+     16.5,
+     56.09
+    ]
+   },
+   {
+    "name": "Wohnen · Kochen · Essen",
+    "area": "33,33",
+    "pos": [
+     77.45,
+     38.21
+    ]
+   }
+  ],
+  "entry": [
+   53.35,
+   11.79
+  ]
+ },
+ "w5": {
+  "width_m": 10.157,
+  "height_m": 9.091,
+  "labels": [
+   {
+    "name": "Bad",
+    "area": "3,90",
+    "pos": [
+     83.11,
+     48.51
+    ]
+   },
+   {
+    "name": "Schlafen",
+    "area": "6,35",
+    "pos": [
+     73.86,
+     62.0
+    ]
+   },
+   {
+    "name": "Wohnen · Kochen · Essen",
+    "area": "26,48",
+    "pos": [
+     48.47,
+     62.08
+    ]
+   },
+   {
+    "name": "Flur / Abstl.",
+    "area": "3,80",
+    "pos": [
+     9.79,
+     18.21
+    ]
+   },
+   {
+    "name": "Terrasse",
+    "area": "4,17",
+    "pos": [
+     51.82,
+     89.64
+    ]
+   }
+  ],
+  "entry": [
+   53.35,
+   28.89
+  ]
+ },
+ "w6": {
+  "width_m": 9.566,
+  "height_m": 6.585,
+  "labels": [
+   {
+    "name": "Wohnen · Essen · Schlafen",
+    "area": "20,76",
+    "pos": [
+     66.83,
+     29.39
+    ]
+   },
+   {
+    "name": "Küche / Flur",
+    "area": "6,11",
+    "pos": [
+     68.33,
+     77.88
+    ]
+   },
+   {
+    "name": "Bad",
+    "area": "3,78",
+    "pos": [
+     21.97,
+     18.0
+    ]
+   },
+   {
+    "name": "Ankleide",
+    "area": "2,59",
+    "pos": [
+     47.52,
+     75.11
+    ]
+   }
+  ],
+  "entry": [
+   88.14,
+   99.96
+  ]
+ }
+}
