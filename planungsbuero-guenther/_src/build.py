@@ -25,16 +25,29 @@ YEAR = datetime.date.today().year
 PROJECTS = json.load(open(os.path.join(SRC, "projekte.json"), encoding="utf-8"))
 BY_ID = {p["id"]: p for p in PROJECTS}
 
+
+def projekt(title, ort):
+    """Projekt eindeutig über Titel und Bauort finden (bricht ab, wenn es nicht genau eines gibt)."""
+    hits = [p for p in PROJECTS if p["title"] == title and p["ort"] == ort]
+    if len(hits) != 1:
+        raise SystemExit(f"Projekt nicht eindeutig: {title} / {ort} ({len(hits)} Treffer)")
+    return hits[0]
+
+
+def projektbild(title, ort, n=1, vorschau=False):
+    name = projekt(title, ort)["img"][n - 1][0]
+    return f"assets/img/p/{name}{'-s' if vorschau else ''}.webp"
+
 # Bauaufgaben – Pfad entspricht der bisherigen Adresse
 CATS = [
     dict(key="aktuell", path="aktuelle-projekte", name="Aktuelle Projekte", disp="aktuelle projekte", v="aktuelle projekte",
          intro="In Planung, im Bau und gerade fertiggestellt.", img="assets/video/film-soehrewald.webp", note="Wohnanlage Söhrewald · in Planung"),
     dict(key="efh", path="einfamilienhäuser", name="Einfamilienhäuser", disp="einfamilien&shy;häuser", v="einfamilien&shy;häuser",
-         intro="Neubau, Umbau, Erweiterung und Sanierung.", img="assets/img/p/neubau-eines-modernen-einfamilienhauses-kassel-1-s.webp", note="Modernes Einfamilienhaus, Kassel"),
+         intro="Neubau, Umbau, Erweiterung und Sanierung.", img=projektbild("Neubau eines modernen Einfamilienhauses", "Kassel", 1, True), note="Modernes Einfamilienhaus, Kassel"),
     dict(key="mfh", path="mehrfamilienhäuser", name="Mehrfamilienhäuser", disp="mehrfamilien&shy;häuser", v="mehrfamilien&shy;häuser",
-         intro="Neubau, Umbau, Erweiterung und Sanierung.", img="assets/video/film-kassel-25we.webp", note="Wohnhaus mit 25 WE, Kassel"),
+         intro="Neubau, Umbau, Erweiterung und Sanierung.", img=projektbild("Neubau von zwei Mehrfamilienhäusern (30 WE)", "Kaufungen", 1, True), note="Zwei Mehrfamilienhäuser (30 WE), Kaufungen"),
     dict(key="gewerbe", path="gewerbe-sonstige-bauwerke", name="Gewerbe & Sonstige Bauwerke", disp="gewerbe &amp; sonstige bauwerke", v="gewerbe &amp; sonstige",
-         intro="Gewerbe, Verwaltung, Umnutzung und Bauen im Bestand.", img="assets/img/p/neubau-polizeirevier-sued-west-baunatal-baunatal-1-s.webp", note="Polizeirevier Süd-West, Baunatal"),
+         intro="Gewerbe, Verwaltung, Umnutzung und Bauen im Bestand.", img=projektbild("Neubau Polizeirevier Süd-West (Baunatal)", "Baunatal", 1, True), note="Polizeirevier Süd-West, Baunatal"),
     dict(key="entwicklung", path="projektentwicklungen", name="Projektentwicklungen", disp="projekt&shy;entwicklungen", v="projekt&shy;entwicklungen",
          intro="Aus Grundstücken werden realisierbare Projekte.", img="assets/video/film-kita-kassel.webp", note="Wohn- und Geschäftshaus mit Kita, Kassel"),
 ]
@@ -43,15 +56,18 @@ for c in CATS:
     c["count"] = sum(1 for p in PROJECTS if p["cat"] == c["key"])
 
 # Filme (Reihenfolge wie auf der Seite „Videos“)
+# Titel wie auf der Seite „Videos“ der bisherigen Website; Ort aus den Projektdaten
 FILMS = [
-    ("film-soehrewald", "Wohnanlage Söhrewald", "Söhrewald · 3D-Visualisierung", "PG-001"),
-    ("film-salamander-areal", "Entwicklung eines Areals mit Kindergarten, Parkhaus, Boardinghaus, Neubau von Mehrfamilienhäusern und Sanierung eines Fabrikgebäudes zu Loftwohnungen", "Stuttgart und Umgebung · Bauen im Bestand", "PG-045"),
-    ("film-kita-kassel", "Neubau eines Wohn- u. Geschäftshauses mit Kindertagesstätte", "Kassel · Projektentwicklung", "PG-056"),
-    ("film-kassel-25we", "Neubau eines 25-Familienhauses", "Kassel · 3D-Visualisierung", "PG-002"),
-    ("film-hochhaus-kassel", "Teilsanierung eines Hochhauses", "Kassel · Drohnenflug", "PG-049"),
-    ("film-pultdachhaus", "Bau eines Pultdachhauses in Holzständerbauweise", "Südhessen · Holzständerbau", "PG-022"),
-    ("film-satteldachhaus", "Bau eines Satteldachhauses in Holzständerbauweise", "Südhessen · Holzständerbau", "PG-023"),
+    ("film-soehrewald", "Wohnanlage Söhrewald", "3D-Visualisierung"),
+    ("film-salamander-areal", "Entwicklung eines Areals mit Kindergarten, Parkhaus, Boardinghaus, Neubau von Mehrfamilienhäusern und Sanierung eines Fabrikgebäudes zu Loftwohnungen", "3D-Visualisierung"),
+    ("film-kita-kassel", "Neubau eines Wohn- u. Geschäftshauses mit Kindertagesstätte", "3D-Visualisierung"),
+    ("film-kassel-25we", "Neubau eines 25-Familienhauses", "3D-Visualisierung"),
+    ("film-hochhaus-kassel", "Teilsanierung eines Hochhauses", "Drohnenflug"),
+    ("film-pultdachhaus", "Bau eines Pultdachhauses in Holzständerbauweise", "Holzständerbau"),
+    ("film-satteldachhaus", "Bau eines Satteldachhauses in Holzständerbauweise", "Holzständerbau"),
 ]
+FILM_PROJEKT = {p["film"]: p for p in PROJECTS if p.get("film")}
+FILMS = [(k, t, f"{FILM_PROJEKT[k]['ort']} · {art}", FILM_PROJEKT[k]["id"]) for k, t, art in FILMS]
 FILM = {f[0]: f for f in FILMS}
 
 # Bilder, die nachgeliefert werden (Datei ablegen, neu bauen – fertig)
@@ -66,7 +82,7 @@ PAGES = [
     ("index.html", "home", "portfolio", "Architekt | Planungsbüro Günther | Kassel",
      "Planungsbüro Günther – Architekten & Ingenieure in Kassel. Alle Leistungsphasen der HOAI für Einfamilienhäuser, Mehrfamilienhäuser, Gewerbebauten und Projektentwicklungen.", "start.html"),
     ("portfolio/index.html", "portfolio", "portfolio", "Portfolio | Planungsbüro Günther",
-     "Alle 59 Projekte des Planungsbüro Günther: Einfamilienhäuser, Mehrfamilienhäuser, Gewerbe und Projektentwicklungen.", "portfolio.html"),
+     f"Alle {len(PROJECTS)} Projekte des Planungsbüro Günther: Einfamilienhäuser, Mehrfamilienhäuser, Gewerbe und Projektentwicklungen.", "portfolio.html"),
     *[(f"{c['path']}/index.html", "portfolio", c["key"], f"{c['name']} | Planungsbüro Günther",
        f"{c['name']} – {c['count']} Projekte des Planungsbüro Günther, Kassel. {c['intro']}", "kategorie.html") for c in CATS],
     ("videos/index.html", "portfolio", "videos", "Videos | Planungsbüro Günther",
@@ -95,8 +111,8 @@ def exists(rel):
     return os.path.exists(os.path.join(ROOT, rel))
 
 
-def fmt_eur(v):
-    return f"{v:,.0f} €".replace(",", ".") if v else "keine Angabe"
+def fmt_eur(v, ca=False):
+    return ("ca. " if ca else "") + f"{v:,.0f} €".replace(",", ".") if v else "keine Angabe"
 
 
 def img_p(name, w, h, alt, root, sizes="(max-width: 640px) 50vw, 25vw", eager=False):
@@ -204,15 +220,15 @@ def strip(root):
 
 STEPS = [
     ("kennenlernen &amp; beratung", "Wünsche, Grundstück, Budget: Wir klären, was möglich ist.", "LPH 1", "Grundlagenermittlung",
-     ("bild", "schritt-1", "Erstgespräch im Planungsbüro Günther", "Erstgespräch"), None),
+     ("bild", "schritt-1", "Dipl.-Ing. Architekt Carsten Günther", "Erstgespräch"), "Ihr Ansprechpartner · Carsten Günther"),
     ("entwurf &amp; visualisierung", "Ihr Haus in Skizze und 3D – bevor gebaut wird.", "LPH 2–3", "Vor- und Entwurfsplanung",
      ("img", "assets/video/film-kassel-25we.webp", "3D-Visualisierung des Wohnhauses mit 25 WE in Kassel"), "3D-Visualisierung · Wohnhaus Kassel"),
     ("bauantrag &amp; genehmigung", "Alle Unterlagen, alle Abstimmungen mit dem Bauamt.", "LPH 4", "Genehmigungsplanung",
-     ("bild", "schritt-3", "Genehmigungsplanung", "Pläne / Bauantrag"), None),
+     ("bild", "schritt-3", "Grundriss 1. Obergeschoss der Wohnanlage Söhrewald", "Pläne / Bauantrag"), "Grundriss 1. OG · Wohnanlage Söhrewald"),
     ("ausführung &amp; vergabe", "Werkpläne, Ausschreibung, geprüfte Angebote.", "LPH 5–7", "Ausführung, Vergabe",
-     ("img", "assets/img/p/sanierung-und-aufstockung-eines-einfamilienhauses-kassel-1.webp", "Sanierung und Aufstockung eines Einfamilienhauses in Kassel"), "Sanierung und Aufstockung · Kassel"),
+     ("img", projektbild("Sanierung und Aufstockung eines Einfamilienhauses", "Kassel"), "Sanierung und Aufstockung eines Einfamilienhauses in Kassel"), "Sanierung und Aufstockung · Kassel"),
     ("bau &amp; übergabe", "Bauüberwachung bis zur Schlüsselübergabe.", "LPH 8–9", "Objektüberwachung",
-     ("img", "assets/img/p/neubau-von-zwei-mehrfamilienhaeusern-30-we-kaufungen-1.webp", "Zwei Mehrfamilienhäuser mit 30 WE in Kaufungen"), "30 Wohneinheiten · Kaufungen"),
+     ("img", projektbild("Neubau von zwei Mehrfamilienhäusern (30 WE)", "Kaufungen"), "Zwei Mehrfamilienhäuser mit 30 WE in Kaufungen"), "30 Wohneinheiten · Kaufungen"),
 ]
 
 
@@ -308,7 +324,7 @@ def projects_js():
         else:
             rows.append(["Geplante Fertigstellung" if p.get("status") == "geplant" else "Fertigstellung", str(p.get("jahr", "keine Angabe"))])
             rows.append(["Leistungen", p.get("lph", "keine Angabe")])
-            rows.append(["Bauvolumen", fmt_eur(p.get("volumen"))])
+            rows.append(["Bauvolumen", fmt_eur(p.get("volumen"), p.get("volumen_ca"))])
         d["rows"] = rows
         d["path"] = CAT[p["cat"]]["path"]
         data.append(d)
