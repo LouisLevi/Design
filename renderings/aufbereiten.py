@@ -1,6 +1,7 @@
 """Fertige Renderings auf 1080p bringen und das Licht vereinheitlichen.
 
-Aufruf: python3 renderings/aufbereiten.py
+Aufruf: python3 renderings/aufbereiten.py [Namensfilter …]
+        z. B. python3 renderings/aufbereiten.py "Wohnung 6 Innenansicht" – nur passende Bilder
 Liest renderings/auswahl/*.jpg und schreibt nach renderings/fotorealistisch/auswahl/
 (1920×1080, JPEG, Qualität 95).
 
@@ -16,6 +17,7 @@ Schritte:
 
 Braucht: pip install opencv-contrib-python-headless numpy pillow
 """
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -33,7 +35,7 @@ SIZE = (1920, 1080)
 # Quellbilder, die deutlich weicher sind als der Rest der Serie: zusätzlich mit Real-ESRGAN
 # hochrechnen (esrgan.py, braucht torch) und mit der FSRCNN-Fassung mischen, damit Stoffe
 # und Teppiche ihre natürliche Struktur behalten.
-STRONG_SR = {"wohnung 2 innenansicht", "wohnung 4 innenansicht"}
+STRONG_SR = {"wohnung 2 innenansicht", "wohnung 4 innenansicht", "wohnung 6 innenansicht"}
 STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
 WB_STRENGTH = 0.9                     # Anteil der Farbstich-Korrektur
@@ -138,6 +140,9 @@ def clean_background(img8, threshold=240):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     files = sorted(p for p in SRC.iterdir() if p.suffix.lower() in (".jpg", ".jpeg", ".png"))
+    wanted = [a.lower() for a in sys.argv[1:]]
+    if wanted:
+        files = [p for p in files if any(w in p.stem.lower() for w in wanted)]
     for p in files:
         kind = "luft" if "luft" in p.name.lower() else "innen"
         img = cv2.imread(str(p)).astype(np.float32) / 255
