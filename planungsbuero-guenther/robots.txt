@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_src/
+Disallow: /entwurf/
+Sitemap: https://www.planungsbuero-guenther.de/sitemap.xml

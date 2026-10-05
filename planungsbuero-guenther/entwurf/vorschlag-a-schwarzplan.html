@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vorschlag A · Schwarzplan</title>
+<style>
+@font-face { font-family: "Inter"; src: url("fonts/inter-400.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+/* Farben aus dem Logo: Hintergrund #00020A, Weiß, Grau des Wortteils „planungsbüro“ */
+:root {
+  --black: #00020a;
+  --panel: #090b13;
+  --panel-2: #10131c;
+  --white: #ffffff;
+  --grey: #a3a5ab;
+  --grey-2: #6c6f77;
+  --rule: rgba(255,255,255,.13);
+  --rule-strong: rgba(255,255,255,.32);
+  --gut: clamp(16px, 3.6vw, 56px);
+}
+* { box-sizing: border-box; }
+html { background: var(--black); }
+body { margin: 0; background: var(--black); color: var(--white); font: 400 15px/1.6 "Inter", system-ui, sans-serif; font-feature-settings: "tnum" 1, "cv11" 1; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1480px; margin: 0 auto; padding: 0 var(--gut); }
+.grey { color: var(--grey); }
+
+/* ---------- Logo (Nachbau des Originals) ---------- */
+.logo { display: inline-flex; align-items: stretch; gap: 10px; }
+.logo .pg { width: 52px; height: 52px; background: var(--white); color: var(--black); display: grid; place-items: center; font-weight: 300; font-size: 37px; letter-spacing: -.045em; line-height: 1; padding-bottom: 7px; }
+.logo .wm { display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; }
+.logo .l1 { font-weight: 300; font-size: 19px; letter-spacing: -.02em; line-height: 1; }
+.logo .l1 span { color: var(--grey); }
+.logo .l2 { background: var(--white); color: var(--black); font-size: 10.5px; letter-spacing: .14em; line-height: 1; padding: 4px 6px 4px; white-space: nowrap; }
+
+/* ---------- Kopf ---------- */
+header { border-bottom: 1px solid var(--rule); position: relative; z-index: 10; background: var(--black); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; height: 92px; }
+nav { display: flex; align-items: center; gap: 4px; font-size: 14px; }
+nav > a, nav > .dd > a { padding: 10px 14px; color: var(--grey); display: inline-flex; align-items: center; gap: 6px; }
+nav > a.on { color: var(--white); }
+nav .caret { width: 7px; height: 7px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg) translateY(-3px); }
+nav .kontakt { margin-left: 14px; background: var(--white); color: var(--black); padding: 11px 18px; font-weight: 500; }
+.dd { position: relative; }
+.dd.open > a { color: var(--white); }
+.dd:not(.open) .menu { display: none; }
+.menu { position: absolute; top: calc(100% + 25px); left: -200px; width: 640px; background: var(--panel); border: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 220px; }
+.menu ul { list-style: none; margin: 0; padding: 10px 0; }
+.menu li a { display: grid; grid-template-columns: 1fr auto; padding: 11px 22px; color: var(--grey); }
+.menu li a b { font-weight: 400; color: var(--white); }
+.menu li a span { color: var(--grey-2); }
+.menu li.on a { background: var(--panel-2); }
+.menu figure { margin: 0; border-left: 1px solid var(--rule); position: relative; }
+.menu figure img { width: 100%; height: 100%; object-fit: cover; }
+.menu figcaption { position: absolute; left: 0; bottom: 0; background: var(--white); color: var(--black); font-size: 11px; letter-spacing: .08em; padding: 5px 8px; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; }
+.hero-img { height: 760px; position: relative; overflow: hidden; }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.hero-block { position: absolute; left: 0; bottom: 0; width: min(820px, 60%); background: var(--black); padding: 56px var(--gut) 0 var(--gut); }
+.hero h1 { margin: 0; font-weight: 300; font-size: clamp(32px, 3.3vw, 50px); line-height: 1.08; letter-spacing: -.03em; }
+.hero h1 span { color: var(--grey); }
+.hero-meta { position: absolute; right: var(--gut); top: 24px; display: flex; align-items: center; gap: 16px; font-size: 12.5px; color: var(--white); }
+.hero-meta .lab { background: var(--white); color: var(--black); padding: 5px 9px; letter-spacing: .06em; }
+.hero-meta .play { width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.7); display: grid; place-items: center; background: rgba(0,2,10,.35); }
+.hero-meta .play i { width: 0; height: 0; border-left: 9px solid #fff; border-top: 6px solid transparent; border-bottom: 6px solid transparent; margin-left: 3px; }
+.hero-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 36px 0 0; }
+.hero-foot p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--grey); max-width: 560px; }
+.hero-foot .acts { display: flex; gap: 0; justify-content: flex-end; align-items: flex-start; }
+.btn { display: inline-flex; align-items: center; gap: 14px; height: 50px; padding: 0 22px; font-size: 14px; font-weight: 500; border: 1px solid var(--rule-strong); }
+.btn--white { background: var(--white); color: var(--black); border-color: var(--white); }
+.btn .ar { width: 16px; height: 1px; background: currentColor; position: relative; }
+.btn .ar::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+
+/* ---------- Abschnittskopf ---------- */
+.sec { padding: 140px 0 0; }
+.sec-head { display: grid; grid-template-columns: 240px 1fr auto; gap: 40px; align-items: baseline; padding-bottom: 28px; border-bottom: 1px solid var(--rule); }
+.sec-no { font-size: 12px; letter-spacing: .1em; color: var(--grey-2); }
+.sec-no b { display: inline-block; background: var(--white); color: var(--black); font-weight: 500; padding: 3px 7px; margin-right: 10px; letter-spacing: .04em; }
+.sec-head h2 { margin: 0; font-weight: 300; font-size: clamp(30px, 2.8vw, 44px); letter-spacing: -.025em; line-height: 1.1; }
+.sec-head h2 span { color: var(--grey); }
+.sec-head > a { font-size: 13px; color: var(--grey); border-bottom: 1px solid var(--rule-strong); padding-bottom: 3px; }
+
+/* ---------- Portfolio-Index ---------- */
+.index { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
+.index ol { list-style: none; margin: 0; padding: 0; }
+.index li a { display: grid; grid-template-columns: 56px 1fr auto 24px; align-items: center; gap: 12px; padding: 22px 0; border-bottom: 1px solid var(--rule); font-size: 22px; font-weight: 300; letter-spacing: -.015em; color: var(--grey); }
+.index li a small { font-size: 12px; color: var(--grey-2); letter-spacing: .04em; }
+.index li a em { font-style: normal; font-size: 13px; color: var(--grey-2); }
+.index li a .ar { width: 14px; height: 1px; background: currentColor; position: relative; justify-self: end; }
+.index li a .ar::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+.index li.on a { color: var(--white); }
+.index li.on a em { color: var(--white); }
+.index figure { margin: 22px 0 0; position: relative; height: 520px; }
+.index figure img { width: 100%; height: 100%; object-fit: cover; }
+.index figcaption { position: absolute; left: 0; bottom: 0; background: var(--black); padding: 14px 18px 0 0; font-size: 13px; color: var(--grey); }
+.index figcaption b { color: var(--white); font-weight: 400; display: block; }
+
+/* ---------- 5 Schritte ---------- */
+.steps-intro { display: grid; grid-template-columns: 240px 1fr 1fr; gap: 40px; padding: 36px 0 56px; }
+.steps-intro p { grid-column: 2; margin: 0; color: var(--grey); font-size: 17px; max-width: 520px; }
+.step-list { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--rule-strong); }
+.step { padding: 0 22px 0 0; position: relative; }
+.step + .step { padding-left: 22px; border-left: 1px solid var(--rule); }
+.step .bar { height: 2px; background: transparent; margin-top: -1px; }
+.step.on .bar { background: var(--white); }
+.step .n { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-top: 26px; border: 1px solid var(--rule-strong); font-size: 14px; color: var(--grey); }
+.step.on .n { background: var(--white); color: var(--black); border-color: var(--white); font-weight: 500; }
+.step figure { margin: 24px 0 0; aspect-ratio: 4/3; overflow: hidden; background: var(--panel); position: relative; }
+.step figure img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(.7); }
+.step.on figure img { filter: none; }
+.step figure img.crop { transform: scale(1.38); }
+.step figure img.portrait { object-position: 50% 12%; filter: grayscale(1) brightness(.78) contrast(1.08) !important; }
+.step h3 { margin: 22px 0 8px; font-weight: 400; font-size: 18px; letter-spacing: -.01em; line-height: 1.25; }
+.step p { margin: 0 0 14px; font-size: 14px; color: var(--grey); }
+.step .lph { font-size: 12px; color: var(--grey-2); letter-spacing: .04em; }
+.ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--grey-2); font-size: 11.5px; letter-spacing: .08em; text-align: center; }
+.ph svg { width: 56%; margin: 0 auto 10px; display: block; }
+
+/* ---------- Aktuelle Projekte ---------- */
+.current { display: grid; grid-template-columns: 1.55fr 1fr; gap: 56px; padding-top: 40px; }
+.current figure { margin: 0; height: 600px; }
+.current figure img { width: 100%; height: 100%; object-fit: cover; }
+.current h3 { margin: 0 0 18px; font-weight: 300; font-size: 34px; letter-spacing: -.025em; line-height: 1.12; }
+.current p { color: var(--grey); margin: 0 0 32px; font-size: 16px; }
+.facts { margin: 0; display: grid; grid-template-columns: 130px 1fr; border-top: 1px solid var(--rule); }
+.facts dt, .facts dd { margin: 0; padding: 13px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.facts dt { color: var(--grey-2); }
+.current .more { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+.current .more a { display: block; }
+.current .more img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.current .more span { display: block; font-size: 13px; color: var(--grey); margin-top: 10px; }
+
+/* ---------- Fuß ---------- */
+footer { margin-top: 150px; border-top: 1px solid var(--rule); }
+.f-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-top: 56px; padding-bottom: 64px; }
+.f-top h4 { margin: 0 0 14px; font-size: 12px; font-weight: 400; color: var(--grey-2); letter-spacing: .08em; }
+.f-top p, .f-top li { margin: 0; font-size: 14px; color: var(--grey); line-height: 1.9; }
+.f-top ul { list-style: none; margin: 0; padding: 0; }
+.f-top .big { color: var(--white); font-size: 15px; }
+.f-bot { border-top: 1px solid var(--rule); }
+.f-bot .wrap { display: flex; justify-content: space-between; height: 64px; align-items: center; font-size: 12.5px; color: var(--grey-2); }
+.f-bot .wrap div { display: flex; gap: 24px; }
+
+@media (max-width: 760px) {
+  nav > a:not(.kontakt), nav > .dd { display: none; }
+  nav .kontakt { margin: 0; }
+  .logo .l1 { font-size: 15px; } .logo .pg { width: 44px; height: 44px; font-size: 31px; } .logo .l2 { font-size: 8.5px; }
+  .hero-img { height: 440px; }
+  .hero-block { position: relative; width: 100%; padding: 32px var(--gut) 0; }
+  .hero-meta { top: 16px; } .hero-meta > span:first-child { display: none; }
+  .hero-foot { grid-template-columns: 1fr; padding: 24px 0 0; gap: 28px; }
+  .hero-foot .acts { justify-content: flex-start; flex-direction: column; gap: 10px; }
+  .hero-foot .btn { justify-content: space-between; }
+  .sec { padding-top: 96px; }
+  .sec-head { grid-template-columns: 1fr; gap: 14px; }
+  .index { grid-template-columns: 1fr; } .index figure { height: 260px; order: -1; }
+  .steps-intro { grid-template-columns: 1fr; padding: 24px 0 36px; } .steps-intro p { grid-column: 1; }
+  .step-list { grid-template-columns: 1fr; border-top: 0; }
+  .step, .step + .step { padding: 0 0 36px 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .step figure { display: none; }
+  .current { grid-template-columns: 1fr; } .current figure { height: 300px; }
+  .f-top { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="planungsbüro günther – Architekten &amp; Ingenieure">
+      <span class="pg">pg</span>
+      <span class="wm"><span class="l1"><span>planungsbüro</span>günther</span><span class="l2">Architekten &amp; Ingenieure</span></span>
+    </a>
+    <nav>
+      <a class="on" href="#">Home</a>
+      <div class="dd" id="dd-portfolio"><a href="#">Portfolio <i class="caret"></i></a><div class="menu"><ul>
+  <li class="on"><a href="#"><b>Aktuelle Projekte</b><span>5</span></a></li>
+  <li><a href="#"><b>Einfamilienhäuser</b><span>25</span></a></li>
+  <li><a href="#"><b>Mehrfamilienhäuser</b><span>14</span></a></li>
+  <li><a href="#"><b>Gewerbe &amp; Sonstige Bauwerke</b><span>10</span></a></li>
+  <li><a href="#"><b>Projektentwicklungen</b><span>5</span></a></li>
+  <li><a href="#"><b>Videos</b><span>7</span></a></li></ul>
+  <figure><img src="../assets/video/film-soehrewald.webp" alt=""><figcaption>Söhrewald · in Planung</figcaption></figure></div></div>
+      <a href="#">Leistungen</a>
+      <div class="dd"><a href="#">Team <i class="caret"></i></a></div>
+      <a href="#">Karriere</a>
+      <a class="kontakt" href="#">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-img"><img src="../assets/video/film-hochhaus-kassel.webp" alt=""></div>
+  <div class="hero-meta"><span>Teilsanierung Hochhaus, Kassel · Projektsteuerung</span><span class="lab">Film</span><span class="play"><i></i></span></div>
+  <div class="hero-block">
+    <h1>Wir planen Einfamilienhäuser, Wohnanlagen und Gewerbebauten <span>– vom ersten Entwurf bis zur Schlüsselübergabe.</span></h1>
+  </div>
+  <div class="wrap">
+    <div class="hero-foot">
+      <p>Architekten und Ingenieure in Kassel, seit 2010. Alle Leistungsphasen der HOAI aus einer Hand, dazu Projektentwicklung, Projektsteuerung und Visualisierung.</p>
+      <div class="acts"><a class="btn btn--white" href="#">Portfolio ansehen <span class="ar"></span></a><a class="btn" href="#">Projekt besprechen</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no"><b>01</b>Portfolio</span><h2>59 Projekte <span>aus 23 Jahren, nach Bauaufgabe geordnet.</span></h2><a href="#">Gesamtes Portfolio</a></div>
+    <div class="index">
+      <ol>
+        <li class="on"><a href="#"><small>01</small>Aktuelle Projekte<em>5</em><span class="ar"></span></a></li>
+        <li><a href="#"><small>02</small>Einfamilienhäuser<em>25</em><span class="ar"></span></a></li>
+        <li><a href="#"><small>03</small>Mehrfamilienhäuser<em>14</em><span class="ar"></span></a></li>
+        <li><a href="#"><small>04</small>Gewerbe &amp; Sonstige Bauwerke<em>10</em><span class="ar"></span></a></li>
+        <li><a href="#"><small>05</small>Projektentwicklungen<em>5</em><span class="ar"></span></a></li>
+        <li><a href="#"><small>06</small>Videos<em>7</em><span class="ar"></span></a></li>
+      </ol>
+      <figure><img src="../assets/video/film-soehrewald.webp" alt=""><figcaption><b>Wohnanlage Söhrewald</b>27 WE, Kindertagesstätte, Tagespflege · in Planung</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no"><b>02</b>Ablauf</span><h2>In fünf Schritten <span>zu Ihrem Haus.</span></h2><a href="#">Leistungen im Detail</a></div>
+    <div class="steps-intro"><p>Vom ersten Gespräch bis zur Abnahme begleitet Sie ein fester Ansprechpartner. Jeder Schritt entspricht einer oder mehreren Leistungsphasen der HOAI.</p></div>
+    <div class="step-list">
+      <article class="step on"><div class="bar"></div><span class="n">1</span>
+        <figure><img class="portrait" src="../assets/img/site/carsten-guenther.webp" alt=""></figure>
+        <h3>Kennenlernen &amp; Beratung</h3><p>Wünsche, Grundstück und Budget – wir klären, was möglich ist.</p><span class="lph">LPH 1 · Grundlagenermittlung</span></article>
+      <article class="step"><div class="bar"></div><span class="n">2</span>
+        <figure><img class="crop" src="../assets/video/film-pultdachhaus.webp" alt=""></figure>
+        <h3>Entwurf &amp; Visualisierung</h3><p>Skizzen, Varianten, 3D-Modell – Ihr Haus, bevor gebaut wird.</p><span class="lph">LPH 2–3 · Vor- und Entwurfsplanung</span></article>
+      <article class="step"><div class="bar"></div><span class="n">3</span>
+        <figure><div class="ph"><div><svg viewBox="0 0 100 70" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="96" height="66"/><path d="M14 56V22h30v34M44 34h30v22M14 56h74"/></svg>Platzhalter · Pläne</div></div></figure>
+        <h3>Bauantrag &amp; Genehmigung</h3><p>Vollständige Unterlagen und Abstimmung mit dem Bauamt.</p><span class="lph">LPH 4 · Genehmigungsplanung</span></article>
+      <article class="step"><div class="bar"></div><span class="n">4</span>
+        <figure><img src="../assets/img/p/neubau-eines-einfamilienhauses-muenchen-1-s.webp" alt=""></figure>
+        <h3>Ausführung &amp; Vergabe</h3><p>Werkpläne, Ausschreibung, Prüfung der Angebote.</p><span class="lph">LPH 5–7 · Ausführung, Vergabe</span></article>
+      <article class="step"><div class="bar"></div><span class="n">5</span>
+        <figure><img class="crop" src="../assets/video/film-satteldachhaus.webp" alt=""></figure>
+        <h3>Bau &amp; Übergabe</h3><p>Bauüberwachung bis zur Abnahme und Schlüsselübergabe.</p><span class="lph">LPH 8–9 · Objektüberwachung</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no"><b>03</b>Aktuelle Projekte</span><h2>Neubau eines Wohnhauses <span>mit 25 Wohneinheiten, Kassel.</span></h2><a href="#">Alle aktuellen Projekte</a></div>
+    <div class="current">
+      <figure><img src="../assets/video/film-kassel-25we.webp" alt=""></figure>
+      <div>
+        <h3>25 Wohneinheiten in Kassel – Planung von der Grundlagenermittlung bis zur Ausführungsplanung.</h3>
+        <p>Platzhaltertext: Kurzbeschreibung des Projekts aus dem bestehenden Portfolio, zwei bis drei Sätze zu Lage, Konzept und Stand.</p>
+        <dl class="facts"><dt>Ort</dt><dd>Kassel</dd><dt>Status</dt><dd>geplant · 2026</dd><dt>Leistung</dt><dd>LPH 1–5</dd><dt>Bauvolumen</dt><dd>ca. 5 Mio. €</dd></dl>
+        <div class="more">
+          <a href="#"><img src="../assets/img/p/neubau-des-deutschen-zentrums-fuer-luft-und-raumfahrt-dlr-go-1-s.webp" alt=""><span>DLR, Göttingen</span></a>
+          <a href="#"><img src="../assets/video/film-kita-kassel.webp" alt=""><span>Wohn- und Geschäftshaus mit Kita, Kassel</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-top">
+    <div><a class="logo" href="#"><span class="pg">pg</span><span class="wm"><span class="l1"><span>planungsbüro</span>günther</span><span class="l2">Architekten &amp; Ingenieure</span></span></a></div>
+    <div><h4>Büro</h4><p class="big">Friedrich-Ebert-Straße 1<br>34117 Kassel</p></div>
+    <div><h4>Kontakt</h4><p class="big">+49 (0) 561 920 01877<br>buero@planungsbuero-guenther.de</p><p>Mo–Fr 09:00–17:00</p></div>
+    <div><h4>Portfolio</h4><ul><li>Aktuelle Projekte</li><li>Einfamilienhäuser</li><li>Mehrfamilienhäuser</li><li>Gewerbe &amp; Sonstige Bauwerke</li><li>Projektentwicklungen</li><li>Videos</li></ul></div>
+  </div>
+  <div class="f-bot"><div class="wrap"><span>© 2026 Planungsbüro Günther</span><div><a href="#">Impressum</a><a href="#">Datenschutzerklärung</a></div></div></div>
+</footer>
+</body>
+</html>
