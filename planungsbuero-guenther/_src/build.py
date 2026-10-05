@@ -226,9 +226,9 @@ STEPS = [
     ("bauantrag &amp; genehmigung", "Alle Unterlagen, alle Abstimmungen mit dem Bauamt.", "LPH 4", "Genehmigungsplanung",
      ("bild", "schritt-3", "Grundriss 1. Obergeschoss der Wohnanlage Söhrewald", "Pläne / Bauantrag"), "Grundriss 1. OG · Wohnanlage Söhrewald"),
     ("ausführung &amp; vergabe", "Werkpläne, Ausschreibung, geprüfte Angebote.", "LPH 5–7", "Ausführung, Vergabe",
-     ("img", projektbild("Sanierung und Aufstockung eines Einfamilienhauses", "Kassel"), "Sanierung und Aufstockung eines Einfamilienhauses in Kassel"), "Sanierung und Aufstockung · Kassel"),
+     ("img", projektbild("Neubau eines modernen Einfamilienhauses", "Kassel"), "Modernes Einfamilienhaus in Kassel"), "Modernes Einfamilienhaus · Kassel"),
     ("bau &amp; übergabe", "Bauüberwachung bis zur Schlüsselübergabe.", "LPH 8–9", "Objektüberwachung",
-     ("img", projektbild("Neubau von zwei Mehrfamilienhäusern (30 WE)", "Kaufungen"), "Zwei Mehrfamilienhäuser mit 30 WE in Kaufungen"), "30 Wohneinheiten · Kaufungen"),
+     ("img", projektbild("Umbau und Sanierung einer ehemaligen Kaserne zu einer Wohnanlage (51 WE)", "Kassel"), "Umbau einer ehemaligen Kaserne zur Wohnanlage mit 51 WE in Kassel"), "Ehemalige Kaserne, 51 WE · Kassel"),
 ]
 
 
