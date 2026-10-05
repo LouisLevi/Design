@@ -16,7 +16,7 @@ Die Adressen entsprechen der bisherigen Website, damit Links und Google-Treffer 
 | Adresse | Inhalt |
 | --- | --- |
 | `/` | Start: Logo-Schriftzug, Bauaufgaben als Bildleiste, 5 Schritte zum Haus, Filme |
-| `/portfolio/` | Werkverzeichnis aller 59 Projekte mit Filter |
+| `/portfolio/` | Werkverzeichnis aller 60 Projekte mit Filter |
 | `/aktuelle-projekte/`, `/einfamilienhäuser/`, `/mehrfamilienhäuser/`, `/gewerbe-sonstige-bauwerke/`, `/projektentwicklungen/` | Projekte je Bauaufgabe; Klick öffnet Bilder, Film und Eckdaten |
 | `/videos/` | alle 7 Filme |
 | `/leistungen/` | sechs Leistungsfelder, Leistungsphasen der HOAI |
@@ -49,8 +49,8 @@ Diese Dateien werden automatisch eingebunden, sobald sie vorhanden sind (dann ne
 | Datei | Wofür |
 | --- | --- |
 | `assets/img/site/logo.svg` | Original-Logo, helle Fassung für dunklen Hintergrund (ersetzt den Nachbau) |
-| `assets/img/site/schritt-1.webp` | Schritt 1 „Kennenlernen & Beratung“, Querformat, ca. 1600 × 1000 px |
-| `assets/img/site/schritt-3.webp` | Schritt 3 „Bauantrag & Genehmigung“, Querformat, ca. 1600 × 1000 px |
+| `assets/img/site/schritt-1.webp` | Schritt 1 „Kennenlernen & Beratung“ (vorhanden: Porträt Carsten Günther) |
+| `assets/img/site/schritt-3.webp` | Schritt 3 „Bauantrag & Genehmigung“ (vorhanden: Grundriss 1. OG Wohnanlage Söhrewald) |
 
 Fotos umwandeln (ImageMagick):
 
@@ -64,6 +64,10 @@ convert foto.jpg -resize 760x  -quality 80 assets/img/p/<name>-s.webp
 Neue Projektbilder in `_src/projekte.json` beim Projekt unter `img` eintragen: `["<name>", Breite, Höhe]`.
 
 ## Projekte pflegen
+
+Die Projektdaten und Projektbilder wurden 1:1 von der bisherigen Website übernommen
+(`_src/import_original.py`): Auf jeder Bauaufgaben-Seite stehen Galerie und Projekttext in derselben
+Zeile; daraus ergibt sich die Zuordnung. Jedes Projekt speichert unter `quelle` die Wix-Medien-IDs seiner Bilder.
 
 Ein Eintrag in `_src/projekte.json`:
 
@@ -107,7 +111,7 @@ Jede Änderung, die auf den Branch gepusht wird, ist danach automatisch online.
 
 ## Vor dem Livegang
 
-1. Bilder für Schritt 1 und 3 sowie Original-Logo einsetzen (siehe oben).
+1. Original-Logo einsetzen (siehe oben).
 2. Impressum prüfen: Inhalte stammen von der bisherigen Seite; Rechtsgrundlage auf DDG aktualisiert, Hinweis auf die
    abgeschaltete EU-Streitschlichtungsplattform entfernt, Anschrift der Architektenkammer ergänzt.
 3. Auftragsverarbeitungsvertrag mit Netlify abschließen (siehe oben).

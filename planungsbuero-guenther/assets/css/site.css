@@ -295,7 +295,7 @@ body.locked { overflow: hidden; }
 /* ---------- Team & Vita ---------- */
 .founder { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; border-top: 1px solid var(--rule-strong); padding-top: 6px; }
 .founder figure { grid-column: 1 / span 4; margin: 0; position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--panel); }
-.founder figure img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; filter: grayscale(1) brightness(.8) contrast(1.1); }
+.founder figure img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
 .founder figure .label { position: absolute; left: 0; bottom: 0; }
 .founder .ftxt { grid-column: 6 / span 7; padding-top: 40px; display: flex; flex-direction: column; }
 .founder .ftxt small { color: var(--grey); font-size: 13px; }
@@ -344,7 +344,7 @@ body.locked { overflow: hidden; }
 .contact .blocks h3 { margin: 0 0 8px; font-size: 12px; font-weight: 400; color: var(--grey-2); letter-spacing: .08em; }
 .contact .blocks p { margin: 0; font-size: 15px; line-height: 1.7; }
 .contact .person { margin-top: 48px; display: flex; gap: 18px; align-items: center; padding-top: 24px; border-top: 1px solid var(--rule); }
-.contact .person img { width: 72px; height: 72px; object-fit: cover; object-position: 50% 15%; filter: grayscale(1); }
+.contact .person img { width: 72px; height: 72px; object-fit: cover; object-position: 50% 10%; }
 .contact .person small { display: block; color: var(--grey); font-size: 13px; }
 .contact form { grid-column: 7 / span 6; padding: 36px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; align-content: start; }
 .field { display: flex; flex-direction: column; gap: 8px; }
