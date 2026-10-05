@@ -109,3 +109,13 @@ img { display: block; }
 .contact a { color: var(--ink); text-decoration: none; font-feature-settings: "tnum"; }
 .overview td, .overview th { padding-right: 3.5mm; }
 .overview td:last-child, .overview th:last-child { padding-right: 0; }
+
+/* Seite 3: Ausstattung */
+.p3-image { position: absolute; top: 0; right: 0; width: 101mm; height: 120mm; object-fit: cover; }
+.p3-caption { position: absolute; top: 122.5mm; left: 109mm; right: 18mm; }
+.feat { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: var(--gut); }
+.feat-item { display: grid; grid-template-columns: 12mm 1fr; border-top: 0.5pt solid var(--rule); padding: 3.2mm 0 3.6mm; }
+.feat-item:nth-child(-n+2) { border-top: 0.75pt solid var(--ink); }
+.feat-item .no { font-family: "NR Display", serif; font-weight: 300; font-size: 17pt; line-height: 17pt; color: var(--accent); font-feature-settings: "lnum", "tnum"; }
+.feat-item p { font-family: "NR Text", serif; font-weight: 350; font-size: 10.5pt; line-height: 14.5pt; margin-top: 1.4mm; color: var(--ink); max-width: 64mm; }
+.spec-house { grid-template-columns: 34mm 1fr; }

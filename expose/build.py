@@ -66,7 +66,7 @@ UNITS = [
         "rooms": [("Wohnen, Kochen, Essen", "43,19"), ("Schlafen", "13,52"), ("Bad", "4,15"), ("Flur", "2,69"),
                   ("Abstellraum", "1,49"), ("Terrasse", "6,13")],
         "split": "Wohnen/Kochen/Essen, Schlafen, Bad, Flur, Abstellraum",
-        "room_caption": "Küche, Essplatz und Wohnbereich",
+        "room_caption": "Wohnbereich mit Essplatz und Küche",
         "plans": ["w2"], "luft_h": 118,
     },
     {
@@ -96,7 +96,7 @@ UNITS = [
         ],
         "rooms": [("Wohnen, Kochen, Essen", "33,33"), ("Schlafen", "12,20"), ("Bad", "3,47")],
         "split": "Wohnen/Kochen/Essen, Schlafen, Bad",
-        "room_caption": "Wohnbereich mit Küche",
+        "room_caption": "Küche, Essplatz und Wohnbereich",
         "plans": ["w4"], "luft_h": 125,
     },
     {
@@ -249,38 +249,34 @@ def build():
         'in der Wohnfläche enthalten. Kaltmieten zuzüglich Nebenkosten.</p>'))
 
     # 3 — Ausstattung
-    d.add("", content=(
-        '<div class="kicker" style="grid-column:1/13">Ausstattung</div>'
-        '<h1 class="display" style="grid-column:1/7;margin-top:6mm">In jeder<br>Wohnung</h1>'
-        '<p class="lead" style="grid-column:7/13;margin-top:9mm">Neue Einbauküche, Bad mit bodengleicher '
-        'Dusche und Fußbodenheizung in allen Räumen.</p>'
-        '<p class="body" style="grid-column:1/6;margin-top:14mm">Die Haustechnik ist auf den Alltag ausgelegt: '
+    feats = [('Küche', 'Neue Einbauküche mit Backofen, Cerankochfeld, großem Kühlschrank, Geschirrspülmaschine und Abzugshaube'), ('Bad', 'Bodengleiche Dusche'), ('Heizung', 'Fußbodenheizung in allen Räumen, Wohnungsstation'), ('Fenster', 'Dreifachverglasung, elektrische Rollläden, außenliegende Jalousien'), ('Netz', 'Glasfaser-Internet, WLAN in jedem Raum'), ('Elektro', 'Zeitgemäße Unterverteilung, überdurchschnittlich viele Steckdosen')]
+    feat_html = "".join(
+        f'<div class="feat-item"><span class="no">{i:02d}</span><div><div class="kicker">{k}</div>'
+        f'<p>{t}</p></div></div>' for i, (k, t) in enumerate(feats, 1))
+    house = [("Zugang", "Video-Klingelanlage, Treppenhaus mit Tageslicht"),
+             ("Keller", f"Eigener Kellerraum je Wohnung, ca. 5–10{NB}m²"),
+             ("Waschen", "Gemeinschaftliche Waschküche, Möglichkeit zur Wäschetrocknung"),
+             ("Garten", "Garten mit Grillplatz zur Mitbenutzung"),
+             ("Stellplätze", "Nach Absprache")]
+    house_html = "".join(f"<dt>{k}</dt><dd>{t}</dd>" for k, t in house)
+    d.add(
+        '<img src="assets/img/detail-kueche.jpg" alt="" class="p3-image">'
+        '<p class="caption p3-caption"><b>Wohnung 1, Küche.</b> Visualisierung – Einrichtung beispielhaft</p>',
+        content=(
+        '<div style="grid-column:1/6">'
+        '<div class="kicker">Ausstattung</div>'
+        '<h1 class="display" style="font-size:44pt;line-height:46pt;margin-top:14mm">In jeder<br>Wohnung</h1>'
+        '<p class="lead" style="margin-top:9mm">Neue Einbauküche, Bad mit bodengleicher Dusche und '
+        'Fußbodenheizung in allen Räumen.</p>'
+        '<p class="body" style="margin-top:6mm">Die Haustechnik ist auf den Alltag ausgelegt: '
         'dreifach verglaste Fenster mit elektrischen Rollläden und außenliegenden Jalousien, '
-        'Glasfaser-Internet und WLAN in jedem Raum.</p>'
-        '<div style="grid-column:7/13;margin-top:14mm">'
-        '<dl class="spec">'
-        '<dt>Küche</dt><dd>Neue Einbauküche mit Backofen, Cerankochfeld, großem Kühlschrank, '
-        'Geschirrspülmaschine und Abzugshaube</dd>'
-        '<dt>Bad</dt><dd>Bodengleiche Dusche</dd>'
-        '<dt>Heizung</dt><dd>Fußbodenheizung in allen Räumen, Wohnungsstation</dd>'
-        '<dt>Fenster</dt><dd>Dreifachverglasung, elektrische Rollläden, außenliegende Jalousien</dd>'
-        '<dt>Netz</dt><dd>Glasfaser-Internet, WLAN in jedem Raum</dd>'
-        '<dt>Elektro</dt><dd>Zeitgemäße Unterverteilung, überdurchschnittlich viele Steckdosen</dd>'
-        '</dl></div>'),
+        'Glasfaser-Internet und WLAN in jedem Raum.</p></div>'),
         bottom=(
-        '<div style="grid-column:1/6;align-self:end">'
-        '<img src="assets/img/detail-kueche.jpg" alt="" style="width:100%;aspect-ratio:4/5;object-fit:cover">'
-        '<p class="caption" style="margin-top:2.5mm"><b>Wohnung 1, Küche.</b> Visualisierung – Einrichtung beispielhaft</p>'
-        '</div>'
-        '<div style="grid-column:7/13;align-self:end">'
-        '<h2 class="h2" style="margin-bottom:4mm">Im Haus</h2>'
-        '<dl class="spec">'
-        '<dt>Zugang</dt><dd>Video-Klingelanlage, Treppenhaus mit Tageslicht</dd>'
-        f'<dt>Keller</dt><dd>Eigener Kellerraum je Wohnung, ca. 5–10{NB}m²</dd>'
-        '<dt>Waschen</dt><dd>Gemeinschaftliche Waschküche, Möglichkeit zur Wäschetrocknung</dd>'
-        '<dt>Garten</dt><dd>Garten mit Grillplatz zur Mitbenutzung</dd>'
-        '<dt>Stellplätze</dt><dd>Nach Absprache</dd>'
-        '</dl><p class="caption" style="margin-top:2.5mm">&nbsp;</p></div>'))
+        '<div class="kicker" style="grid-column:1/13;margin-bottom:3mm">Wohnung</div>'
+        f'<div class="feat" style="grid-column:1/13">{feat_html}</div>'
+        '<div class="kicker" style="grid-column:1/13;margin:8mm 0 3mm">Im Haus</div>'
+        f'<dl class="spec spec-house" style="grid-column:1/13">{house_html}</dl>'),
+        bottom_style="align-items:start")
 
     # 4 — Energie und Lage
     d.add(
