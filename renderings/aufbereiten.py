@@ -11,6 +11,7 @@ Schritte:
   laufen weich aus statt auszubrennen.
 - Alle: dezente Mikrokontraste, etwas Lebendigkeit, Hochskalieren mit FSRCNN (×2,
   OpenCV dnn_superres), auf 1920×1080 verkleinern, leicht nachschärfen.
+- Weiche Quellbilder (STRONG_SR): zusätzlich Real-ESRGAN ×4 (esrgan.py), 85 % gemischt.
 - Luftansichten: Hintergrund auf sauberes Reinweiß (ohne JPEG-Rauschen).
 
 Braucht: pip install opencv-contrib-python-headless numpy pillow
@@ -29,6 +30,11 @@ MODEL = Path.home() / ".cache" / "sr" / "FSRCNN_x2.pb"
 MODEL_URL = "https://raw.githubusercontent.com/Saafke/FSRCNN_Tensorflow/master/models/FSRCNN_x2.pb"
 
 SIZE = (1920, 1080)
+# Quellbilder, die deutlich weicher sind als der Rest der Serie: zusätzlich mit Real-ESRGAN
+# hochrechnen (esrgan.py, braucht torch) und mit der FSRCNN-Fassung mischen, damit Stoffe
+# und Teppiche ihre natürliche Struktur behalten.
+STRONG_SR = {"wohnung 2 innenansicht", "wohnung 4 innenansicht"}
+STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
 WB_STRENGTH = 0.9                     # Anteil der Farbstich-Korrektur
 MEDIAN_L = {"innen": 0.57, "luft": None}
@@ -98,8 +104,11 @@ def upscale(img8):
     sr = cv2.dnn_superres.DnnSuperResImpl_create()
     sr.readModel(str(MODEL))
     sr.setModel("fsrcnn", 2)
-    big = sr.upsample(img8)
-    # auf Breite 1920 verkleinern, dann mittig auf 1080 Höhe zuschneiden
+    return fit(sr.upsample(img8))
+
+
+def fit(big):
+    """Auf Breite 1920 verkleinern, dann mittig auf 1080 Höhe zuschneiden."""
     h = round(big.shape[0] * SIZE[0] / big.shape[1])
     small = cv2.resize(big, (SIZE[0], h), interpolation=cv2.INTER_AREA)
     top = (h - SIZE[1]) // 2
@@ -135,7 +144,12 @@ def main():
         img = white_balance(img, keep_white=kind == "luft")
         img = tone(img, MEDIAN_L[kind])
         img8 = (img * 255 + 0.5).astype(np.uint8)
-        img8 = sharpen(upscale(img8))
+        base = sharpen(upscale(img8))
+        if p.stem.lower() in STRONG_SR:
+            import esrgan  # erst hier laden: torch wird nur für diese Bilder gebraucht
+            strong = fit(esrgan.upscale_x4(img8))
+            base = cv2.addWeighted(strong, STRONG_SR_MIX, base, 1 - STRONG_SR_MIX, 0)
+        img8 = base
         if kind == "luft":
             img8 = clean_background(img8)
         # einheitliche Dateinamen: "Wohnung 6 innenansicht" → "Wohnung 6 Innenansicht"
