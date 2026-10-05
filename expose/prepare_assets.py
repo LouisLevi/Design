@@ -12,6 +12,8 @@ import json
 import sys
 from pathlib import Path
 
+import cv2
+import numpy as np
 import pymupdf
 from PIL import Image
 
@@ -139,9 +141,68 @@ def prepare_renderings():
     print("Renderings vorbereitet")
 
 
+# ---------- Dunkle Variante ----------
+DARK_PAPER = (0x16, 0x15, 0x13)  # RGB, wie --paper in .dark
+DARK_LINE = (0xD9, 0xD2, 0xC7)   # Linienfarbe der Grundrisse
+
+
+def alpha_mask(src, size=(1920, 1080), thr=249, eps=3.0, inset=1.5):
+    """Umriss des Modells als weiche Alpha-Maske (Polygon, damit die Kanten gerade bleiben)."""
+    nw = (src.min(axis=2) >= thr).astype(np.uint8)
+    nw = cv2.medianBlur(nw * 255, 5) // 255
+    cnt, lab = cv2.connectedComponents(nw, connectivity=4)
+    border = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    fg = (~np.isin(lab, border[border > 0])).astype(np.uint8)
+    fg = cv2.morphologyEx(fg, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    contours, _ = cv2.findContours(fg, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    c = max(contours, key=cv2.contourArea)
+    poly = cv2.approxPolyDP(c, eps, True).astype(np.float32)
+    s = size[0] / src.shape[1]
+    hi = np.zeros((round(src.shape[0] * s), size[0]), np.uint8)
+    cv2.fillPoly(hi, [np.round((poly + 0.5) * s * 16).astype(np.int32)], 255, lineType=cv2.LINE_AA, shift=4)
+    hi = hi[:size[1]].astype(np.float32) / 255
+    if inset:
+        k = int(round(inset * 2)) | 1
+        hi = cv2.erode(hi, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+    return cv2.GaussianBlur(hi, (0, 0), 0.6)
+
+
+def prepare_dark():
+    """Luftansichten freigestellt auf dunklem Papier und Grundrisse hell auf dunkel."""
+    out_img = ASSETS / "img" / "dark"
+    out_plan = ASSETS / "plans" / "dark"
+    out_img.mkdir(parents=True, exist_ok=True)
+    out_plan.mkdir(parents=True, exist_ok=True)
+    src_dir = RENDER.parent.parent / "auswahl"
+    for n in range(1, 7):
+        src_path = next((p for p in src_dir.iterdir() if p.stem.lower() == f"wohnung {n} luftansicht"), None)
+        if src_path is None:
+            continue
+        src = cv2.imread(str(src_path))
+        rgb = cv2.cvtColor(cv2.imread(str(RENDER / f"Wohnung {n} Luftansicht.jpg")), cv2.COLOR_BGR2RGB)
+        a = alpha_mask(src, size=(rgb.shape[1], rgb.shape[0]))
+        ys, xs = np.where(a > 0.02)
+        pad = 12
+        t, b = max(ys.min() - pad, 0), min(ys.max() + pad, rgb.shape[0])
+        l, r = max(xs.min() - pad, 0), min(xs.max() + pad, rgb.shape[1])
+        # direkt auf die Papierfarbe rechnen: Seite ist einfarbig, JPEG hält das PDF klein
+        al = a[..., None]
+        comp = rgb.astype(np.float32) * al + np.array(DARK_PAPER, np.float32) * (1 - al)
+        Image.fromarray((comp + 0.5).astype(np.uint8)[t:b, l:r]).save(
+            out_img / f"w{n}-luft.jpg", quality=93, subsampling=0)
+    paper = np.array(DARK_PAPER, np.float32)
+    line = np.array(DARK_LINE, np.float32)
+    for png in sorted((ASSETS / "plans").glob("*.png")):
+        g = np.asarray(Image.open(png).convert("L"), np.float32)[..., None] / 255
+        rgb = paper * g + line * (1 - g)
+        Image.fromarray((rgb + 0.5).astype(np.uint8), "RGB").save(out_plan / png.name, optimize=True)
+    print("Dunkle Variante vorbereitet")
+
+
 if __name__ == "__main__":
     pdf = sys.argv[1]
     (ASSETS / "img").mkdir(parents=True, exist_ok=True)
     export_cover(pdf)
     export_plans(pdf)
     prepare_renderings()
+    prepare_dark()

@@ -8,9 +8,10 @@ try { ({ chromium } = require("playwright")); } catch { ({ chromium } = require(
   if (process.env.PLAYWRIGHT_BROWSERS_PATH === "/opt/pw-browsers") launch.executablePath = "/opt/pw-browsers/chromium";
   const browser = await chromium.launch(launch);
   const page = await browser.newPage();
-  await page.goto("file://" + path.join(__dirname, "expose.html"), { waitUntil: "networkidle" });
+  const [html = "expose.html", pdf = "Expose_Altenbaunaer_Strasse_26.pdf"] = process.argv.slice(2);
+  await page.goto("file://" + path.join(__dirname, html), { waitUntil: "networkidle" });
   await page.evaluate(() => document.fonts.ready);
-  const out = path.join(__dirname, "Expose_Altenbaunaer_Strasse_26.pdf");
+  const out = path.join(__dirname, pdf);
   await page.pdf({ path: out, preferCSSPageSize: true, printBackground: true });
   await browser.close();
   console.log(out);
