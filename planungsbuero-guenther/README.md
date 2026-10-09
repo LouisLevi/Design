@@ -54,3 +54,14 @@ Alle Projekte stehen in `assets/js/projects.js` (ein Eintrag pro Projekt):
 3. **Bildzuordnung prüfen** bei: Neubau 3-Familienhaus Vellmar, Neubau 4-Familienhaus mit Büroeinheit Butzbach, Erweiterung Bürogebäude Kassel, Fitnesscenter Kassel, Doppelhaushälften Kassel, Wohnanlage mit Shopping-Mall Österreich (auf der alten Seite nicht eindeutig zugeordnet).
 4. Auf der alten Seite war das Projekt Habichtswald/Ehlen doppelt gelistet; es ist jetzt ein Eintrag („Habichtswald-Ehlen“).
 5. Neu formulierte Texte freigeben lassen: Hero-Claim, Abschnitt „Digitaler Workflow“, Stichpunkte in den Leistungen, Beschreibungen der HOAI-Phasen.
+
+## Nach dem Livegang: IONOS-Kosten senken
+
+Bei IONOS werden monatlich 65,40 € für „Webhosting Pro“ abgebucht (Stand Oktober 2026). Die Website lief nie dort (vorher Wix, jetzt Hetzner), der Vertrag trägt aber die **Domain** planungsbuero-guenther.de und die **E-Mail-Postfächer** (MX: mx00/mx01.ionos.de). Deshalb **nicht einfach kündigen**.
+
+Vorgehen, sobald die neue Seite stabil mit HTTPS läuft:
+1. IONOS „Verträge & Abos“ prüfen: Inhalt von Webhosting Pro (Domains, Postfächer, Speicher), weitere Verträge, Laufzeit und Kündigungsfrist.
+2. Entscheiden:
+   - A) Bei IONOS auf einen reinen Domain- und E-Mail-Tarif wechseln (meist unter 10 €/Monat).
+   - B) Domain und Postfächer zu Hetzner umziehen (Webhosting S enthält E-Mail, .de-Domain wenige €/Jahr). Postfach-Umzug sorgfältig planen, damit keine Mail verloren geht.
+3. Danach das Wix-Abo kündigen.
