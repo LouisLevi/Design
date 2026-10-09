@@ -49,9 +49,8 @@ Alle Projekte stehen in `assets/js/projects.js` (ein Eintrag pro Projekt):
 
 ## Vor dem Livegang zu klären
 
-1. **Impressum:** Mitgliedsnummer der Architektenkammer, USt-IdNr., Berufshaftpflichtversicherung (Platzhalter sind markiert).
-2. **Datenschutz:** Löschfrist der Server-Logfiles (im Hetzner-Kundenmenü nachsehen), Datum „Stand“. Hoster (Hetzner) ist eingetragen.
-3. **Bildrechte** für Fotos, Visualisierungen und Filme bestätigen (inkl. Drohnenaufnahme Hochhaus).
-4. **Bildzuordnung prüfen** bei: Neubau 3-Familienhaus Vellmar, Neubau 4-Familienhaus mit Büroeinheit Butzbach, Erweiterung Bürogebäude Kassel, Fitnesscenter Kassel, Doppelhaushälften Kassel, Wohnanlage mit Shopping-Mall Österreich (auf der alten Seite nicht eindeutig zugeordnet).
-5. Auf der alten Seite war das Projekt Habichtswald/Ehlen doppelt gelistet; es ist jetzt ein Eintrag („Habichtswald-Ehlen“).
-6. Neu formulierte Texte freigeben lassen: Hero-Claim, Abschnitt „Digitaler Workflow“, Stichpunkte in den Leistungen, Beschreibungen der HOAI-Phasen.
+1. Impressum (Daten der alten Seite) und Datenschutz (Hetzner, Stand Oktober 2026) sind vollständig.
+2. **Bildrechte** für Fotos, Visualisierungen und Filme bestätigen (inkl. Drohnenaufnahme Hochhaus).
+3. **Bildzuordnung prüfen** bei: Neubau 3-Familienhaus Vellmar, Neubau 4-Familienhaus mit Büroeinheit Butzbach, Erweiterung Bürogebäude Kassel, Fitnesscenter Kassel, Doppelhaushälften Kassel, Wohnanlage mit Shopping-Mall Österreich (auf der alten Seite nicht eindeutig zugeordnet).
+4. Auf der alten Seite war das Projekt Habichtswald/Ehlen doppelt gelistet; es ist jetzt ein Eintrag („Habichtswald-Ehlen“).
+5. Neu formulierte Texte freigeben lassen: Hero-Claim, Abschnitt „Digitaler Workflow“, Stichpunkte in den Leistungen, Beschreibungen der HOAI-Phasen.
