@@ -33,6 +33,12 @@ Alle Projekte stehen in `assets/js/projects.js` (ein Eintrag pro Projekt):
 - `featured` (0–4) legt Reihenfolge der fünf Projekte auf der Startseite fest.
 - Kennzahlen auf der Startseite (Anzahl Referenzen, Bauvolumen) sind fest im HTML eingetragen und bei neuen Projekten anzupassen.
 
+## Hosting (Hetzner Webhosting S)
+
+- `.htaccess`: erzwingt HTTPS und www, leitet die alten Wix-Adressen (`/kontakt`, `/team`, `/einfamilienhäuser` …) per 301 auf die neuen Seiten um, setzt Cache- und Sicherheits-Header.
+- `404.html`, `sitemap.xml`, `robots.txt` liegen im Hauptverzeichnis.
+- Hochladen: alles in diesem Ordner außer `README.md` in das Web-Verzeichnis (`public_html`).
+
 ## Technik & Datenschutz
 
 - Schriften (Archivo, IBM Plex Sans/Mono, SIL Open Font License) sind lokal eingebunden – kein Abruf bei Google Fonts.
@@ -44,7 +50,7 @@ Alle Projekte stehen in `assets/js/projects.js` (ein Eintrag pro Projekt):
 ## Vor dem Livegang zu klären
 
 1. **Impressum:** Mitgliedsnummer der Architektenkammer, USt-IdNr., Berufshaftpflichtversicherung (Platzhalter sind markiert).
-2. **Datenschutz:** Hosting-Anbieter, Löschfrist der Server-Logfiles, Datum „Stand“.
+2. **Datenschutz:** Löschfrist der Server-Logfiles (im Hetzner-Kundenmenü nachsehen), Datum „Stand“. Hoster (Hetzner) ist eingetragen.
 3. **Bildrechte** für Fotos, Visualisierungen und Filme bestätigen (inkl. Drohnenaufnahme Hochhaus).
 4. **Bildzuordnung prüfen** bei: Neubau 3-Familienhaus Vellmar, Neubau 4-Familienhaus mit Büroeinheit Butzbach, Erweiterung Bürogebäude Kassel, Fitnesscenter Kassel, Doppelhaushälften Kassel, Wohnanlage mit Shopping-Mall Österreich (auf der alten Seite nicht eindeutig zugeordnet).
 5. Auf der alten Seite war das Projekt Habichtswald/Ehlen doppelt gelistet; es ist jetzt ein Eintrag („Habichtswald-Ehlen“).
