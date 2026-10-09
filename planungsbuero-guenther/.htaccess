@@ -1,0 +1,66 @@
+# Planungsbüro Günther – Webserver-Einstellungen (Apache, Hetzner Webhosting)
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+DirectorySlash On
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Arbeitsdateien nie ausliefern
+  RewriteRule ^(_src|entwurf)(/|$) - [R=404,L]
+  RewriteRule ^(README\.md|netlify\.toml)$ - [R=404,L]
+
+  # Immer HTTPS und immer mit www (Let's-Encrypt-Prüfpfad ausgenommen)
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+  RewriteRule ^ https://www.%1%{REQUEST_URI} [R=301,L,NE]
+
+  # Ordner ohne Schrägstrich (alte Wix-Adressen wie /kontakt) direkt auf https mit Schrägstrich
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.+[^/])$ https://%{HTTP_HOST}/$1/ [R=301,L,NE]
+
+  # Umlaut-Ordner: falls der FTP-Upload (macOS) die Ordnernamen in zerlegter Unicode-Form angelegt hat
+  RewriteCond %{DOCUMENT_ROOT}/einfamilienhäuser !-d
+  RewriteRule ^einfamilienhäuser(/.*)?$ einfamilienhäuser$1 [L]
+  RewriteCond %{DOCUMENT_ROOT}/mehrfamilienhäuser !-d
+  RewriteRule ^mehrfamilienhäuser(/.*)?$ mehrfamilienhäuser$1 [L]
+</IfModule>
+
+# Dateitypen
+AddType image/webp .webp
+AddType video/mp4 .mp4
+AddType font/woff2 .woff2
+
+# Sicherheit
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+</IfModule>
+
+# Komprimierung
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml text/plain
+</IfModule>
+
+# Browser-Cache: Bilder/Filme 30 Tage, Schriften 1 Jahr, CSS/JS 1 Stunde, HTML immer frisch
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/javascript "access plus 1 hour"
+</IfModule>

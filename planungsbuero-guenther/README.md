@@ -116,3 +116,19 @@ Jede Änderung, die auf den Branch gepusht wird, ist danach automatisch online.
    abgeschaltete EU-Streitschlichtungsplattform entfernt, Anschrift der Architektenkammer ergänzt.
 3. Auftragsverarbeitungsvertrag mit Netlify abschließen (siehe oben).
 4. Formulardienst anbinden (optional, z. B. Netlify Forms) und Datenschutzerklärung ergänzen.
+
+## Hosting: Hetzner Webhosting S (live seit 09.10.2026)
+
+- Adresse: https://www.planungsbuero-guenther.de · Server www787.your-server.de (IP 167.235.125.65), Web-Verzeichnis `public_html`.
+- Let's-Encrypt-Zertifikat für Domain mit und ohne www, Verlängerung automatisch (Prüfpfad `/.well-known/acme-challenge/` ist von der HTTPS-Umleitung ausgenommen).
+- DNS bei IONOS: A-Records `@` und `www` → 167.235.125.65. Alle Mail-Einträge (MX, SPF, DKIM, DMARC, autodiscover) bleiben bei IONOS.
+- `.htaccess`: HTTPS und www erzwingen, `/kontakt` → `/kontakt/`, `_src/` und `entwurf/` gesperrt, Cache- und Sicherheits-Header, Absicherung der Umlaut-Ordner gegen macOS-Unicode-Zerlegung beim FTP-Upload. `netlify.toml` wird auf Hetzner nicht verwendet.
+- Hochladen per FileZilla (FTP über TLS oder SFTP): alles aus diesem Ordner **außer** `_src/`, `entwurf/` und `README.md` nach `public_html`.
+
+## Nach dem Livegang: IONOS-Kosten senken
+
+Bei IONOS werden monatlich 65,40 € für „Webhosting Pro“ abgebucht (Stand Oktober 2026). Die Website lief nie dort (vorher Wix, jetzt Hetzner), der Vertrag trägt aber die **Domain** und die **E-Mail-Postfächer** (MX: mx00/mx01.ionos.de). Deshalb **nicht einfach kündigen**.
+
+1. IONOS „Verträge & Abos“ prüfen: Inhalt von Webhosting Pro, weitere Verträge, Laufzeit und Kündigungsfrist.
+2. Entscheiden: A) bei IONOS auf reinen Domain- und E-Mail-Tarif wechseln (meist unter 10 €/Monat) oder B) Domain und Postfächer zu Hetzner umziehen (Postfach-Umzug sorgfältig planen).
+3. Danach das Wix-Abo kündigen.
