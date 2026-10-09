@@ -9,6 +9,8 @@ AddDefaultCharset utf-8
   RewriteEngine On
 
   # Immer HTTPS und immer mit www (vorher SSL-Zertifikat im Hetzner-Kundenmenü aktivieren!)
+  # Zertifikatsprüfung (Let's Encrypt) nicht umleiten
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/ [NC]
   RewriteCond %{HTTPS} !=on [OR]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
