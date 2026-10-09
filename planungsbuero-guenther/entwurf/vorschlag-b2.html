@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vorschlag B · Überarbeitung</title>
+<style>
+/* Inter = Schrift des Logos. Archivo (variabel, Breite 62–125 %) = Überschriften und Ziffern. */
+@font-face { font-family: "Inter"; src: url("fonts/inter-400.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-var.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+
+:root {
+  --black: #00020a;
+  --panel: #0a0c14;
+  --white: #ffffff;
+  --grey: #a3a5ab;
+  --grey-2: #6c6f77;
+  --rule: rgba(255,255,255,.12);
+  --rule-strong: rgba(255,255,255,.3);
+  --gut: clamp(16px, 3.2vw, 48px);
+}
+* { box-sizing: border-box; }
+html { background: var(--black); }
+body { margin: 0; background: var(--black); color: var(--white); font: 400 15px/1.6 "Inter", system-ui, sans-serif; font-feature-settings: "tnum" 1, "cv11" 1; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.wrap { padding: 0 var(--gut); }
+.label { display: inline-block; background: var(--white); color: var(--black); font-size: 11.5px; letter-spacing: .12em; line-height: 1; padding: 6px 8px; white-space: nowrap; }
+
+/* Überschriften: breite Archivo, kleingeschrieben wie das Logo – grauer, dünner Teil + weißer Teil */
+.disp { font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 250; letter-spacing: -.035em; line-height: .95; text-transform: lowercase; margin: 0; }
+.disp b { font-weight: 450; color: var(--white); }
+.disp span { color: var(--grey-2); }
+
+/* ---------- Kopf ---------- */
+.bar1 { display: flex; align-items: center; justify-content: space-between; height: 72px; border-bottom: 1px solid var(--rule); }
+.mini { display: flex; align-items: center; gap: 14px; }
+.mini .pg { width: 40px; height: 40px; background: var(--white); color: var(--black); display: grid; place-items: center; font-weight: 300; font-size: 28px; letter-spacing: -.045em; padding-bottom: 5px; }
+.mini span { font-size: 13px; color: var(--grey); }
+nav { display: flex; align-items: center; font-size: 14px; }
+nav a { padding: 8px 15px; color: var(--grey); }
+nav a.on { color: var(--white); }
+nav a.kontakt { margin-left: 12px; background: var(--white); color: var(--black); font-weight: 500; padding: 10px 18px; }
+.bar2 { display: flex; border-bottom: 1px solid var(--rule); font-size: 13px; }
+.bar2 a { flex: 1; white-space: nowrap; gap: 10px; display: flex; justify-content: space-between; padding: 13px 16px; border-left: 1px solid var(--rule); color: var(--grey); }
+.bar2 a:first-child { border-left: 0; padding-left: 0; flex: 0 0 auto; padding-right: 28px; color: var(--grey-2); }
+.bar2 a span { color: var(--grey-2); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 76px 0 0; }
+.word { margin: 0; font-weight: 300; font-size: clamp(44px, 10.4vw, 152px); letter-spacing: -.045em; line-height: .92; white-space: nowrap; }
+.word span { color: var(--grey); }
+.hero-sub { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 22px; }
+.hero-sub .left { display: flex; align-items: center; gap: 28px; }
+.hero-sub .label { font-size: clamp(12px, 1.2vw, 17px); padding: 8px 12px; letter-spacing: .16em; }
+.hero-sub p { margin: 0; color: var(--grey); font-size: 16px; }
+.btn { display: inline-flex; align-items: center; gap: 14px; height: 48px; padding: 0 20px; font-size: 14px; font-weight: 500; border: 1px solid var(--rule-strong); }
+.btn--white { background: var(--white); color: var(--black); border-color: var(--white); }
+.ar { width: 16px; height: 1px; background: currentColor; position: relative; display: inline-block; }
+.ar::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+
+/* Kontaktabzug: schmale Felder mit senkrechter Beschriftung */
+.strip { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr 1fr; gap: 6px; margin-top: 64px; height: 580px; }
+.strip a { position: relative; overflow: hidden; background: var(--panel); }
+.strip img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(.5); }
+.strip a.on img { filter: none; }
+.strip .v { position: absolute; left: 18px; bottom: 20px; writing-mode: vertical-rl; transform: rotate(180deg); font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 300; font-size: 25px; letter-spacing: -.02em; line-height: 1; text-transform: lowercase; white-space: nowrap; }
+.strip .cnt { position: absolute; right: 16px; top: 16px; font-family: "Archivo", sans-serif; font-stretch: 62%; font-weight: 200; font-size: 56px; line-height: .8; color: rgba(255,255,255,.9); }
+.strip a.on .cap { position: absolute; left: 0; bottom: 0; background: var(--black); padding: 18px 28px 0 0; }
+.strip a.on .cap .disp { font-size: 40px; }
+.strip a.on .cap small { display: block; margin-top: 10px; font-size: 13px; color: var(--grey); }
+.strip-foot { display: flex; justify-content: space-between; padding: 14px 0 0; font-size: 12.5px; color: var(--grey-2); }
+
+/* ---------- Abschnittskopf ---------- */
+.sec { padding: 170px 0 0; }
+.head { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; align-items: end; padding-bottom: 56px; }
+.head .label { grid-column: 1 / -1; justify-self: start; margin-bottom: 28px; }
+.head .disp { grid-column: 1 / span 9; font-size: clamp(44px, 7vw, 108px); }
+.head p { grid-column: 10 / span 3; margin: 0 0 8px; color: var(--grey); font-size: 15px; }
+
+/* ---------- 5 Schritte: Bänder untereinander ---------- */
+.steps { border-top: 1px solid var(--rule-strong); }
+.st { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; border-bottom: 1px solid var(--rule); position: relative; }
+.st .num { grid-column: 1 / span 2; font-family: "Archivo", sans-serif; font-stretch: 62%; font-weight: 150; font-size: 200px; line-height: .78; letter-spacing: -.02em; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.28); padding-top: 26px; border-right: 1px solid var(--rule); position: relative; }
+.st .txt { grid-column: 3 / span 4; padding: 30px 0 30px 8px; display: flex; flex-direction: column; }
+.st h3 { margin: 0 0 12px; font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 300; font-size: 30px; letter-spacing: -.03em; line-height: 1.05; text-transform: lowercase; color: var(--grey); }
+.st p { margin: 0; font-size: 15px; color: var(--grey-2); max-width: 340px; }
+.st .lph { margin-top: auto; padding-top: 22px; display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--grey-2); letter-spacing: .04em; }
+.st .lph .label { background: transparent; color: var(--grey); border: 1px solid var(--rule-strong); padding: 5px 7px; }
+.st figure { grid-column: 7 / span 6; margin: 0; height: 200px; overflow: hidden; position: relative; background: var(--panel); }
+.st figure img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(.42); }
+.st figure img.crop { transform: scale(1.38); }
+.st figure img.portrait { object-position: 50% 16%; }
+
+/* aktiver Schritt: Ziffer gefüllt, Bild in Farbe, Fortschritt an der Trennlinie */
+.st.on .num { color: var(--white); -webkit-text-stroke: 0; }
+.st.on .num::after { content: ""; position: absolute; right: -1px; top: 0; bottom: 0; width: 3px; background: var(--white); }
+.st.on h3 { color: var(--white); font-size: 44px; }
+.st.on p { color: var(--grey); font-size: 16px; }
+.st.on .lph .label { background: var(--white); color: var(--black); border-color: var(--white); }
+.st.on figure { height: 400px; }
+.st.on figure img { filter: none; }
+.st.on figure img.portrait { filter: grayscale(1) contrast(1.05) brightness(.9); }
+.st figure .hint { position: absolute; right: 0; bottom: 0; }
+
+.ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--grey-2); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  background: repeating-linear-gradient(90deg, transparent 0 39px, rgba(255,255,255,.04) 39px 40px), repeating-linear-gradient(0deg, transparent 0 39px, rgba(255,255,255,.04) 39px 40px), var(--panel); }
+
+/* ---------- Videos ---------- */
+.films { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 6px; }
+.film { position: relative; height: 440px; overflow: hidden; display: block; }
+.film img { width: 100%; height: 100%; object-fit: cover; }
+.film:not(:first-child) img { filter: grayscale(1) brightness(.6); }
+.film .play { position: absolute; left: 22px; top: 22px; width: 56px; height: 56px; border: 1px solid rgba(255,255,255,.85); display: grid; place-items: center; background: rgba(0,2,10,.4); }
+.film .play i { width: 0; height: 0; border-left: 11px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px; }
+.film .cap { position: absolute; left: 0; bottom: 0; background: var(--black); padding: 14px 24px 0 0; }
+.film .cap b { display: block; font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 300; font-size: 20px; letter-spacing: -.02em; text-transform: lowercase; line-height: 1.1; }
+.film .cap span { font-size: 12.5px; color: var(--grey); }
+
+/* ---------- Fuß ---------- */
+footer { margin-top: 180px; border-top: 1px solid var(--rule); }
+.f-cta { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; align-items: end; padding: 80px 0 72px; border-bottom: 1px solid var(--rule); }
+.f-cta .disp { grid-column: 1 / span 9; font-size: clamp(44px, 6.2vw, 96px); }
+.f-cta .tel { grid-column: 10 / span 3; justify-self: end; text-align: right; }
+.f-cta .tel a { display: block; font-family: "Archivo", sans-serif; font-stretch: 62%; font-weight: 250; font-size: 64px; line-height: 1; letter-spacing: -.01em; }
+.f-cta .tel span { display: block; margin-top: 10px; font-size: 14px; color: var(--grey); }
+.f-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; padding: 48px 0 56px; }
+.f-col { grid-column: span 3; font-size: 14px; color: var(--grey); line-height: 1.9; }
+.f-col h4 { margin: 0 0 12px; font-size: 12px; font-weight: 400; color: var(--grey-2); letter-spacing: .08em; }
+.f-col ul { list-style: none; padding: 0; margin: 0; }
+.f-end { border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; height: 72px; font-size: 12.5px; color: var(--grey-2); }
+.f-end .mini span { color: var(--grey-2); }
+.f-end div:last-child { display: flex; gap: 24px; }
+
+@media (max-width: 760px) {
+  nav a:not(.kontakt) { display: none; }
+  .mini > span:last-child { display: none; }
+  .bar2 { overflow-x: auto; }
+  .bar2 a { flex: 0 0 auto; }
+  .hero { padding-top: 40px; }
+  .word { font-size: 14.6vw; white-space: normal; line-height: .95; } .word span { display: block; }
+  .hero-sub, .hero-sub .left { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .hero-sub .btn { width: 100%; justify-content: space-between; }
+  .strip { grid-template-columns: 1fr 1fr; height: auto; margin-top: 40px; }
+  .strip a { height: 150px; } .strip a.on { grid-column: 1 / -1; height: 320px; }
+  .strip .v { writing-mode: horizontal-tb; transform: none; font-size: 16px; left: 12px; bottom: 12px; white-space: normal; right: 12px; } .strip .cnt { font-size: 34px; right: 10px; top: 10px; }
+  .strip a.on .cap .disp { font-size: 28px; }
+  .strip-foot span:last-child { display: none; }
+  .sec { padding-top: 110px; }
+  .head { display: block; } .head .disp { font-size: 13vw; } .head p { margin-top: 20px; }
+  .st { grid-template-columns: 76px 1fr; gap: 0 16px; }
+  .st .num { grid-column: 1; font-size: 92px; padding-top: 20px; }
+  .st .txt { grid-column: 2; padding: 22px 0 24px; }
+  .st h3, .st.on h3 { font-size: 22px; }
+  .st figure { display: none; }
+  .st.on figure { display: block; grid-column: 1 / -1; height: 220px; margin-bottom: 24px; }
+  .films { grid-template-columns: 1fr; } .film { height: 230px; }
+  .f-cta { display: block; padding: 56px 0; } .f-cta .disp { font-size: 13vw; } .f-cta .tel { text-align: left; margin-top: 32px; } .f-cta .tel a { font-size: 44px; }
+  .f-col { grid-column: span 6; margin-bottom: 24px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar1">
+    <a class="mini" href="#"><span class="pg">pg</span><span>Architekten &amp; Ingenieure · Kassel</span></a>
+    <nav>
+      <a class="on" href="#">Home</a><a href="#">Portfolio</a><a href="#">Leistungen</a><a href="#">Team</a><a href="#">Karriere</a>
+      <a class="kontakt" href="#">Kontakt</a>
+    </nav>
+  </div>
+  <div class="wrap bar2">
+    <a href="#">Portfolio</a>
+    <a href="#">Aktuelle Projekte <span>5</span></a>
+    <a href="#">Einfamilienhäuser <span>25</span></a>
+    <a href="#">Mehrfamilienhäuser <span>14</span></a>
+    <a href="#">Gewerbe &amp; Sonstige Bauwerke <span>10</span></a>
+    <a href="#">Projektentwicklungen <span>5</span></a>
+    <a href="#">Videos <span>7</span></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="word"><span>planungsbüro</span>günther</h1>
+    <div class="hero-sub">
+      <div class="left"><span class="label">Architekten &amp; Ingenieure</span><p>Alle Leistungsphasen der HOAI. Seit 2010 aus Kassel.</p></div>
+      <a class="btn btn--white" href="#">Projekt besprechen <span class="ar"></span></a>
+    </div>
+
+    <div class="strip">
+      <a class="on" href="#"><img src="../assets/video/film-soehrewald.webp" alt=""><span class="cnt">5</span>
+        <div class="cap"><h2 class="disp"><b>aktuelle projekte</b></h2><small>Wohnanlage Söhrewald · in Planung</small></div></a>
+      <a href="#"><img src="../assets/img/p/neubau-eines-modernen-einfamilienhauses-kassel-1-s.webp" alt=""><span class="cnt">25</span><span class="v">einfamilienhäuser</span></a>
+      <a href="#"><img src="../assets/video/film-kassel-25we.webp" alt="" style="object-position:60% 50%"><span class="cnt">14</span><span class="v">mehrfamilienhäuser</span></a>
+      <a href="#"><img src="../assets/img/p/neubau-polizeirevier-sued-west-baunatal-baunatal-1-s.webp" alt=""><span class="cnt">10</span><span class="v">gewerbe &amp; sonstige</span></a>
+      <a href="#"><img src="../assets/video/film-kita-kassel.webp" alt=""><span class="cnt">5</span><span class="v">projektentwicklungen</span></a>
+    </div>
+    <div class="strip-foot"><span>59 Projekte · 2004–2027</span><span>Friedrich-Ebert-Straße 1, 34117 Kassel</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head"><span class="label">Ihr Weg zum Haus</span><h2 class="disp"><span>in fünf schritten</span><br><b>zu ihrem haus.</b></h2><p>Ein Ansprechpartner – von der ersten Idee bis zur Schlüsselübergabe.</p></div>
+    <div class="steps">
+      <article class="st"><div class="num">1</div>
+        <div class="txt"><h3>kennenlernen &amp; beratung</h3><p>Wünsche, Grundstück, Budget: Wir klären, was möglich ist.</p><div class="lph"><span class="label">LPH 1</span>Grundlagenermittlung</div></div>
+        <figure><div class="ph">Platzhalter · Foto Erstgespräch</div></figure></article>
+      <article class="st on"><div class="num">2</div>
+        <div class="txt"><h3>entwurf &amp; visualisierung</h3><p>Ihr Haus in Skizze und 3D – bevor gebaut wird.</p><div class="lph"><span class="label">LPH 2–3</span>Vor- und Entwurfsplanung</div></div>
+        <figure><img src="../assets/video/film-kassel-25we.webp" alt="" style="object-position:50% 45%"><span class="label hint">3D-Visualisierung · Wohnhaus Kassel</span></figure></article>
+      <article class="st"><div class="num">3</div>
+        <div class="txt"><h3>bauantrag &amp; genehmigung</h3><p>Alle Unterlagen, alle Abstimmungen mit dem Bauamt.</p><div class="lph"><span class="label">LPH 4</span>Genehmigungsplanung</div></div>
+        <figure><div class="ph">Platzhalter · Pläne</div></figure></article>
+      <article class="st"><div class="num">4</div>
+        <div class="txt"><h3>ausführung &amp; vergabe</h3><p>Werkpläne, Ausschreibung, geprüfte Angebote.</p><div class="lph"><span class="label">LPH 5–7</span>Ausführung, Vergabe</div></div>
+        <figure><img src="../assets/img/p/neubau-eines-einfamilienhauses-muenchen-1.webp" alt=""></figure></article>
+      <article class="st"><div class="num">5</div>
+        <div class="txt"><h3>bau &amp; übergabe</h3><p>Bauüberwachung bis zur Schlüsselübergabe.</p><div class="lph"><span class="label">LPH 8–9</span>Objektüberwachung</div></div>
+        <figure><img class="crop" src="../assets/video/film-satteldachhaus.webp" alt=""></figure></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head"><span class="label">Videos</span><h2 class="disp"><span>projekte</span><br><b>in bewegung.</b></h2><p>Drohnenflüge, 3D-Rundgänge und Baustellen – sieben Filme.</p></div>
+    <div class="films">
+      <a class="film" href="#"><img src="../assets/video/film-hochhaus-kassel.webp" alt=""><span class="play"><i></i></span><div class="cap"><b>hochhaus kassel</b><span>Drohnenflug · Projektsteuerung</span></div></a>
+      <a class="film" href="#"><img src="../assets/video/film-satteldachhaus.webp" alt="" style="transform:scale(1.36)"><span class="play"><i></i></span><div class="cap"><b>satteldachhaus</b><span>Holzständerbau</span></div></a>
+      <a class="film" href="#"><img src="../assets/video/film-kassel-25we.webp" alt=""><span class="play"><i></i></span><div class="cap"><b>wohnhaus, 25 we</b><span>3D-Rundgang</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-cta">
+      <h2 class="disp"><span>sie planen</span><br><b>ein bauvorhaben?</b></h2>
+      <div class="tel"><a href="#">0561 920 01877</a><span>buero@planungsbuero-guenther.de</span></div>
+    </div>
+    <div class="f-grid">
+      <div class="f-col"><h4>Büro</h4>Friedrich-Ebert-Straße 1<br>34117 Kassel<br>Mo–Fr 09:00–17:00</div>
+      <div class="f-col"><h4>Portfolio</h4><ul><li>Aktuelle Projekte</li><li>Einfamilienhäuser</li><li>Mehrfamilienhäuser</li></ul></div>
+      <div class="f-col"><h4>&nbsp;</h4><ul><li>Gewerbe &amp; Sonstige Bauwerke</li><li>Projektentwicklungen</li><li>Videos</li></ul></div>
+      <div class="f-col"><h4>Über uns</h4><ul><li>Leistungen</li><li>Team</li><li>Karriere</li></ul></div>
+    </div>
+    <div class="f-end"><a class="mini" href="#"><span class="pg">pg</span><span>© 2026 Planungsbüro Günther</span></a><div><a href="#">Impressum</a><a href="#">Datenschutzerklärung</a></div></div>
+  </div>
+</footer>
+</body>
+</html>

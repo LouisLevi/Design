@@ -1,0 +1,1959 @@
+[
+ {
+  "id": "PG-001",
+  "slug": "wohnanlage-soehrewald-mit-27-we-kindertagesstaette-und-einer-tagespfle",
+  "cat": "aktuell",
+  "title": "Wohnanlage Söhrewald mit 27 WE, Kindertagesstätte und einer Tagespflege",
+  "ort": "Söhrewald",
+  "jahr": 2027,
+  "status": "geplant",
+  "lph": "LPH 1–9",
+  "volumen": 12000000,
+  "img": [
+   [
+    "wohnanlage-soehrewald-mit-27-we-kindertagesstaette-und-einer-tagespfle-1",
+    1600,
+    900
+   ],
+   [
+    "wohnanlage-soehrewald-mit-27-we-kindertagesstaette-und-einer-tagespfle-2",
+    1600,
+    900
+   ],
+   [
+    "wohnanlage-soehrewald-mit-27-we-kindertagesstaette-und-einer-tagespfle-3",
+    1600,
+    900
+   ]
+  ],
+  "quelle": [
+   "21bbcf_ccca5e9e984a401790b99a785552058a~mv2.jpg",
+   "21bbcf_4dcce06c35154a7d9d4e58b0056a5c67~mv2.png",
+   "21bbcf_306ad09b84a04e868c4d5d5576f0d750~mv2.png"
+  ],
+  "film": "film-soehrewald"
+ },
+ {
+  "id": "PG-002",
+  "slug": "neubau-eines-wohnhauses-mit-25-we-kassel",
+  "cat": "aktuell",
+  "title": "Neubau eines Wohnhauses mit 25 WE",
+  "ort": "Kassel",
+  "jahr": 2026,
+  "status": "geplant",
+  "lph": "LPH 1–5",
+  "volumen": 5000000,
+  "img": [
+   [
+    "neubau-eines-wohnhauses-mit-25-we-kassel-1",
+    1600,
+    900
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-25-we-kassel-2",
+    1600,
+    900
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-25-we-kassel-3",
+    1600,
+    900
+   ]
+  ],
+  "quelle": [
+   "21bbcf_d6f5cdefb2324454b0cc46e370336b77~mv2.jpg",
+   "21bbcf_41b32412db274deca5c0719ba9578206~mv2.jpg",
+   "21bbcf_644e096c34974cdabfb7d377f2cc7547~mv2.jpg"
+  ],
+  "film": "film-kassel-25we"
+ },
+ {
+  "id": "PG-003",
+  "slug": "neubau-des-deutschen-luft-und-raumfahrtzentrums-dlr-goettingen",
+  "cat": "aktuell",
+  "title": "Neubau des Deutschen Luft- und Raumfahrtzentrums (DLR)",
+  "ort": "Göttingen",
+  "jahr": 2024,
+  "status": "fertig",
+  "lph": "LPH 5",
+  "volumen": 3000000,
+  "img": [
+   [
+    "neubau-des-deutschen-luft-und-raumfahrtzentrums-dlr-goettingen-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-des-deutschen-luft-und-raumfahrtzentrums-dlr-goettingen-2",
+    1200,
+    1600
+   ],
+   [
+    "neubau-des-deutschen-luft-und-raumfahrtzentrums-dlr-goettingen-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_eb85b15b6e904cbc93733c8a6aba15c6~mv2.jpg",
+   "21bbcf_c4cdba8aeaa1455f99c40b27df011efc~mv2.jpg",
+   "21bbcf_e80409dab423421db08b33efa122607a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-004",
+  "slug": "gestaltung-eines-patientenzimmers-bad-zwesten",
+  "cat": "aktuell",
+  "title": "Gestaltung eines Patientenzimmers",
+  "ort": "Bad Zwesten",
+  "jahr": 2024,
+  "status": "fertig",
+  "lph": "Design · Planung · Ausführung",
+  "volumen": 110000,
+  "img": [
+   [
+    "gestaltung-eines-patientenzimmers-bad-zwesten-1",
+    1600,
+    1200
+   ],
+   [
+    "gestaltung-eines-patientenzimmers-bad-zwesten-2",
+    1600,
+    1200
+   ],
+   [
+    "gestaltung-eines-patientenzimmers-bad-zwesten-3",
+    1600,
+    1200
+   ],
+   [
+    "gestaltung-eines-patientenzimmers-bad-zwesten-4",
+    1600,
+    1200
+   ],
+   [
+    "gestaltung-eines-patientenzimmers-bad-zwesten-5",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_5e331005828b4ec99b3336c62ac0a165~mv2.jpg",
+   "21bbcf_7e9facecee124d9ebdba669763e6ac4c~mv2.jpg",
+   "21bbcf_872cdf723e764fa0bf167335a00bc086~mv2.jpg",
+   "21bbcf_6899d135e9db4f3a93fa3fe34cf8d292~mv2.jpg",
+   "21bbcf_742e040278704b719d7eca5abf2b95c6~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-005",
+  "slug": "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald",
+  "cat": "aktuell",
+  "title": "Erweiterung zum Zweifamilienhaus mit Gewerbeeinheit",
+  "ort": "Habichtswald",
+  "jahr": 2025,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 1000000,
+  "img": [
+   [
+    "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald-1",
+    1600,
+    1200
+   ],
+   [
+    "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald-2",
+    1600,
+    1067
+   ],
+   [
+    "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald-3",
+    1600,
+    900
+   ],
+   [
+    "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald-4",
+    1600,
+    900
+   ],
+   [
+    "erweiterung-zum-zweifamilienhaus-mit-gewerbeeinheit-habichtswald-5",
+    1600,
+    1067
+   ]
+  ],
+  "quelle": [
+   "21bbcf_70991e8ceb5d4071af1beff9294c9df2~mv2.jpg",
+   "21bbcf_c7c59f03306d4bd18063261f286c8cc9~mv2.jpg",
+   "21bbcf_49a9d3e09772444ca28151c61b4fdd9e~mv2.jpg",
+   "21bbcf_ad3a0f8ac40348e99c0466f203dcc475~mv2.jpg",
+   "21bbcf_1a79d3ccc34741a7ab52c8ae7672b04d~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-006",
+  "slug": "neubau-eines-einfamilienhauses-mit-carport-kraftsolms",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Carport",
+  "ort": "Kraftsolms",
+  "jahr": 2018,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 480000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-kraftsolms-1",
+    1600,
+    1091
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-kraftsolms-2",
+    1600,
+    1228
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-kraftsolms-3",
+    1600,
+    1068
+   ]
+  ],
+  "quelle": [
+   "21bbcf_068fca7b08d54068975b7b23ca947f65~mv2.jpg",
+   "21bbcf_128ce1ec67dd46eda59957f379e4e2f0~mv2.jpg",
+   "21bbcf_ff50abbabf0f4981963ce01da1a1689d~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-007",
+  "slug": "neubau-eines-einfamilienhauses-kassel",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2004,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 550000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-kassel-1",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-2",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_6d67cf5e5f0f4e14aef2ee748d7116c2~mv2.jpg",
+   "21bbcf_c71095151d85449c888aa14dec1e5509~mv2.jpg",
+   "21bbcf_ec52184566124efd9bc2364bded412c7~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-008",
+  "slug": "neubau-eines-einfamilienhauses-mit-garage-ihringshausen",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Garage",
+  "ort": "Ihringshausen",
+  "jahr": 2019,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 420000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-ihringshausen-1",
+    1600,
+    990
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-ihringshausen-2",
+    1600,
+    995
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-ihringshausen-3",
+    1600,
+    1136
+   ]
+  ],
+  "quelle": [
+   "21bbcf_df69ed3e1b894f919255a5b01c8ed903~mv2.jpg",
+   "21bbcf_3abfcc1b12324d37bee3f4e64d5bc13f~mv2.jpg",
+   "21bbcf_9089c342045e49bdb55d8af57f32c95c~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-009",
+  "slug": "neubau-eines-einfamilienhauses-muenchen",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses",
+  "ort": "München",
+  "jahr": 2015,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 670000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-muenchen-1",
+    1024,
+    768
+   ],
+   [
+    "neubau-eines-einfamilienhauses-muenchen-2",
+    1024,
+    768
+   ]
+  ],
+  "quelle": [
+   "21bbcf_a9e5240bb06846f0ab39d75dfa8f179b~mv2.jpg",
+   "21bbcf_94b0476006f84a248df84425072d92fa~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-010",
+  "slug": "aufstockung-und-erweiterung-efh-vellmar",
+  "cat": "efh",
+  "title": "Aufstockung und Erweiterung EFH",
+  "ort": "Vellmar",
+  "jahr": 2007,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 320000,
+  "img": [
+   [
+    "aufstockung-und-erweiterung-efh-vellmar-1",
+    1600,
+    1200
+   ],
+   [
+    "aufstockung-und-erweiterung-efh-vellmar-2",
+    1600,
+    1200
+   ],
+   [
+    "aufstockung-und-erweiterung-efh-vellmar-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_ab308e8680f94ae0a33e3681c17fd4e0~mv2.jpg",
+   "21bbcf_e8d4ff04a833421793f2791296aa099b~mv2.jpg",
+   "21bbcf_b9854fa0cbe64bbeb8db6e2a1b5c9607~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-011",
+  "slug": "erweiterung-eines-einfamilienhauses-kassel",
+  "cat": "efh",
+  "title": "Erweiterung eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2018,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 500000,
+  "img": [
+   [
+    "erweiterung-eines-einfamilienhauses-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "erweiterung-eines-einfamilienhauses-kassel-2",
+    1200,
+    1600
+   ],
+   [
+    "erweiterung-eines-einfamilienhauses-kassel-3",
+    1200,
+    1600
+   ]
+  ],
+  "quelle": [
+   "21bbcf_2b099bc129ac477a874d712cd2ee4390~mv2.jpg",
+   "21bbcf_516fff86b23d4e71add4bfa2b91d1280~mv2.jpg",
+   "21bbcf_95607640117b4c03be2b4e1650f7489a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-012",
+  "slug": "neubau-eines-einfamilienhauses-kassel-2",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2018,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 480000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-kassel-2-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-2-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-2-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_bbca5d6c79214059bfa9ec5603682d8c~mv2.jpg",
+   "21bbcf_610c58120d5548c8b92ea7d0c28105c7~mv2.jpg",
+   "21bbcf_8c4085ad239c4a4f9da2a4272af660ea~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-013",
+  "slug": "erweiterung-und-sanierung-efh-mannheim",
+  "cat": "efh",
+  "title": "Erweiterung und Sanierung EFH",
+  "ort": "Mannheim",
+  "jahr": 2012,
+  "status": "fertig",
+  "lph": "LPH 3",
+  "volumen": 680000,
+  "img": [
+   [
+    "erweiterung-und-sanierung-efh-mannheim-1",
+    1600,
+    1088
+   ],
+   [
+    "erweiterung-und-sanierung-efh-mannheim-2",
+    1600,
+    892
+   ],
+   [
+    "erweiterung-und-sanierung-efh-mannheim-3",
+    1600,
+    1145
+   ]
+  ],
+  "quelle": [
+   "21bbcf_965608516355480c8314f9ab6e15992e~mv2.jpg",
+   "21bbcf_4cca8d08fe7f47c68d8ccb55c6d12ac6~mv2.jpg",
+   "21bbcf_7c0b9c52334e454a97eb1638da78a9e7~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-014",
+  "slug": "neubau-eines-einfamilienhauses-mit-garage-fuldatal",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Garage",
+  "ort": "Fuldatal",
+  "jahr": 2019,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 450000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-fuldatal-1",
+    1600,
+    1058
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-fuldatal-2",
+    1600,
+    1155
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-fuldatal-3",
+    1600,
+    972
+   ]
+  ],
+  "quelle": [
+   "21bbcf_42134b2be6ca4e9c8785b4de489a84ca~mv2.jpg",
+   "21bbcf_bfa792e170eb4ac293f64989593a0752~mv2.jpg",
+   "21bbcf_0055e751ee414030a8da17fc83818709~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-015",
+  "slug": "neubau-efh-nieste",
+  "cat": "efh",
+  "title": "Neubau EFH",
+  "ort": "Nieste",
+  "jahr": 2007,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 650000,
+  "img": [
+   [
+    "neubau-efh-nieste-1",
+    1600,
+    1064
+   ],
+   [
+    "neubau-efh-nieste-2",
+    1600,
+    1064
+   ],
+   [
+    "neubau-efh-nieste-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_8cb3716d92ae4bb9bd3959b5d83d6061~mv2.jpg",
+   "21bbcf_438f13628b494b71ad5e055bfa3025b9~mv2.jpg",
+   "21bbcf_8309db35870a4f71a75678ba557b4559~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-016",
+  "slug": "neubau-eines-modernen-einfamilienhauses-kassel",
+  "cat": "efh",
+  "title": "Neubau eines modernen Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2005,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 620000,
+  "img": [
+   [
+    "neubau-eines-modernen-einfamilienhauses-kassel-1",
+    1600,
+    1068
+   ],
+   [
+    "neubau-eines-modernen-einfamilienhauses-kassel-2",
+    1600,
+    1068
+   ]
+  ],
+  "quelle": [
+   "21bbcf_50a2cccdee854f5a90695724b34657c8~mv2.png",
+   "21bbcf_c40e89efda84482e8e2bf3a088d2eaf6~mv2.png"
+  ]
+ },
+ {
+  "id": "PG-017",
+  "slug": "umbau-und-erweiterung-efh-kassel",
+  "cat": "efh",
+  "title": "Umbau und Erweiterung EFH",
+  "ort": "Kassel",
+  "jahr": 2008,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 600000,
+  "img": [
+   [
+    "umbau-und-erweiterung-efh-kassel-1",
+    1600,
+    1067
+   ],
+   [
+    "umbau-und-erweiterung-efh-kassel-2",
+    1600,
+    1043
+   ],
+   [
+    "umbau-und-erweiterung-efh-kassel-3",
+    1600,
+    548
+   ]
+  ],
+  "quelle": [
+   "21bbcf_a9d5686611134ec1b2ffb1b4cbe5c254~mv2.jpg",
+   "21bbcf_7f19804834a041c495edeacee45df078~mv2.jpg",
+   "21bbcf_d30b62cb9bd54c2a96b0c6167edd4a0f~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-018",
+  "slug": "neubau-eines-einfamilienhauses-mit-garage-wincheringen",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Garage",
+  "ort": "Wincheringen",
+  "jahr": 2016,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 550000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-wincheringen-1",
+    1600,
+    1063
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-wincheringen-2",
+    1600,
+    993
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-wincheringen-3",
+    1600,
+    1058
+   ]
+  ],
+  "quelle": [
+   "21bbcf_26a10309f684487ab48018e6d6f0495e~mv2.jpg",
+   "21bbcf_b635335146764b31a1f365d61ca6fef4~mv2.jpg",
+   "21bbcf_fec593714618469bb7b24ad0222e1e68~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-019",
+  "slug": "sanierung-und-aufstockung-eines-einfamilienhauses-kassel",
+  "cat": "efh",
+  "title": "Sanierung und Aufstockung eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2020,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 360000,
+  "img": [
+   [
+    "sanierung-und-aufstockung-eines-einfamilienhauses-kassel-1",
+    1600,
+    1195
+   ],
+   [
+    "sanierung-und-aufstockung-eines-einfamilienhauses-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "sanierung-und-aufstockung-eines-einfamilienhauses-kassel-3",
+    1600,
+    1195
+   ]
+  ],
+  "quelle": [
+   "21bbcf_793f5d71e3bb48039b011e2e4f7cc0c7~mv2.jpg",
+   "21bbcf_819670a47c3040339e476e4620d31d70~mv2.jpg",
+   "21bbcf_ab2d115cee8a45e18edef0cb4b7f00dd~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-020",
+  "slug": "neubau-einer-stadtvilla-kassel",
+  "cat": "efh",
+  "title": "Neubau einer Stadtvilla",
+  "ort": "Kassel",
+  "jahr": 2009,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 650000,
+  "img": [
+   [
+    "neubau-einer-stadtvilla-kassel-1",
+    1200,
+    1600
+   ],
+   [
+    "neubau-einer-stadtvilla-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-einer-stadtvilla-kassel-3",
+    1200,
+    1600
+   ]
+  ],
+  "quelle": [
+   "21bbcf_25d5ba76aa4e4774ac07f0333e1b9288~mv2.jpg",
+   "21bbcf_f50b5f29e5ea410eb4a679814e7da111~mv2.jpg",
+   "21bbcf_9e0d78039ffd442897fad6f8a5d1e37e~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-021",
+  "slug": "neubau-eines-einfamilienhauses-mit-carport-eckelshausen",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Carport",
+  "ort": "Eckelshausen",
+  "jahr": 2017,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 580000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-eckelshausen-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-eckelshausen-2",
+    1600,
+    1072
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-carport-eckelshausen-3",
+    1600,
+    1256
+   ]
+  ],
+  "quelle": [
+   "21bbcf_bdb6ba9e9b354ba1be74d3e3f220b1d6~mv2.jpg",
+   "21bbcf_9be30d0ff94643e3a25e17cbad48644c~mv2.jpg",
+   "21bbcf_349b845e7704491483dfc4d51bbe5600~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-022",
+  "slug": "bau-eines-pultdachhauses-in-holzstaenderbauweise-suedhessen",
+  "cat": "efh",
+  "title": "Bau eines Pultdachhauses in Holzständerbauweise",
+  "ort": "Südhessen",
+  "jahr": 2016,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 430000,
+  "img": [
+   [
+    "bau-eines-pultdachhauses-in-holzstaenderbauweise-suedhessen-1",
+    640,
+    360
+   ]
+  ],
+  "quelle": [
+   "21bbcf_135dd8e1af594fb5834ddd6bb3925fe5f002.jpg"
+  ],
+  "film": "film-pultdachhaus"
+ },
+ {
+  "id": "PG-023",
+  "slug": "bau-eines-satteldachhauses-in-holzstaenderbauweise-suedhessen",
+  "cat": "efh",
+  "title": "Bau eines Satteldachhauses in Holzständerbauweise",
+  "ort": "Südhessen",
+  "jahr": 2015,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 370000,
+  "img": [
+   [
+    "bau-eines-satteldachhauses-in-holzstaenderbauweise-suedhessen-1",
+    480,
+    360
+   ]
+  ],
+  "quelle": [
+   "21bbcf_dfaa7be633cd4165b2ef226e9bb8ca08f002.jpg"
+  ],
+  "film": "film-satteldachhaus"
+ },
+ {
+  "id": "PG-024",
+  "slug": "erweiterung-und-sanierung-efh-kassel",
+  "cat": "efh",
+  "title": "Erweiterung und Sanierung EFH",
+  "ort": "Kassel",
+  "jahr": 2010,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 200000,
+  "img": [
+   [
+    "erweiterung-und-sanierung-efh-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "erweiterung-und-sanierung-efh-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "erweiterung-und-sanierung-efh-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_af5ae108707844529ea8609e50b876f9~mv2.jpg",
+   "21bbcf_218ca3fbc5db4d4f83a37cb7663e82d3~mv2.jpg",
+   "21bbcf_14c3b4b95d9248ee9a1803747d74f00b~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-025",
+  "slug": "neubau-eines-einfamilienhauses-kassel-3",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2006,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 380000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-kassel-3-1",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-3-2",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-3-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_cc14068e5c4741c7b90d1033a641faf8~mv2.jpg",
+   "21bbcf_173402ac3b934cbebfa625f847307fec~mv2.jpg",
+   "21bbcf_a0ee38173de6447bbaff4a6a6286f72a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-026",
+  "slug": "neubau-eines-einfamilienhauses-mit-garage-kassel",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses mit Garage",
+  "ort": "Kassel",
+  "jahr": 2011,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 450000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-einfamilienhauses-mit-garage-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_1750b95e65dc4ec793278e1e677a06fe~mv2.jpg",
+   "21bbcf_6c13ab9a9e294bdcbba9afcabd8f0f26~mv2.jpg",
+   "21bbcf_020e0252126f456497b51691a136f744~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-027",
+  "slug": "neubau-eines-einfamilienhauses-kassel-4",
+  "cat": "efh",
+  "title": "Neubau eines Einfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2005,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 350000,
+  "img": [
+   [
+    "neubau-eines-einfamilienhauses-kassel-4-1",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-4-2",
+    1600,
+    1064
+   ],
+   [
+    "neubau-eines-einfamilienhauses-kassel-4-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_a23c155fe771464d93814adf5bc271ac~mv2.jpg",
+   "21bbcf_32bd3b38da764c09bb6649bb07081990~mv2.jpg",
+   "21bbcf_25d4ee2c008e4056b15332dca6df48c9~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-028",
+  "slug": "neubau-eines-2-familienhauses-mit-garage-kaufungen",
+  "cat": "efh",
+  "title": "Neubau eines 2-Familienhauses mit Garage",
+  "ort": "Kaufungen",
+  "jahr": 2010,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 620000,
+  "img": [
+   [
+    "neubau-eines-2-familienhauses-mit-garage-kaufungen-1",
+    1600,
+    1067
+   ],
+   [
+    "neubau-eines-2-familienhauses-mit-garage-kaufungen-2",
+    1600,
+    1067
+   ]
+  ],
+  "quelle": [
+   "21bbcf_e9e6e84579784b0e9cec4e227401b309~mv2.jpg",
+   "21bbcf_d74406a74a5e4798818cb3ffcb4f35ac~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-029",
+  "slug": "anbau-und-erweiterung-eines-einfamilienhauses-schauenburg",
+  "cat": "efh",
+  "title": "Anbau und Erweiterung eines Einfamilienhauses",
+  "ort": "Schauenburg",
+  "jahr": 2008,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 200000,
+  "img": [
+   [
+    "anbau-und-erweiterung-eines-einfamilienhauses-schauenburg-1",
+    1600,
+    1067
+   ],
+   [
+    "anbau-und-erweiterung-eines-einfamilienhauses-schauenburg-2",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_06f6aee9315f4787b7753812aa581b37~mv2.jpg",
+   "21bbcf_0dd551aa4db84d9bb12a399fe38a515f~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-030",
+  "slug": "neubau-eines-doppelhauses-kassel",
+  "cat": "efh",
+  "title": "Neubau eines Doppelhauses",
+  "ort": "Kassel",
+  "jahr": 2007,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 400000,
+  "img": [
+   [
+    "neubau-eines-doppelhauses-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-doppelhauses-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-doppelhauses-kassel-3",
+    1600,
+    1067
+   ]
+  ],
+  "quelle": [
+   "21bbcf_c365cf5613244adc8b9f6eda858ab106~mv2.jpg",
+   "21bbcf_b020c3f51c5f4c43a8e5e88f180116d2~mv2.jpg",
+   "21bbcf_f516c8a20ae046238b943636e8118751~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-031",
+  "slug": "umbau-und-sanierung-einer-ehemaligen-kaserne-zu-einer-wohnanlage-51-we",
+  "cat": "mfh",
+  "title": "Umbau und Sanierung einer ehemaligen Kaserne zu einer Wohnanlage (51 WE)",
+  "ort": "Kassel",
+  "jahr": 2011,
+  "status": "fertig",
+  "lph": "Projektentwicklung / LPH 1–9",
+  "volumen": 7000000,
+  "img": [
+   [
+    "umbau-und-sanierung-einer-ehemaligen-kaserne-zu-einer-wohnanlage-51-we-1",
+    1600,
+    1200
+   ],
+   [
+    "umbau-und-sanierung-einer-ehemaligen-kaserne-zu-einer-wohnanlage-51-we-2",
+    1600,
+    693
+   ],
+   [
+    "umbau-und-sanierung-einer-ehemaligen-kaserne-zu-einer-wohnanlage-51-we-3",
+    1600,
+    688
+   ]
+  ],
+  "quelle": [
+   "21bbcf_fdc53a074e014b90b9c768c802f67f65~mv2.jpg",
+   "21bbcf_3a30fa06672b4476aec7ab71dac634b7~mv2.jpg",
+   "21bbcf_a1c7ebaa33594c28ac445d94ec288d61~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-032",
+  "slug": "neubau-von-zwei-mehrfamilienhaeusern-30-we-kaufungen",
+  "cat": "mfh",
+  "title": "Neubau von zwei Mehrfamilienhäusern (30 WE)",
+  "ort": "Kaufungen",
+  "jahr": 2021,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 7000000,
+  "img": [
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-30-we-kaufungen-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-30-we-kaufungen-2",
+    1600,
+    795
+   ],
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-30-we-kaufungen-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_e6a94c30a9df4290be5ccc41dfec7bd0~mv2.jpg",
+   "21bbcf_9b9598fe44564f1b9f25d5ebc9df8c50~mv2.jpg",
+   "21bbcf_750761dfc8bc49fcbf90f68761cfbb59~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-033",
+  "slug": "aufstockung-eines-mehrfamilienhauses-um-6-geschosse-kassel",
+  "cat": "mfh",
+  "title": "Aufstockung eines Mehrfamilienhauses um 6 Geschosse",
+  "ort": "Kassel",
+  "jahr": 2009,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 2000000,
+  "volumen_ca": true,
+  "img": [
+   [
+    "aufstockung-eines-mehrfamilienhauses-um-6-geschosse-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "aufstockung-eines-mehrfamilienhauses-um-6-geschosse-kassel-2",
+    1333,
+    1600
+   ],
+   [
+    "aufstockung-eines-mehrfamilienhauses-um-6-geschosse-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_8bb13826c35d43de84520109489fcfbf~mv2.jpg",
+   "21bbcf_28975e00c1c743bf91a2cc6500fe5bf4~mv2.jpg",
+   "21bbcf_74c2a06587b240a185983b9a2e0bdb36~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-034",
+  "slug": "neubau-eines-5-familienhauses-kassel",
+  "cat": "mfh",
+  "title": "Neubau eines 5-Familienhauses",
+  "ort": "Kassel",
+  "jahr": 2019,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 1200000,
+  "img": [
+   [
+    "neubau-eines-5-familienhauses-kassel-1",
+    1600,
+    1067
+   ],
+   [
+    "neubau-eines-5-familienhauses-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-5-familienhauses-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_09f2b3a00d6f40718487ba5b455d37dc~mv2.jpg",
+   "21bbcf_092158ef967643dd8950fa077df8d983~mv2.jpg",
+   "21bbcf_e43c6505f5144876b13894a764925d25~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-035",
+  "slug": "neubau-eines-10-familienhauses-lohfelden",
+  "cat": "mfh",
+  "title": "Neubau eines 10-Familienhauses",
+  "ort": "Lohfelden",
+  "jahr": 2011,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 1000000,
+  "img": [
+   [
+    "neubau-eines-10-familienhauses-lohfelden-1",
+    1600,
+    1067
+   ],
+   [
+    "neubau-eines-10-familienhauses-lohfelden-2",
+    1600,
+    1067
+   ],
+   [
+    "neubau-eines-10-familienhauses-lohfelden-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_396d8c44609f471cb6dc8d4a10115ee0~mv2.jpg",
+   "21bbcf_aff89d301246495f859e235702c2fb9d~mv2.jpg",
+   "21bbcf_d9bc7982dfa949afa749df22525640c0~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-036",
+  "slug": "neubau-von-zwei-mehrfamilienhaeusern-mit-tiefgarage-16-we-kassel",
+  "cat": "mfh",
+  "title": "Neubau von zwei Mehrfamilienhäusern mit Tiefgarage (16 WE)",
+  "ort": "Kassel",
+  "jahr": 2020,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 3500000,
+  "img": [
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-mit-tiefgarage-16-we-kassel-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-mit-tiefgarage-16-we-kassel-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-von-zwei-mehrfamilienhaeusern-mit-tiefgarage-16-we-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_33a57105b1844bbdb2d7cb3a5019399a~mv2.jpg",
+   "21bbcf_d58d9318f95a450b888744fface6ecd8~mv2.jpg",
+   "21bbcf_19557374a2f6498a8c0125b40d280264~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-037",
+  "slug": "neubau-eines-4-familienhauses-heiligenrode",
+  "cat": "mfh",
+  "title": "Neubau eines 4-Familienhauses",
+  "ort": "Heiligenrode",
+  "jahr": 2017,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 750000,
+  "img": [
+   [
+    "neubau-eines-4-familienhauses-heiligenrode-1",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-4-familienhauses-heiligenrode-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-4-familienhauses-heiligenrode-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_b042fe3c4e884eb7b1bb92fc7a84a471~mv2.jpg",
+   "21bbcf_49c4041025c4437993689b4bdcc62234~mv2.jpg",
+   "21bbcf_b8d73aba51314068ab15e437fbf22506~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-038",
+  "slug": "anbau-eines-mehrfamilienhauses-kassel",
+  "cat": "mfh",
+  "title": "Anbau eines Mehrfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2004,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 500000,
+  "img": [
+   [
+    "anbau-eines-mehrfamilienhauses-kassel-1",
+    1064,
+    1600
+   ],
+   [
+    "anbau-eines-mehrfamilienhauses-kassel-2",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_42550735b6e44755b327911e8d3aee10~mv2.jpg",
+   "21bbcf_fc28694313ee4cd1b55d85a0858d646f~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-039",
+  "slug": "sanierung-einer-wohnanlage-mit-120-wohneinheiten-hamm",
+  "cat": "mfh",
+  "title": "Sanierung einer Wohnanlage mit 120 Wohneinheiten",
+  "ort": "Hamm",
+  "jahr": 2009,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 6000000,
+  "img": [
+   [
+    "sanierung-einer-wohnanlage-mit-120-wohneinheiten-hamm-1",
+    1600,
+    1200
+   ],
+   [
+    "sanierung-einer-wohnanlage-mit-120-wohneinheiten-hamm-2",
+    1600,
+    1200
+   ],
+   [
+    "sanierung-einer-wohnanlage-mit-120-wohneinheiten-hamm-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_e1e4a2f4f2834f478d640e4432f5b7b5~mv2.jpg",
+   "21bbcf_cba31113131d411a97bcf8f87b4afc96~mv2.jpg",
+   "21bbcf_aefdae7bf3a3450f9189c23566e2717e~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-040",
+  "slug": "neubau-eines-wohnhauses-mit-5-we-vellmar",
+  "cat": "mfh",
+  "title": "Neubau eines Wohnhauses mit 5 WE",
+  "ort": "Vellmar",
+  "jahr": 2023,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 800000,
+  "img": [
+   [
+    "neubau-eines-wohnhauses-mit-5-we-vellmar-1",
+    1600,
+    900
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-5-we-vellmar-2",
+    1600,
+    1113
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-5-we-vellmar-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_14053ab1ae204c71895675eddeef4139~mv2.jpg",
+   "21bbcf_fef1b0ad96d546d79690ca40cf29861e~mv2.jpg",
+   "21bbcf_0a3e80e1bda94e9bb95573ae75c7cb54~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-041",
+  "slug": "neubau-eines-wohnhauses-mit-6-we-kassel",
+  "cat": "mfh",
+  "title": "Neubau eines Wohnhauses mit 6 WE",
+  "ort": "Kassel",
+  "jahr": 2021,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 750000,
+  "img": [
+   [
+    "neubau-eines-wohnhauses-mit-6-we-kassel-1",
+    1600,
+    1020
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-6-we-kassel-2",
+    1600,
+    931
+   ],
+   [
+    "neubau-eines-wohnhauses-mit-6-we-kassel-3",
+    1600,
+    1198
+   ]
+  ],
+  "quelle": [
+   "21bbcf_34baa16b71424cfca7fb0b84074d455b~mv2.jpg",
+   "21bbcf_8a0bddcd8daf42719d53b8e9f23b86ee~mv2.jpg",
+   "21bbcf_c8947154c81544629d4818c041e6911c~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-042",
+  "slug": "sanierung-eines-mehrfamilienhauses-kassel",
+  "cat": "mfh",
+  "title": "Sanierung eines Mehrfamilienhauses",
+  "ort": "Kassel",
+  "jahr": 2005,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 2500000,
+  "img": [
+   [
+    "sanierung-eines-mehrfamilienhauses-kassel-1",
+    450,
+    600
+   ],
+   [
+    "sanierung-eines-mehrfamilienhauses-kassel-2",
+    450,
+    600
+   ],
+   [
+    "sanierung-eines-mehrfamilienhauses-kassel-3",
+    800,
+    600
+   ]
+  ],
+  "quelle": [
+   "21bbcf_524c5c80f5a6495f978eadd3a291971f~mv2.jpg",
+   "21bbcf_a136df86fa484b6eb5350cfcc53f9108~mv2.jpg",
+   "21bbcf_36820c23d28040d8939b43008ef1b3fe~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-043",
+  "slug": "neubau-eines-3-familienhauses-vellmar",
+  "cat": "mfh",
+  "title": "Neubau eines 3-Familienhauses",
+  "ort": "Vellmar",
+  "jahr": 2019,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 900000,
+  "img": [
+   [
+    "neubau-eines-3-familienhauses-vellmar-1",
+    1600,
+    996
+   ],
+   [
+    "neubau-eines-3-familienhauses-vellmar-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-3-familienhauses-vellmar-3",
+    1600,
+    972
+   ]
+  ],
+  "quelle": [
+   "21bbcf_463bfea35d7f4ef980db3cbb7ed63eb1~mv2.jpg",
+   "21bbcf_29c03bb7db7b4690b428321362f76faa~mv2.jpg",
+   "21bbcf_ecf7871c41f643f297c56767e87a4bb3~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-044",
+  "slug": "neubau-eines-4-familienhauses-mit-bueroeinheit-butzbach",
+  "cat": "mfh",
+  "title": "Neubau eines 4-Familienhauses mit Büroeinheit",
+  "ort": "Butzbach",
+  "jahr": 2015,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 700000,
+  "img": [
+   [
+    "neubau-eines-4-familienhauses-mit-bueroeinheit-butzbach-1",
+    1600,
+    1018
+   ],
+   [
+    "neubau-eines-4-familienhauses-mit-bueroeinheit-butzbach-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-eines-4-familienhauses-mit-bueroeinheit-butzbach-3",
+    1600,
+    1094
+   ],
+   [
+    "neubau-eines-4-familienhauses-mit-bueroeinheit-butzbach-4",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_c05bd0f363c44dfd86a68877711d0804~mv2.jpg",
+   "21bbcf_fde4eb508a3f4611b94ac21b83c7e54c~mv2.jpg",
+   "21bbcf_e6683b39e48d4d5e9eae2bfc7f6b113f~mv2.jpg",
+   "21bbcf_d3cc5b1371a247168a9ceb59098e5f95~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-045",
+  "slug": "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen",
+  "cat": "mfh",
+  "title": "Anbau und Erweiterung eines Wohnhauses mit 3 WE und Büroeinheit",
+  "ort": "Ehlen",
+  "jahr": 2025,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 1000000,
+  "img": [
+   [
+    "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen-1",
+    1600,
+    1200
+   ],
+   [
+    "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen-2",
+    1600,
+    900
+   ],
+   [
+    "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen-3",
+    1600,
+    1067
+   ],
+   [
+    "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen-4",
+    1600,
+    1067
+   ],
+   [
+    "anbau-und-erweiterung-eines-wohnhauses-mit-3-we-und-bueroeinheit-ehlen-5",
+    1600,
+    1062
+   ]
+  ],
+  "quelle": [
+   "21bbcf_0a498cc6962c47ebb21622fe61048211~mv2.jpg",
+   "21bbcf_a274b6d6d76143f085d9aebb5dde811f~mv2.jpg",
+   "21bbcf_29faf43688314eafb069256cf0d5677d~mv2.jpg",
+   "21bbcf_1a79d3ccc34741a7ab52c8ae7672b04d~mv2.jpg",
+   "21bbcf_b06934be7d374b608948ba2ac76de926~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-046",
+  "slug": "ehemaliges-fabrikgelaende-stuttgart-umgebung",
+  "cat": "gewerbe",
+  "title": "Ehemaliges Fabrikgelände",
+  "ort": "Stuttgart & Umgebung",
+  "jahr": 2011,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 80000000,
+  "img": [
+   [
+    "ehemaliges-fabrikgelaende-stuttgart-umgebung-1",
+    800,
+    400
+   ],
+   [
+    "ehemaliges-fabrikgelaende-stuttgart-umgebung-2",
+    1600,
+    1200
+   ],
+   [
+    "ehemaliges-fabrikgelaende-stuttgart-umgebung-3",
+    1600,
+    1200
+   ],
+   [
+    "ehemaliges-fabrikgelaende-stuttgart-umgebung-4",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_04c76027dfe548c7aa314361666360f0~mv2.jpg",
+   "21bbcf_c088bbbbc4fb407ead3e33388e71d5a3~mv2.png",
+   "21bbcf_db1e7b50f8f946f2902ae796fd461916~mv2.png",
+   "21bbcf_fd46555968124b1393f70d4218f635ab~mv2.png"
+  ],
+  "film": "film-salamander-areal"
+ },
+ {
+  "id": "PG-047",
+  "slug": "neubau-polizeirevier-sued-west-baunatal-baunatal",
+  "cat": "gewerbe",
+  "title": "Neubau Polizeirevier Süd-West (Baunatal)",
+  "ort": "Baunatal",
+  "jahr": 2015,
+  "status": "fertig",
+  "lph": "LPH 5",
+  "volumen": 5000000,
+  "img": [
+   [
+    "neubau-polizeirevier-sued-west-baunatal-baunatal-1",
+    1600,
+    813
+   ],
+   [
+    "neubau-polizeirevier-sued-west-baunatal-baunatal-2",
+    1600,
+    909
+   ],
+   [
+    "neubau-polizeirevier-sued-west-baunatal-baunatal-3",
+    1600,
+    868
+   ]
+  ],
+  "quelle": [
+   "21bbcf_ea5e24d647db4ea09c4384c633c91af2~mv2.jpg",
+   "21bbcf_fdbd54a84c8340c1beb4ebcf220a6a65~mv2.jpg",
+   "21bbcf_36cd81d49f8841b5a75612f914634d5a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-048",
+  "slug": "nutzungsaenderung-eines-theaterfundus-kassel",
+  "cat": "gewerbe",
+  "title": "Nutzungsänderung eines Theaterfundus",
+  "ort": "Kassel",
+  "jahr": 2004,
+  "status": "fertig",
+  "lph": "LPH 1–4",
+  "volumen": 2500000,
+  "img": [
+   [
+    "nutzungsaenderung-eines-theaterfundus-kassel-1",
+    1600,
+    1078
+   ],
+   [
+    "nutzungsaenderung-eines-theaterfundus-kassel-2",
+    1600,
+    1076
+   ]
+  ],
+  "quelle": [
+   "21bbcf_3ad0093f9c8e4288bc6f1c0cc2618563~mv2.jpg",
+   "21bbcf_ef68f07f8b5c4743b35516784a4d9ab4~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-049",
+  "slug": "neubau-von-gewerbehallen-mit-verkaufsflaeche-kassel",
+  "cat": "gewerbe",
+  "title": "Neubau von Gewerbehallen mit Verkaufsfläche",
+  "ort": "Kassel",
+  "jahr": 2006,
+  "status": "fertig",
+  "lph": "LPH 1–5",
+  "volumen": 1800000,
+  "img": [
+   [
+    "neubau-von-gewerbehallen-mit-verkaufsflaeche-kassel-1",
+    1000,
+    665
+   ],
+   [
+    "neubau-von-gewerbehallen-mit-verkaufsflaeche-kassel-2",
+    1600,
+    1067
+   ],
+   [
+    "neubau-von-gewerbehallen-mit-verkaufsflaeche-kassel-3",
+    1600,
+    1064
+   ]
+  ],
+  "quelle": [
+   "21bbcf_85451208246947f582aaea45234379ff~mv2.jpg",
+   "21bbcf_1d41beef326b4450891a63119368270c~mv2.png",
+   "21bbcf_f02f929ac0f84a2f8e6685843df73eb5~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-050",
+  "slug": "teilsanierung-eines-hochhauses-kassel",
+  "cat": "gewerbe",
+  "title": "Teilsanierung eines Hochhauses",
+  "ort": "Kassel",
+  "jahr": 2016,
+  "status": "fertig",
+  "lph": "Projektsteuerung",
+  "volumen": 3500000,
+  "img": [
+   [
+    "teilsanierung-eines-hochhauses-kassel-1",
+    1200,
+    1600
+   ],
+   [
+    "teilsanierung-eines-hochhauses-kassel-2",
+    1200,
+    1600
+   ],
+   [
+    "teilsanierung-eines-hochhauses-kassel-3",
+    1600,
+    1200
+   ]
+  ],
+  "quelle": [
+   "21bbcf_a37828c4532b4134b9d27ee70690b042~mv2.jpg",
+   "21bbcf_79d9611a0b8e4bc78e4127ecd73d6b7b~mv2.jpg",
+   "21bbcf_7de97ebfe6bf45ee849f6a1f7e242549~mv2.jpg"
+  ],
+  "film": "film-hochhaus-kassel"
+ },
+ {
+  "id": "PG-051",
+  "slug": "neubau-einer-gewerbehalle-calden",
+  "cat": "gewerbe",
+  "title": "Neubau einer Gewerbehalle",
+  "ort": "Calden",
+  "jahr": 2016,
+  "status": "fertig",
+  "lph": "LPH 1–9",
+  "volumen": 680000,
+  "img": [
+   [
+    "neubau-einer-gewerbehalle-calden-1",
+    1600,
+    655
+   ],
+   [
+    "neubau-einer-gewerbehalle-calden-2",
+    1600,
+    1200
+   ],
+   [
+    "neubau-einer-gewerbehalle-calden-3",
+    1000,
+    445
+   ]
+  ],
+  "quelle": [
+   "21bbcf_a6b944cf8cec42b2a5234b82a58c4e11~mv2.jpg",
+   "21bbcf_5dca224c1d9b40bd985d876446f56fd7~mv2.jpg",
+   "21bbcf_0c6c6eb8ed2b460a8eb72762ec4ba709~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-052",
+  "slug": "nutzungsaenderung-sporthalle-zu-einem-fitnessstudio-baunatal",
+  "cat": "gewerbe",
+  "title": "Nutzungsänderung Sporthalle zu einem Fitnessstudio",
+  "ort": "Baunatal",
+  "jahr": 2022,
+  "status": "fertig",
+  "lph": "LPH 3–5",
+  "img": [
+   [
+    "nutzungsaenderung-sporthalle-zu-einem-fitnessstudio-baunatal-1",
+    1290,
+    968
+   ],
+   [
+    "nutzungsaenderung-sporthalle-zu-einem-fitnessstudio-baunatal-2",
+    1290,
+    968
+   ],
+   [
+    "nutzungsaenderung-sporthalle-zu-einem-fitnessstudio-baunatal-3",
+    1290,
+    968
+   ]
+  ],
+  "quelle": [
+   "21bbcf_e12c6f0c8b2148bca3a93ea8824607c2~mv2.jpg",
+   "21bbcf_194cdde59c36436db538facac741cb24~mv2.jpg",
+   "21bbcf_b447154dafc941e29b85ac42258c116a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-053",
+  "slug": "sanierung-eines-wohn-und-geschaeftshauses-fulda",
+  "cat": "gewerbe",
+  "title": "Sanierung eines Wohn- und Geschäftshauses",
+  "ort": "Fulda",
+  "jahr": 2016,
+  "status": "fertig",
+  "lph": "LPH 5–8",
+  "volumen": 1500000,
+  "img": [
+   [
+    "sanierung-eines-wohn-und-geschaeftshauses-fulda-1",
+    899,
+    1600
+   ],
+   [
+    "sanierung-eines-wohn-und-geschaeftshauses-fulda-2",
+    1600,
+    1200
+   ],
+   [
+    "sanierung-eines-wohn-und-geschaeftshauses-fulda-3",
+    1024,
+    768
+   ]
+  ],
+  "quelle": [
+   "21bbcf_c0e3f033aeee4f1d9e285505ffc8bd09~mv2.jpg",
+   "21bbcf_db099951f5d6416fa8ae7a84f3285388~mv2.jpg",
+   "21bbcf_7a387609955144ef86ecd2cfec715cc2~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-054",
+  "slug": "erweiterung-eines-buerogebaeudes-kassel",
+  "cat": "gewerbe",
+  "title": "Erweiterung eines Bürogebäudes",
+  "ort": "Kassel",
+  "jahr": 2013,
+  "status": "fertig",
+  "lph": "LPH 1–8",
+  "volumen": 670000,
+  "img": [
+   [
+    "erweiterung-eines-buerogebaeudes-kassel-1",
+    1600,
+    1067
+   ],
+   [
+    "erweiterung-eines-buerogebaeudes-kassel-2",
+    1600,
+    1067
+   ]
+  ],
+  "quelle": [
+   "21bbcf_40433680d6be42a7a8928d371faddefe~mv2.jpg",
+   "21bbcf_6458876aa8724c6ea66aaebb334ce9eb~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-055",
+  "slug": "nutzungsaenderung-zu-einem-fitnesscenter-kassel",
+  "cat": "gewerbe",
+  "title": "Nutzungsänderung zu einem Fitnesscenter",
+  "ort": "Kassel",
+  "jahr": 2015,
+  "status": "fertig",
+  "lph": "LPH 3–5",
+  "volumen": 250000,
+  "img": [
+   [
+    "nutzungsaenderung-zu-einem-fitnesscenter-kassel-1",
+    1600,
+    1067
+   ],
+   [
+    "nutzungsaenderung-zu-einem-fitnesscenter-kassel-2",
+    1600,
+    1067
+   ]
+  ],
+  "quelle": [
+   "21bbcf_1f383e1c217440f9b9d99589700b0604~mv2.jpg",
+   "21bbcf_13c06ff0c18c4575a18c0e01a860bd2f~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-056",
+  "slug": "neubau-von-drei-einfamilienhaeusern-niedenstein",
+  "cat": "entwicklung",
+  "title": "Neubau von drei Einfamilienhäusern",
+  "ort": "Niedenstein",
+  "jahr": 2026,
+  "status": "geplant",
+  "lph": "Projektentwicklung und Umsetzung",
+  "grundstueck": "1.100 m²",
+  "img": [
+   [
+    "neubau-von-drei-einfamilienhaeusern-niedenstein-1",
+    1600,
+    900
+   ],
+   [
+    "neubau-von-drei-einfamilienhaeusern-niedenstein-2",
+    1600,
+    900
+   ],
+   [
+    "neubau-von-drei-einfamilienhaeusern-niedenstein-3",
+    1600,
+    900
+   ]
+  ],
+  "quelle": [
+   "21bbcf_7aa5992c8b304f7498be9d1158f608d8~mv2.jpg",
+   "21bbcf_e97d69658287435aaec2fa345146dba9~mv2.jpg",
+   "21bbcf_9522ff382c624f8292b45e50ca56ae7a~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-057",
+  "slug": "neubau-eines-wohn-u-geschaeftshauses-mit-kindertagesstaette-kassel",
+  "cat": "entwicklung",
+  "title": "Neubau eines Wohn- u. Geschäftshauses mit Kindertagesstätte",
+  "ort": "Kassel",
+  "img": [
+   [
+    "neubau-eines-wohn-u-geschaeftshauses-mit-kindertagesstaette-kassel-1",
+    1600,
+    900
+   ]
+  ],
+  "quelle": [
+   "21bbcf_b4d4b64132bd4c8a8eead5012e9e058bf002.jpg"
+  ],
+  "film": "film-kita-kassel"
+ },
+ {
+  "id": "PG-058",
+  "slug": "entwicklung-von-zwei-doppelhaushaelften-kassel",
+  "cat": "entwicklung",
+  "title": "Entwicklung von zwei Doppelhaushälften",
+  "ort": "Kassel",
+  "jahr": 2026,
+  "status": "geplant",
+  "lph": "Projektentwicklung",
+  "grundstueck": "1.200 m²",
+  "img": [
+   [
+    "entwicklung-von-zwei-doppelhaushaelften-kassel-1",
+    1600,
+    900
+   ],
+   [
+    "entwicklung-von-zwei-doppelhaushaelften-kassel-2",
+    1600,
+    900
+   ],
+   [
+    "entwicklung-von-zwei-doppelhaushaelften-kassel-3",
+    1600,
+    900
+   ]
+  ],
+  "quelle": [
+   "21bbcf_49198e3ff94e4b4eaad633e38b85a046~mv2.png",
+   "21bbcf_00adc5ef957849f7afaf0a0a727541c3~mv2.png",
+   "21bbcf_91519c5ea0d549cdac53f3b88d174231~mv2.jpg"
+  ]
+ },
+ {
+  "id": "PG-059",
+  "slug": "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich",
+  "cat": "entwicklung",
+  "title": "Entwicklung einer Wohnanlage mit Shopping-Mall",
+  "ort": "Österreich",
+  "lph": "Projektentwicklung",
+  "grundstueck": "10.000 m²",
+  "img": [
+   [
+    "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich-1",
+    1600,
+    1067
+   ],
+   [
+    "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich-2",
+    1600,
+    1067
+   ],
+   [
+    "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich-3",
+    1600,
+    1067
+   ],
+   [
+    "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich-4",
+    1600,
+    1067
+   ],
+   [
+    "entwicklung-einer-wohnanlage-mit-shopping-mall-oesterreich-5",
+    1600,
+    1201
+   ]
+  ],
+  "quelle": [
+   "21bbcf_2abefb2f0e2f4d85811a8e2cb9b80bc7~mv2.png",
+   "21bbcf_4e59a2c6e353437b91cc5e9ac2aaaa06~mv2.png",
+   "21bbcf_d8985097860542e493168f92609a7bde~mv2.png",
+   "21bbcf_17ffe198c454458f88c45c68f747fec8~mv2.png",
+   "21bbcf_b2e37422b29048c4b52bf02a4fdc95d9~mv2.png"
+  ]
+ },
+ {
+  "id": "PG-060",
+  "slug": "entwicklung-eines-wohnkomplexes-butzbach",
+  "cat": "entwicklung",
+  "title": "Entwicklung eines Wohnkomplexes",
+  "ort": "Butzbach",
+  "jahr": 2014,
+  "status": "fertig",
+  "lph": "Projektentwicklung",
+  "grundstueck": "1.800 m²",
+  "img": [
+   [
+    "entwicklung-eines-wohnkomplexes-butzbach-1",
+    1600,
+    942
+   ],
+   [
+    "entwicklung-eines-wohnkomplexes-butzbach-2",
+    1600,
+    942
+   ],
+   [
+    "entwicklung-eines-wohnkomplexes-butzbach-3",
+    1600,
+    942
+   ]
+  ],
+  "quelle": [
+   "21bbcf_7d90e574603844e08824c411d1f93f9e~mv2.jpg",
+   "21bbcf_e1334cb73d7b4e40b78ac9667f280148~mv2.jpg",
+   "21bbcf_5b177967859d4005b5f682d262742928~mv2.jpg"
+  ]
+ }
+]
