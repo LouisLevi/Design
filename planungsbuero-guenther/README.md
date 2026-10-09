@@ -35,6 +35,8 @@ Alle Projekte stehen in `assets/js/projects.js` (ein Eintrag pro Projekt):
 
 ## Hosting (Hetzner Webhosting S)
 
+**Live seit 09.10.2026** unter https://www.planungsbuero-guenther.de · Server www787.your-server.de (IP 167.235.125.65) · Let's-Encrypt-Zertifikat für Domain mit und ohne www (Verlängerung automatisch, Prüfpfad `/.well-known/acme-challenge/` ist von der HTTPS-Umleitung ausgenommen). DNS liegt bei IONOS: A-Records `@` und `www` → 167.235.125.65, alle Mail-Einträge (MX, SPF, DKIM, DMARC, autodiscover) unverändert bei IONOS.
+
 - `.htaccess`: erzwingt HTTPS und www, leitet die alten Wix-Adressen (`/kontakt`, `/team`, `/einfamilienhäuser` …) per 301 auf die neuen Seiten um, setzt Cache- und Sicherheits-Header.
 - `404.html`, `sitemap.xml`, `robots.txt` liegen im Hauptverzeichnis.
 - Hochladen: alles in diesem Ordner außer `README.md` in das Web-Verzeichnis (`public_html`).
