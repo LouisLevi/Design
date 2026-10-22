@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 PLANS = json.loads((ROOT / "assets" / "plans" / "plans.json").read_text())
 ADDRESS = "Altenbaunaer Straße 26"
-CITY = "34134 Kassel"
+CITY = "34134 Kassel-Niederzwehren"
 MOVE_IN = "Januar 2027"
 CONTACT = {"name": "Carsten Günther", "phone": "0179 2199 100", "tel": "+491792199100",
            "mail": "buero@planungsbuero-guenther.de"}
@@ -200,16 +200,16 @@ def build(variant="hell"):
 
     # 1 — Titel
     d.add(
-        '<img class="bleed-top" src="assets/img/haus.jpg" alt="" '
-        'style="top:auto;bottom:0;height:130mm;object-position:72% 50%">'
+        '<img class="bleed-top" src="assets/img/haus-titel.jpg" alt="" '
+        'style="top:auto;bottom:0;height:157.5mm">'
         '<div style="position:absolute;left:22mm;right:18mm;top:18mm" class="kicker">Exposé zur Vermietung</div>'
         '<div style="position:absolute;left:22mm;top:58mm;width:150mm">'
         '<h1 class="display" style="font-size:54pt;line-height:56pt;letter-spacing:-0.02em">Altenbaunaer<br>Straße 26</h1>'
         f'<p class="lead" style="margin-top:9mm">{CITY}</p>'
-        f'<p class="lead" style="color:var(--graphite)">Fünf Mietwohnungen von 33 bis 71{NB}m², '
+        f'<p class="lead" style="color:var(--graphite)">Fünf Mietwohnungen von 33 bis 65{NB}m², '
         f'Erstbezug ab {MOVE_IN}</p></div>'
         '<div class="rule-accent" style="position:absolute;left:22mm;width:14.5mm;top:52mm"></div>'
-        '<div class="caption" style="position:absolute;right:18mm;bottom:133mm;text-align:right">'
+        '<div class="caption" style="position:absolute;right:18mm;bottom:160.5mm;text-align:right">'
         'Außenansicht. Visualisierung</div>',
         folio=False)
 

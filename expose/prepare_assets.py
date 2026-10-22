@@ -199,10 +199,24 @@ def prepare_dark():
     print("Dunkle Variante vorbereitet")
 
 
+def prepare_exterior():
+    """Titelbild und Ausschnitt für Seite 4 aus der neuen Außenansicht mit realer Umgebung."""
+    src = ROOT.parent / "renderings" / "fotorealistisch" / "Aussenansicht Umgebung.jpg"
+    im = Image.open(src).convert("RGB")
+    im.save(ASSETS / "img" / "haus-titel.jpg", quality=92, subsampling=0)
+    w, h = im.size
+    x0, x1 = round(w * 0.20), round(w * 0.83)
+    y0 = round(h * 0.12)
+    im.crop((x0, y0, x1, y0 + round((x1 - x0) * 95 / 210))).save(
+        ASSETS / "img" / "haus-detail.jpg", quality=92, subsampling=0)
+    print("Außenansicht vorbereitet")
+
+
 if __name__ == "__main__":
     pdf = sys.argv[1]
     (ASSETS / "img").mkdir(parents=True, exist_ok=True)
     export_cover(pdf)
     export_plans(pdf)
     prepare_renderings()
+    prepare_exterior()
     prepare_dark()

@@ -19,8 +19,8 @@ Wird Schritt für Schritt mit dem Auftraggeber durchgegangen.
 
 ## Seite für Seite
 
-- **S. 1 Titel:** „34134 Kassel-Niederzwehren“. Foto mit realistischer Umgebung (Nachbarhäuser, Straße mit
-  Straßenbahn-Rasengleis laut Street View; Haus selbst unverändert) – braucht Bild-KI.
+- **S. 1 Titel:** ✅ erledigt – „34134 Kassel-Niederzwehren“ (überall), „33 bis 65 m²“, neues Foto mit realer
+  Umgebung (vom Auftraggeber geliefert, mit Real-ESRGAN auf 2480 px geschärft; auch Ausschnitt S. 4).
 - **S. 2 Auf einen Blick:** „in Kassel-Niederzwehren“ in den Einleitungssatz; „Zweizimmerwohnung mit Dachterrasse“;
   Ausstattung ergänzen: hochwertiger Designboden ?; Photovoltaik minimiert die Kosten für Heizung und Allgemeinstrom;
   Wallbox für E-Autos möglich. Eckdaten: Zahlen wie oben, Stellplätze „möglich mit Wallbox, 60,– €/Stellplatz“,
