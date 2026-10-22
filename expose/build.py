@@ -236,7 +236,7 @@ def build(variant="hell"):
             ("Objekt", f"Neubau, {CITY}"),
             ("Baujahr", "2027"),
             ("Erstbezug", f"ab {MOVE_IN}"),
-            ("Mietwohnungen", "5, Untergeschoss bis 2. OG"),
+            ("Mietwohnungen", "Untergeschoss bis 2. OG"),
             ("Wohnflächen", f"33,24 – 65,04{NB}m²"),
             ("Kaltmieten", f"595,00 – 995,00{NB}€"),
             ("Kaltmiete je m²", f"ab 15,00{NB}€"),
@@ -340,7 +340,6 @@ def build(variant="hell"):
                 f'<div style="padding-top:5mm">' + facts([
                     ("Wohnfläche", m2(u["area"]), True),
                     ("Kaltmiete", eur(u["rent"]), True),
-                ] + ([("Kaltmiete je m²", eur(u["sqm"]))] if u["sqm"] else []) + [
                     ("Freifläche", outdoor),
                     ("Geschoss", u["floor"]),
                     ("Bezugsfrei ab", MOVE_IN),

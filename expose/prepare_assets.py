@@ -31,7 +31,7 @@ PLANS = {
     6: ("w1", {"Wohnen-Kochen-Essen": ("Wohnen · Kochen · Essen", "29,70"), "Schlafen": ("Schlafen", "12,67"),
                "Bad": ("Bad", "4,71"), "Abstl.": ("Abstl.", "2,60")}, []),
     8: ("w2", {"Wohnen-Kochen-Essen": ("Wohnen · Kochen · Essen", "43,19"), "Schlafen": ("Schlafen", "13,52"),
-               "Bad": ("Bad", "4,15"), "Abstl.": ("Abstl.", "1,49"), "Terrasse": ("Terrasse", "6,13")}, []),
+               "Bad": ("Bad", "4,15"), "Abstl.": ("Abstl.", "1,49")}, []),
     11: ("w3-eg", {"Wohnen-Kochen-Essen": ("Wohnen · Kochen · Essen", "97,57"), "Bad": ("Gäste-Bad", "3,58"),
                    "Abstl.": ("Abstl.", "2,05"), "Balkon": ("Balkon", "7,22")}, []),
     12: ("w3-og", {"Schlafen": ("Schlafen", "15,50"), "Ankleide": ("Ankleide", "21,88"), "Büro": ("Büro", "11,62"),
@@ -107,6 +107,39 @@ def export_plans(pdf_path):
         }
         print(f"Plan {name}: {box.width / PT_PER_M:.2f} × {box.height / PT_PER_M:.2f} m, {len(found)} Labels")
     (ASSETS / "plans" / "plans.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    for name in PLAN_TRIM_LEFT:
+        trim_plan_left(name)
+
+
+# Pläne, bei denen links ein Teil wegfällt (Terrasse der Wohnung Erdgeschoss in Richtung Garten entfällt)
+PLAN_TRIM_LEFT = {"w2"}
+
+
+def trim_plan_left(name):
+    """Alles links der Außenwand abschneiden; der übrige Plan bleibt pixelgleich. Mehrfach aufrufbar."""
+    png = ASSETS / "plans" / f"{name}.png"
+    meta_path = ASSETS / "plans" / "plans.json"
+    meta = json.loads(meta_path.read_text())
+    g = np.asarray(Image.open(png).convert("L"))
+    h, w = g.shape
+    lower = g[int(h * 0.68):]                      # unterhalb der Terrasse liegt nur noch das Gebäude
+    wall = int(np.where((lower < 128).any(axis=0))[0].min())
+    pad = round(4 * TARGET_DPI * (10 / 25.4 * 72 / PT_PER_M) / 72)   # wie der Rand der übrigen Pläne
+    x0 = max(wall - pad, 0)
+    out = g[:, x0:].copy()
+    out[:, :wall - x0] = 255                       # Reste der Terrassenkante links der Wand
+    Image.fromarray(out).save(png, optimize=True)
+    if x0 <= 5:
+        return
+    m = meta[name]
+    px_per_m = w / m["width_m"]
+    m["width_m"] = round((w - x0) / px_per_m, 3)
+    fix = lambda pos: [round((pos[0] / 100 * w - x0) / (w - x0) * 100, 2), pos[1]]
+    m["labels"] = [dict(l, pos=fix(l["pos"])) for l in m["labels"] if l["name"] != "Terrasse"]
+    if m.get("entry"):
+        m["entry"] = fix(m["entry"])
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1))
+    print(f"Plan {name}: links {x0} px entfernt, neue Breite {m['width_m']} m")
 
 
 def export_cover(pdf_path):
