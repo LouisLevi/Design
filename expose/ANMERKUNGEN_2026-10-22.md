@@ -32,16 +32,8 @@ Zahlen ✅ überall eingetragen (Übersicht, Wohnungsseiten, Konditionen, Kautio
   Wärmepumpe und Allgemeinstrom senkt Nebenkosten, Mieterstrom gestrichen, + Fenster/Wallbox; Lage: Straßenbahn
   2 Min. zu Fuß, Autobahn in 1 Minute, Einkauf/Ärzte/Apotheken/Schulen/Kitas in unmittelbarer Nähe.
 - **S. 5 Erdgeschoss:** ✅ neues Bild (Schrank vor Fenster weg), Preise.
-- **S. 6:** Luftansicht: Fenster fehlt (Küche), etwas „steht im Flur“ ?, Bett andersherum wie im Grundriss, hier Schrank.
-  Grundriss: Sofa auf die gegenüberliegende Seite, weil dort der Fernseher ist.
-- **S. 7 Erdgeschoss Garten:** Bild: Tür weiß. Terrasse entfällt (Freifläche, Raumliste, Text „Tür auf die Terrasse“).
-- **S. 8:** Grundriss: Terrasse weg.
-- **S. 9 1. OG:** Bild: Fenster bodentief, Küche falsch ?, „Tapeten“/„Tageslicht“ ?, Sofa ?. Freifläche-Zeile ?.
-- **S. 10:** Luftansicht: Küchenzeile wie Grundriss, Wandscheibe, Schrank, Grundriss falsch.
-- **S. 11 2. OG:** Preis anpassen. Terrasse markiert (Dachterrasse ?).
-- **S. 12:** Luftansicht: Schrankraum, Fenster fehlt, Küchenzeile gerade, Eckcouch/Esstisch/Bett wie Grundriss,
-  Terrasse fehlt komplett.
-- **S. 13 Untergeschoss:** Bild passt nicht; Preis 595 €; €/m² weglassen; Stellplatz.
-- **S. 14:** Luftansicht: Tür gibt es nicht, Tür falsch, Fenstertür fehlt, Bett, Grundriss anpassen.
-  Grundriss: Schrift größer, TV einzeichnen.
-- **S. 15 Konditionen:** Preise und Fläche wie oben, Zeile „1 Stellplatz – 60,– €“.
+- **S. 6–14:** Bild- und Möbelanmerkungen übernimmt der Auftraggeber selbst (Möbel in Grundrissen unverändert).
+  ✅ Neue Bilder eingesetzt und geschärft; Terrasse aus Grundriss S. 8 entfernt; Zeile „Freifläche“ nur bei 2. OG;
+  „je m²“ auf Wohnungsseiten entfernt; Preise angepasst; Raumnamen in allen Grundrissen größer (7,6 pt).
+- **S. 15 Konditionen:** ✅ Preise, Fläche, Kaution (2. OG 2.145,60 €), Stellplatz je Wohnung optional mit Wallbox 60 €.
+- **S. 2 Eckdaten:** „Mietwohnungen“ ohne die 5; „fünf“ im Titel/Text bleibt.
