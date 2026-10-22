@@ -17,14 +17,15 @@ Wird Schritt für Schritt mit dem Auftraggeber durchgegangen.
 - Spannen: Wohnfläche 33,24 – 65,04 m², Kaltmiete 595 – 995 €, je m² 15,00 – 16,00 € (Untergeschoss läge darüber)
 - „33 bis 71 m²“ → „33 bis 65 m²“ (Titel, S. 2)
 
+Zahlen ✅ überall eingetragen (Übersicht, Wohnungsseiten, Konditionen, Kaution, Stellplatz).
+
 ## Seite für Seite
 
 - **S. 1 Titel:** ✅ erledigt – „34134 Kassel-Niederzwehren“ (überall), „33 bis 65 m²“, neues Foto mit realer
   Umgebung (vom Auftraggeber geliefert, mit Real-ESRGAN auf 2480 px geschärft; auch Ausschnitt S. 4).
-- **S. 2 Auf einen Blick:** „in Kassel-Niederzwehren“ in den Einleitungssatz; „Zweizimmerwohnung mit Dachterrasse“;
-  Ausstattung ergänzen: hochwertiger Designboden ?; Photovoltaik minimiert die Kosten für Heizung und Allgemeinstrom;
-  Wallbox für E-Autos möglich. Eckdaten: Zahlen wie oben, Stellplätze „möglich mit Wallbox, 60,– €/Stellplatz“,
-  Zeile Strom: unleserliche Ergänzung ?.
+- **S. 2 Auf einen Blick:** ✅ erledigt – Kassel-Niederzwehren, 65 m², Dachterrasse, Designboden, PV minimiert
+  Kosten für Heizung und Allgemeinstrom, Wallbox möglich; Eckdaten neu (je m² „ab 15,00 €“), Stellplatz 60 €/Monat
+  (nur ein optionaler Stellplatz genannt). „Mietwohnungen 5“ unverändert. Zeile Strom unverändert.
 - **S. 3 Ausstattung:** „Neue Einbauküche inkl. aller Geräte“; Satz „Die Haustechnik ist auf den Alltag ausgelegt:“
   streichen. Bild: Hängeschränke weg. Bad: + Handtuchheizkörper, 6 Steckdosen über Ablage. Heizung: Fußbodenheizung
   mit Einzelraumsteuerung, Wohnungsstation mit Ablesemöglichkeit zur Kostenminimierung. Fenster: + einzeln steuerbar.
@@ -33,7 +34,7 @@ Wird Schritt für Schritt mit dem Auftraggeber durchgegangen.
   verwendet und minimiert die Nebenkosten (statt Mieterstrom; Zeile „Versorgungsmodell“ streichen).
   + Wallbox möglich, Dreifachverglasung. Lage: viel mehr Text – Straßenbahn, Autobahn, Einkauf, Ärzte, Apotheken,
   Uni, Schule, Kita. Autobahn „in 1 Minute“.
-- **S. 5 Erdgeschoss:** Bild: Schrank vor dem Fenster weg. Preise wie oben.
+- **S. 5 Erdgeschoss:** ✅ neues Bild (Schrank vor Fenster weg), Preise.
 - **S. 6:** Luftansicht: Fenster fehlt (Küche), etwas „steht im Flur“ ?, Bett andersherum wie im Grundriss, hier Schrank.
   Grundriss: Sofa auf die gegenüberliegende Seite, weil dort der Fernseher ist.
 - **S. 7 Erdgeschoss Garten:** Bild: Tür weiß. Terrasse entfällt (Freifläche, Raumliste, Text „Tür auf die Terrasse“).
