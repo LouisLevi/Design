@@ -215,7 +215,7 @@ def build(variant="hell"):
         folio=False)
 
     # 2 — Auf einen Blick
-    parking_row = (f'<tr><td class="unit">Stellplatz</td><td>für jede Wohnung optional, mit Wallbox für E-Autos</td><td>–</td>'
+    parking_row = (f'<tr><td class="unit">Stellplätze</td><td>4 Stellplätze zu vermieten, mit Wallbox für E-Autos möglich</td><td>–</td>'
                    f'<td class="r">–</td><td class="r num">{eur(PARKING)}</td><td></td></tr>')
     rows = "".join(
         f'<tr><td class="unit">{u["label"]}</td><td>{u["split"]}</td>'
@@ -244,7 +244,7 @@ def build(variant="hell"):
             ("Wärmeverteilung", "Fußbodenheizung"),
             ("Strom", "Photovoltaik mit Speicher"),
             ("Keller", f"Kellerraum je Wohnung, ca. 5–10{NB}m²"),
-            ("Stellplatz", f"je Wohnung optional, mit Wallbox, {PARKING}{NB}€ im Monat"),
+            ("Stellplätze", f"4, mit Wallbox möglich, je {PARKING}{NB}€ im Monat"),
         ]) + '</div>'),
         bottom=(
         '<div class="kicker" style="grid-column:1/13">Die Wohnungen</div>'
@@ -264,7 +264,7 @@ def build(variant="hell"):
              ("Keller", f"Eigener Kellerraum je Wohnung, ca. 5–10{NB}m²"),
              ("Waschen", "Gemeinschaftliche Waschküche, Möglichkeit zur Wäschetrocknung"),
              ("Garten", "Garten mit Grillplatz zur Mitbenutzung"),
-             ("Stellplatz", f"Für jede Wohnung optional, mit Wallbox für E-Autos, {PARKING}{NB}€ im Monat")]
+             ("Stellplätze", f"4 Stellplätze zu vermieten, mit Wallbox für E-Autos möglich, je {PARKING}{NB}€ im Monat")]
     house_html = "".join(f"<dt>{k}</dt><dd>{t}</dd>" for k, t in house)
     d.add(
         '<img src="assets/img/detail-kueche.jpg" alt="" class="p3-image">'
@@ -365,7 +365,7 @@ def build(variant="hell"):
         f'<tr><td class="unit">{u["label"]}</td>'
         f'<td class="r num">{m2(u["area"])}</td><td class="r num">{eur(u["rent"])}</td>'
         f'<td class="r num">{deposit(u["rent"])}</td></tr>' for u in UNITS)
-    cond_rows += (f'<tr><td class="unit">Stellplatz je Wohnung, optional mit Wallbox</td><td class="r">–</td>'
+    cond_rows += (f'<tr><td class="unit">Stellplatz, mit Wallbox möglich (4 verfügbar)</td><td class="r">–</td>'
                   f'<td class="r num">{eur(PARKING)}</td><td class="r">–</td></tr>')
     scale = "".join(f'<i class="{"on" if c == EFFICIENCY else ""}">{c}</i>'
                     for c in ["A+", "A", "B", "C", "D", "E", "F", "G", "H"])
@@ -382,7 +382,7 @@ def build(variant="hell"):
             ("Bezugsfrei ab", f"{MOVE_IN}, Erstbezug"),
             ("Kaution", "drei Kaltmieten"),
             ("Nebenkosten", "auf Anfrage"),
-            ("Stellplatz", f"je Wohnung optional, mit Wallbox, {PARKING}{NB}€ im Monat"),
+            ("Stellplätze", f"4, mit Wallbox möglich, je {PARKING}{NB}€ im Monat"),
         ]) + '</div>'
         '<div style="grid-column:7/13;margin-top:14mm">'
         '<h2 class="h2" style="margin-bottom:4mm">Energie</h2>' + facts([

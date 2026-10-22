@@ -35,5 +35,5 @@ Zahlen ✅ überall eingetragen (Übersicht, Wohnungsseiten, Konditionen, Kautio
 - **S. 6–14:** Bild- und Möbelanmerkungen übernimmt der Auftraggeber selbst (Möbel in Grundrissen unverändert).
   ✅ Neue Bilder eingesetzt und geschärft; Terrasse aus Grundriss S. 8 entfernt; Zeile „Freifläche“ nur bei 2. OG;
   „je m²“ auf Wohnungsseiten entfernt; Preise angepasst; Raumnamen in allen Grundrissen größer (7,6 pt).
-- **S. 15 Konditionen:** ✅ Preise, Fläche, Kaution (2. OG 2.145,60 €), Stellplatz je Wohnung optional mit Wallbox 60 €.
+- **S. 15 Konditionen:** ✅ Preise, Fläche, Kaution (2. OG 2.145,60 €), 4 Stellplätze zu vermieten, mit Wallbox möglich, je 60 € (nicht je Wohnung).
 - **S. 2 Eckdaten:** „Mietwohnungen“ ohne die 5; „fünf“ im Titel/Text bleibt.
