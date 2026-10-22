@@ -26,10 +26,8 @@ Zahlen ✅ überall eingetragen (Übersicht, Wohnungsseiten, Konditionen, Kautio
 - **S. 2 Auf einen Blick:** ✅ erledigt – Kassel-Niederzwehren, 65 m², Dachterrasse, Designboden, PV minimiert
   Kosten für Heizung und Allgemeinstrom, Wallbox möglich; Eckdaten neu (je m² „ab 15,00 €“), Stellplatz 60 €/Monat
   (nur ein optionaler Stellplatz genannt). „Mietwohnungen 5“ unverändert. Zeile Strom unverändert.
-- **S. 3 Ausstattung:** „Neue Einbauküche inkl. aller Geräte“; Satz „Die Haustechnik ist auf den Alltag ausgelegt:“
-  streichen. Bild: Hängeschränke weg. Bad: + Handtuchheizkörper, 6 Steckdosen über Ablage. Heizung: Fußbodenheizung
-  mit Einzelraumsteuerung, Wohnungsstation mit Ablesemöglichkeit zur Kostenminimierung. Fenster: + einzeln steuerbar.
-  Netz: + mehrere LAN-Anschlüsse pro Raum. Elektro: + auch im Bad. Stellplätze: möglich mit Wallbox für E-Autos.
+- **S. 3 Ausstattung:** ✅ erledigt – inkl. aller Geräte, Haustechnik-Satz gestrichen, Bad/Heizung/Fenster/Netz
+  ergänzt (Steckdosen nur beim Bad), Stellplatz mit Wallbox 60 €, Garten unverändert, Bild ohne Hängeschränke.
 - **S. 4 Energie/Lage:** Überschrift „Lage + Energieeffizienz“. PV-Strom wird für Wärmepumpe und Allgemeinstrom
   verwendet und minimiert die Nebenkosten (statt Mieterstrom; Zeile „Versorgungsmodell“ streichen).
   + Wallbox möglich, Dreifachverglasung. Lage: viel mehr Text – Straßenbahn, Autobahn, Einkauf, Ärzte, Apotheken,

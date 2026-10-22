@@ -256,7 +256,7 @@ def build(variant="hell"):
         'Wohnung 2. Obergeschoss ist in der Wohnfläche enthalten. Kaltmieten zuzüglich Nebenkosten.</p>'))
 
     # 3 — Ausstattung
-    feats = [('Küche', 'Neue Einbauküche mit Backofen, Cerankochfeld, großem Kühlschrank, Geschirrspülmaschine und Abzugshaube'), ('Bad', 'Bodengleiche Dusche'), ('Heizung', 'Fußbodenheizung in allen Räumen, Wohnungsstation'), ('Fenster', 'Dreifachverglasung, elektrische Rollläden, außenliegende Jalousien'), ('Netz', 'Glasfaser-Internet, WLAN in jedem Raum'), ('Elektro', 'Zeitgemäße Unterverteilung, überdurchschnittlich viele Steckdosen')]
+    feats = [('Küche', 'Neue Einbauküche mit Backofen, Cerankochfeld, großem Kühlschrank, Geschirrspülmaschine und Abzugshaube'), ('Bad', 'Bodengleiche Dusche, Handtuchheizkörper, 6 Steckdosen über der Ablage'), ('Heizung', 'Fußbodenheizung mit Einzelraumsteuerung in allen Räumen, Wohnungsstation mit Ablesemöglichkeit zur Kostenminimierung'), ('Fenster', 'Dreifachverglasung, elektrische Rollläden, außenliegende Jalousien, einzeln steuerbar'), ('Netz', 'Glasfaser-Internet, WLAN in jedem Raum, mehrere LAN-Anschlüsse pro Raum'), ('Elektro', 'Zeitgemäße Unterverteilung, überdurchschnittlich viele Steckdosen')]
     feat_html = "".join(
         f'<div class="feat-item"><span class="no">{i:02d}</span><div><div class="kicker">{k}</div>'
         f'<p>{t}</p></div></div>' for i, (k, t) in enumerate(feats, 1))
@@ -264,19 +264,18 @@ def build(variant="hell"):
              ("Keller", f"Eigener Kellerraum je Wohnung, ca. 5–10{NB}m²"),
              ("Waschen", "Gemeinschaftliche Waschküche, Möglichkeit zur Wäschetrocknung"),
              ("Garten", "Garten mit Grillplatz zur Mitbenutzung"),
-             ("Stellplätze", "Nach Absprache")]
+             ("Stellplatz", f"Mit Wallbox für E-Autos möglich, {PARKING}{NB}€ im Monat")]
     house_html = "".join(f"<dt>{k}</dt><dd>{t}</dd>" for k, t in house)
     d.add(
         '<img src="assets/img/detail-kueche.jpg" alt="" class="p3-image">'
-        '<p class="caption p3-caption"><b>Wohnung Erdgeschoss, Essplatz und Küche.</b> Visualisierung – Einrichtung beispielhaft</p>',
+        '<p class="caption p3-caption"><b>Wohnung Erdgeschoss, Küche.</b> Visualisierung – Einrichtung beispielhaft</p>',
         content=(
         '<div style="grid-column:1/6">'
         '<div class="kicker">Ausstattung</div>'
         '<h1 class="display" style="font-size:44pt;line-height:46pt;margin-top:14mm">In jeder<br>Wohnung</h1>'
-        '<p class="lead" style="margin-top:9mm">Neue Einbauküche, Bad mit bodengleicher Dusche und '
+        '<p class="lead" style="margin-top:9mm">Neue Einbauküche inkl. aller Geräte, Bad mit bodengleicher Dusche und '
         'Fußbodenheizung in allen Räumen.</p>'
-        '<p class="body" style="margin-top:6mm">Die Haustechnik ist auf den Alltag ausgelegt: '
-        'dreifach verglaste Fenster mit elektrischen Rollläden und außenliegenden Jalousien, '
+        '<p class="body" style="margin-top:6mm">Dreifach verglaste Fenster mit elektrischen Rollläden und außenliegenden Jalousien, '
         'Glasfaser-Internet und WLAN in jedem Raum.</p></div>'),
         bottom=(
         '<div class="kicker" style="grid-column:1/13;margin-bottom:3mm">Wohnung</div>'
