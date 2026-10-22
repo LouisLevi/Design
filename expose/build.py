@@ -284,38 +284,44 @@ def build(variant="hell"):
         f'<dl class="spec spec-house" style="grid-column:1/13">{house_html}</dl>'),
         bottom_style="align-items:start")
 
-    # 4 — Energie und Lage
+    # 4 — Lage und Energieeffizienz
     d.add(
         '<img class="bleed-top" src="assets/img/haus-detail.jpg" alt="" style="height:95mm">',
         content=(
         '<p class="caption" style="grid-column:1/13"><b>Außenansicht, obere Geschosse.</b> Visualisierung</p>'
-        '<div class="kicker" style="grid-column:1/13;margin-top:10mm">Energie und Lage</div>'
-        '<h1 class="display" style="grid-column:1/11;margin-top:5mm">Eigener Strom, kurze Wege</h1>'),
+        '<div class="kicker" style="grid-column:1/13;margin-top:10mm">Umgebung und Haustechnik</div>'
+        '<h1 class="display" style="grid-column:1/11;margin-top:5mm">Lage und Energieeffizienz</h1>'),
         content_style="top:98mm",
         bottom=(
         '<div style="grid-column:1/6">'
         '<h2 class="h2">Energie</h2>'
-        '<p class="body" style="margin-top:3mm">Eine Photovoltaikanlage mit Speicher erzeugt Strom am Haus; '
-        'die Mieterinnen und Mieter beziehen ihn über ein Mieterstrommodell.</p>'
+        '<p class="body" style="margin-top:3mm">Eine Photovoltaikanlage mit Speicher erzeugt Strom am Haus. '
+        'Dieser wird für die Wärmepumpe und den Allgemeinstrom verwendet und minimiert dadurch die Nebenkosten.</p>'
         '<p class="body">Geheizt wird mit einer Luft-Wasser-Wärmepumpe, die Wärme über Fußbodenheizungen '
         'in allen Räumen abgibt. Wände und Dach sind überdurchschnittlich gut gedämmt.</p>'
         '<div style="margin-top:8mm">' + facts([
             ("Wärmeerzeugung", "Luft-Wasser-Wärmepumpe"),
             ("Wärmeverteilung", "Fußbodenheizung"),
             ("Strom", "Photovoltaik mit Speicher"),
-            ("Versorgungsmodell", "Mieterstrom"),
+            ("Fenster", "Dreifachverglasung"),
+            ("Wallbox", "möglich"),
         ]) + '</div></div>'
         '<div style="grid-column:7/13">'
         '<h2 class="h2">Lage</h2>'
         '<p class="body" style="margin-top:3mm">Das Haus steht auf einem großzügigen Grundstück in '
         'Innenstadtlage. Der rückwärtige Teil mit Garten liegt ruhig und naturnah.</p>'
+        '<p class="body">Zur Straßenbahn sind es zwei Minuten zu Fuß, zur Autobahn eine Minute mit dem Auto. '
+        'Einkaufsmöglichkeiten, Ärzte und Apotheken, Schulen und Kitas liegen in unmittelbarer Nähe und '
+        'sind in wenigen Minuten zu erreichen.</p>'
         '<div style="margin-top:5mm;display:flex;align-items:flex-end;gap:4mm">'
-        '<span class="num" style="font-family:NR Display;font-weight:300;font-size:60pt;line-height:46pt;color:var(--accent)">6</span>'
-        '<span class="small" style="max-width:44mm">Minuten zu Fuß zu den Haltestellen des öffentlichen Nahverkehrs (ca.)</span></div>'
+        '<span class="num" style="font-family:NR Display;font-weight:300;font-size:60pt;line-height:46pt;color:var(--accent)">2</span>'
+        '<span class="small" style="max-width:44mm">Minuten zu Fuß zur Straßenbahn</span></div>'
         '<div style="margin-top:8mm">' + facts([
-            ("Haltestellen ÖPNV", "ca. 6 Min. zu Fuß"),
+            ("Straßenbahn", "2 Min. zu Fuß"),
+            ("Autobahn", "in 1 Minute"),
+            ("Einkauf, Ärzte, Apotheken", "in unmittelbarer Nähe"),
+            ("Schulen, Kitas", "in unmittelbarer Nähe"),
             ("Universität", "in unmittelbarer Nähe"),
-            ("Autobahn", "in wenigen Minuten"),
         ]) + '</div></div>'),
         bottom_style="align-items:start")
 

@@ -28,10 +28,9 @@ Zahlen ✅ überall eingetragen (Übersicht, Wohnungsseiten, Konditionen, Kautio
   (nur ein optionaler Stellplatz genannt). „Mietwohnungen 5“ unverändert. Zeile Strom unverändert.
 - **S. 3 Ausstattung:** ✅ erledigt – inkl. aller Geräte, Haustechnik-Satz gestrichen, Bad/Heizung/Fenster/Netz
   ergänzt (Steckdosen nur beim Bad), Stellplatz mit Wallbox 60 €, Garten unverändert, Bild ohne Hängeschränke.
-- **S. 4 Energie/Lage:** Überschrift „Lage + Energieeffizienz“. PV-Strom wird für Wärmepumpe und Allgemeinstrom
-  verwendet und minimiert die Nebenkosten (statt Mieterstrom; Zeile „Versorgungsmodell“ streichen).
-  + Wallbox möglich, Dreifachverglasung. Lage: viel mehr Text – Straßenbahn, Autobahn, Einkauf, Ärzte, Apotheken,
-  Uni, Schule, Kita. Autobahn „in 1 Minute“.
+- **S. 4 Energie/Lage:** ✅ erledigt – „Umgebung und Haustechnik“ / „Lage und Energieeffizienz“, PV-Strom für
+  Wärmepumpe und Allgemeinstrom senkt Nebenkosten, Mieterstrom gestrichen, + Fenster/Wallbox; Lage: Straßenbahn
+  2 Min. zu Fuß, Autobahn in 1 Minute, Einkauf/Ärzte/Apotheken/Schulen/Kitas in unmittelbarer Nähe.
 - **S. 5 Erdgeschoss:** ✅ neues Bild (Schrank vor Fenster weg), Preise.
 - **S. 6:** Luftansicht: Fenster fehlt (Küche), etwas „steht im Flur“ ?, Bett andersherum wie im Grundriss, hier Schrank.
   Grundriss: Sofa auf die gegenüberliegende Seite, weil dort der Fernseher ist.
