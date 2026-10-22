@@ -345,7 +345,7 @@ def build(variant="hell"):
                 f'<div style="padding-top:5mm">' + facts([
                     ("Wohnfläche", m2(u["area"]), True),
                     ("Kaltmiete", eur(u["rent"]), True),
-                    ("Freifläche", outdoor),
+                ] + ([("Freifläche", outdoor)] if u["outdoor"] else []) + [
                     ("Geschoss", u["floor"]),
                     ("Bezugsfrei ab", MOVE_IN),
                 ]) + '</div>'
