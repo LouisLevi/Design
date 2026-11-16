@@ -36,7 +36,7 @@ SIZE = (1920, 1080)
 # hochrechnen (esrgan.py, braucht torch) und mit der FSRCNN-Fassung mischen, damit Stoffe
 # und Teppiche ihre natürliche Struktur behalten.
 STRONG_SR = {"wohnung 1 innenansicht", "wohnung 1 luftansicht", "wohnung 2 innenansicht", "wohnung 2 luftansicht",
-             "wohnung 4 innenansicht", "wohnung 4 luftansicht", "wohnung 5 luftansicht",
+             "wohnung 4 innenansicht", "wohnung 4 luftansicht", "wohnung 5 innenansicht", "wohnung 5 luftansicht",
              "wohnung 6 innenansicht", "wohnung 6 luftansicht"}
 STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
@@ -112,11 +112,15 @@ def upscale(img8):
 
 
 def fit(big):
-    """Auf Breite 1920 verkleinern, dann mittig auf 1080 Höhe zuschneiden."""
-    h = round(big.shape[0] * SIZE[0] / big.shape[1])
-    small = cv2.resize(big, (SIZE[0], h), interpolation=cv2.INTER_AREA)
-    top = (h - SIZE[1]) // 2
-    return small[top:top + SIZE[1]]
+    """Auf 1920×1080 bringen: so skalieren, dass das Format ganz gefüllt ist, dann mittig zuschneiden.
+
+    Bei Bildern, die nicht breiter als 16:9 sind, ist das wie bisher „auf Breite 1920, Höhe mittig“.
+    """
+    scale = max(SIZE[0] / big.shape[1], SIZE[1] / big.shape[0])
+    w, h = round(big.shape[1] * scale), round(big.shape[0] * scale)
+    small = cv2.resize(big, (w, h), interpolation=cv2.INTER_AREA)
+    left, top = (w - SIZE[0]) // 2, (h - SIZE[1]) // 2
+    return small[top:top + SIZE[1], left:left + SIZE[0]]
 
 
 def sharpen(img8):
