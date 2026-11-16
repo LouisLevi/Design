@@ -36,13 +36,13 @@ SIZE = (1920, 1080)
 # Quellbilder, die deutlich weicher sind als der Rest der Serie: zusätzlich mit Real-ESRGAN
 # hochrechnen (esrgan.py, braucht torch) und mit der FSRCNN-Fassung mischen, damit Stoffe
 # und Teppiche ihre natürliche Struktur behalten.
-STRONG_SR = {"wohnung 1 innenansicht", "wohnung 1 luftansicht", "wohnung 2 innenansicht", "wohnung 2 luftansicht",
+STRONG_SR = {"wohnung 1 innenansicht", "wohnung 2 innenansicht", "wohnung 2 luftansicht",
              "wohnung 4 innenansicht", "wohnung 4 luftansicht", "wohnung 5 innenansicht", "wohnung 5 luftansicht",
              "wohnung 6 innenansicht", "wohnung 6 luftansicht"}
 STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
 # Stark verwaschene Quellen: auf Verkleinerungsfaktor herunterrechnen (bündelt die verschmierten Details)
 # und mit dem allgemeinen Real-ESRGAN-Modell (Glättung 0…1) ×4 hochrechnen, ohne FSRCNN-Mischung.
-GENERAL_SR = {"wohnung 1 luftansicht": (0.5, 0.3)}
+GENERAL_SR = {}  # derzeit keins (Luftansicht Erdgeschoss vom Auftraggeber selbst hochskaliert)
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
 WB_STRENGTH = 0.9                     # Anteil der Farbstich-Korrektur
 MEDIAN_L = {"innen": 0.57, "luft": None}
