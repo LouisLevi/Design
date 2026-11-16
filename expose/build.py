@@ -420,7 +420,7 @@ def detail_crop():
     im = Image.open(ROOT.parent / "renderings" / "fotorealistisch" / "auswahl" / "Wohnung 1 Innenansicht.jpg")
     w, h = im.size
     cw = round(h * 4 / 5)
-    x = round(w * 0.3125)  # Essplatz und Küche in der Bildmitte (1920 px: ab x = 600)
+    x = round(w * 0.27)  # Essplatz und Eck-Küche, ohne das Sofa rechts (1920 px: ab x = 518)
     im.crop((x, 0, x + cw, h)).save(ROOT / "assets" / "img" / "detail-kueche.jpg", quality=93, subsampling=0)
 
 
