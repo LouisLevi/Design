@@ -42,7 +42,7 @@ STRONG_SR = {"wohnung 1 innenansicht", "wohnung 2 innenansicht", "wohnung 2 luft
 STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
 # Stark verwaschene Quellen: auf Verkleinerungsfaktor herunterrechnen (bündelt die verschmierten Details)
 # und mit dem allgemeinen Real-ESRGAN-Modell (Glättung 0…1) ×4 hochrechnen, ohne FSRCNN-Mischung.
-GENERAL_SR = {}  # derzeit keins (Luftansicht Erdgeschoss vom Auftraggeber selbst hochskaliert)
+GENERAL_SR = {}  # derzeit keins
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
 WB_STRENGTH = 0.9                     # Anteil der Farbstich-Korrektur
 MEDIAN_L = {"innen": 0.57, "luft": None}
