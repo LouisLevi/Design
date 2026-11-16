@@ -13,6 +13,7 @@ Schritte:
 - Alle: dezente Mikrokontraste, etwas Lebendigkeit, Hochskalieren mit FSRCNN (×2,
   OpenCV dnn_superres), auf 1920×1080 verkleinern, leicht nachschärfen.
 - Weiche Quellbilder (STRONG_SR): zusätzlich Real-ESRGAN ×4 (esrgan.py), 85 % gemischt.
+- Stark verwaschene Quellen (GENERAL_SR): verkleinert und mit dem allgemeinen Real-ESRGAN-Modell hochgerechnet.
 - Luftansichten: Hintergrund auf sauberes Reinweiß (ohne JPEG-Rauschen).
 
 Braucht: pip install opencv-contrib-python-headless numpy pillow
@@ -39,6 +40,9 @@ STRONG_SR = {"wohnung 1 innenansicht", "wohnung 1 luftansicht", "wohnung 2 innen
              "wohnung 4 innenansicht", "wohnung 4 luftansicht", "wohnung 5 innenansicht", "wohnung 5 luftansicht",
              "wohnung 6 innenansicht", "wohnung 6 luftansicht"}
 STRONG_SR_MIX = 0.85  # Anteil Real-ESRGAN
+# Stark verwaschene Quellen: auf Verkleinerungsfaktor herunterrechnen (bündelt die verschmierten Details)
+# und mit dem allgemeinen Real-ESRGAN-Modell (Glättung 0…1) ×4 hochrechnen, ohne FSRCNN-Mischung.
+GENERAL_SR = {"wohnung 1 luftansicht": (0.5, 0.3)}
 WHITE = np.array([0.98, 1.0, 1.015])  # Ziel-Weiß in B, G, R: Tageslicht, minimal warm
 WB_STRENGTH = 0.9                     # Anteil der Farbstich-Korrektur
 MEDIAN_L = {"innen": 0.57, "luft": None}
@@ -156,7 +160,12 @@ def main():
         img = tone(img, MEDIAN_L[kind])
         img8 = (img * 255 + 0.5).astype(np.uint8)
         base = sharpen(upscale(img8))
-        if p.stem.lower() in STRONG_SR:
+        if p.stem.lower() in GENERAL_SR:
+            import esrgan
+            factor, denoise = GENERAL_SR[p.stem.lower()]
+            small = cv2.resize(img8, None, fx=factor, fy=factor, interpolation=cv2.INTER_AREA)
+            base = sharpen(fit(esrgan.upscale_general_x4(small, denoise=denoise)))
+        elif p.stem.lower() in STRONG_SR:
             import esrgan  # erst hier laden: torch wird nur für diese Bilder gebraucht
             strong = fit(esrgan.upscale_x4(img8))
             base = cv2.addWeighted(strong, STRONG_SR_MIX, base, 1 - STRONG_SR_MIX, 0)

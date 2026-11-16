@@ -101,3 +101,67 @@ def upscale_x4(img_bgr8, tile=192, pad=12):
             out[:, :, y0 * 4:y1 * 4, x0 * 4:x1 * 4] = res[:, :, oy:oy + (y1 - y0) * 4, ox:ox + (x1 - x0) * 4]
     res = out[0].clamp(0, 1).numpy().transpose(1, 2, 0)[:, :, ::-1]
     return (res * 255 + 0.5).astype(np.uint8)
+
+
+# ---------- Real-ESRGAN „general“ (SRVGGNetCompact), Glättung einstellbar ----------
+GENERAL = Path.home() / ".cache" / "sr" / "realesr-general-x4v3.pth"
+GENERAL_WDN = Path.home() / ".cache" / "sr" / "realesr-general-wdn-x4v3.pth"
+GENERAL_URL = "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/"
+
+
+class SRVGGNetCompact(nn.Module):
+    def __init__(self, nf=64, nconv=32, scale=4):
+        super().__init__()
+        self.scale = scale
+        body = [nn.Conv2d(3, nf, 3, 1, 1), nn.PReLU(num_parameters=nf)]
+        for _ in range(nconv):
+            body += [nn.Conv2d(nf, nf, 3, 1, 1), nn.PReLU(num_parameters=nf)]
+        body.append(nn.Conv2d(nf, 3 * scale * scale, 3, 1, 1))
+        self.body = nn.ModuleList(body)
+        self.up = nn.PixelShuffle(scale)
+
+    def forward(self, x):
+        out = x
+        for m in self.body:
+            out = m(out)
+        return self.up(out) + F.interpolate(x, scale_factor=self.scale, mode="nearest")
+
+
+_general = {}
+
+
+def _load_general(denoise):
+    """denoise 0…1: Mischung der Gewichte wie im Original (1 = stärkste Glättung)."""
+    if denoise not in _general:
+        for p in (GENERAL, GENERAL_WDN):
+            if not p.exists():
+                p.parent.mkdir(parents=True, exist_ok=True)
+                urllib.request.urlretrieve(GENERAL_URL + p.name, p)
+        a = torch.load(GENERAL, map_location="cpu", weights_only=True)
+        b = torch.load(GENERAL_WDN, map_location="cpu", weights_only=True)
+        a, b = a.get("params", a), b.get("params", b)
+        state = {k: denoise * a[k] + (1 - denoise) * b[k] for k in a}
+        net = SRVGGNetCompact()
+        net.load_state_dict(state, strict=True)
+        net.eval()
+        _general[denoise] = net
+    return _general[denoise]
+
+
+@torch.no_grad()
+def upscale_general_x4(img_bgr8, denoise=0.5, tile=256, pad=10):
+    model = _load_general(denoise)
+    rgb = img_bgr8[:, :, ::-1].astype(np.float32) / 255
+    x = torch.from_numpy(np.ascontiguousarray(rgb.transpose(2, 0, 1)))[None]
+    _, _, h, w = x.shape
+    out = torch.zeros((1, 3, h * 4, w * 4))
+    for y0 in range(0, h, tile):
+        for x0 in range(0, w, tile):
+            y1, x1 = min(y0 + tile, h), min(x0 + tile, w)
+            py0, px0 = max(y0 - pad, 0), max(x0 - pad, 0)
+            py1, px1 = min(y1 + pad, h), min(x1 + pad, w)
+            res = model(x[:, :, py0:py1, px0:px1])
+            oy, ox = (y0 - py0) * 4, (x0 - px0) * 4
+            out[:, :, y0 * 4:y1 * 4, x0 * 4:x1 * 4] = res[:, :, oy:oy + (y1 - y0) * 4, ox:ox + (x1 - x0) * 4]
+    res = out[0].clamp(0, 1).numpy().transpose(1, 2, 0)[:, :, ::-1]
+    return (res * 255 + 0.5).astype(np.uint8)
