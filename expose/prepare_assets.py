@@ -190,9 +190,15 @@ def alpha_mask(src, size=(1920, 1080), thr=249, eps=3.0, inset=1.5):
     contours, _ = cv2.findContours(fg, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     c = max(contours, key=cv2.contourArea)
     poly = cv2.approxPolyDP(c, eps, True).astype(np.float32)
-    s = size[0] / src.shape[1]
-    hi = np.zeros((round(src.shape[0] * s), size[0]), np.uint8)
+    # gleiche Skalierung wie aufbereiten.fit(): Format füllen; nur bei Bildern breiter als 16:9
+    # wird zusätzlich seitlich mittig beschnitten
+    s = max(size[0] / src.shape[1], size[1] / src.shape[0])
+    W, H = round(src.shape[1] * s), round(src.shape[0] * s)
+    hi = np.zeros((H, W), np.uint8)
     cv2.fillPoly(hi, [np.round((poly + 0.5) * s * 16).astype(np.int32)], 255, lineType=cv2.LINE_AA, shift=4)
+    if W > size[0]:
+        left, top = (W - size[0]) // 2, (H - size[1]) // 2
+        hi = hi[top:top + size[1], left:left + size[0]]
     hi = hi[:size[1]].astype(np.float32) / 255
     if inset:
         k = int(round(inset * 2)) | 1
