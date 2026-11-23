@@ -246,7 +246,7 @@ EXTERIOR = {
     "haus-hof.jpg": ("Aussenansicht_Abend_Hof_schraeg.jpg", (210, 157.5), (0.5, 0.5), 2480),          # Seite 2 oben
     "haus-strasse.jpg": ("Aussenansicht_Abend_Strasse_schraeg.jpg", (83, 96), (0.5, 0.5), 1240),      # Seite 2 links
     "haus-garten.jpg": ("Aussenansicht_Abend_Gartenseite.jpg", (83, 96), (0.5, 0.5), 1240),           # Seite 2 rechts
-    "haus-detail.jpg": ("Aussenansicht_Abend_Strasse_schraeg.jpg", (210, 95), (0.5, 0.68), None),     # Lage: Straße
+    "haus-detail.jpg": ("Aussenansicht_Abend_Hof_schraeg.jpg", (210, 95), (0.5, 0.75), 2480),        # Seite 5: Lage
 }
 
 

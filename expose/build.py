@@ -277,8 +277,8 @@ def build(variant="hell"):
              ("Stellplätze", f"4 Stellplätze zu vermieten, mit Wallbox für E-Autos möglich, je {PARKING}{NB}€ im Monat")]
     house_html = "".join(f"<dt>{k}</dt><dd>{t}</dd>" for k, t in house)
     d.add(
-        '<img src="assets/img/detail-kueche.jpg" alt="" class="p3-image">'
-        '<p class="caption p3-caption"><b>Wohnung Erdgeschoss, Küche.</b> Visualisierung – Einrichtung beispielhaft</p>',
+        '<img src="assets/img/detail-innen.jpg" alt="" class="p3-image">'
+        '<p class="caption p3-caption"><b>Wohnung 1. Obergeschoss, Essplatz und Wohnbereich.</b> Visualisierung – Einrichtung beispielhaft</p>',
         content=(
         '<div style="grid-column:1/6">'
         '<div class="kicker">Ausstattung</div>'
@@ -298,7 +298,7 @@ def build(variant="hell"):
     d.add(
         '<img class="bleed-top" src="assets/img/haus-detail.jpg" alt="" style="height:95mm">',
         content=(
-        '<p class="caption" style="grid-column:1/13"><b>Straßenseite mit Straßenbahngleisen.</b> Visualisierung</p>'
+        '<p class="caption" style="grid-column:1/13"><b>Hof- und Gartenseite.</b> Visualisierung</p>'
         '<div class="kicker" style="grid-column:1/13;margin-top:10mm">Umgebung und Haustechnik</div>'
         '<h1 class="display" style="grid-column:1/11;margin-top:5mm">Lage und Energieeffizienz</h1>'),
         content_style="top:98mm",
@@ -426,12 +426,13 @@ def build(variant="hell"):
 
 
 def detail_crop():
+    """Hochformat für Seite 4 (Ausstattung): Wohnung 1. Obergeschoss, Essplatz, Fenster und Sofa."""
     from PIL import Image
-    im = Image.open(ROOT.parent / "renderings" / "fotorealistisch" / "auswahl" / "Wohnung 1 Innenansicht.jpg")
+    im = Image.open(ROOT.parent / "renderings" / "fotorealistisch" / "auswahl" / "Wohnung 4 Innenansicht.jpg")
     w, h = im.size
-    cw = round(h * 4 / 5)
-    x = round(w * 0.27)  # Essplatz und Eck-Küche, ohne das Sofa rechts (1920 px: ab x = 518)
-    im.crop((x, 0, x + cw, h)).save(ROOT / "assets" / "img" / "detail-kueche.jpg", quality=93, subsampling=0)
+    cw = round(h * 101 / 120)  # Format des Bildfelds (.p3-image)
+    x = round(w * 820 / 1920)  # Essplatz, großes Fenster und Sofa (1920 px: ab x = 820)
+    im.crop((x, 0, x + cw, h)).save(ROOT / "assets" / "img" / "detail-innen.jpg", quality=93, subsampling=0)
 
 
 def render(variant="hell"):
