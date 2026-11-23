@@ -193,28 +193,38 @@ def build(variant="hell"):
     global theme
     theme = variant
     d = Doc()
-    first_unit_page = 5
+    first_unit_page = 6  # Titel, Das Haus, Auf einen Blick, Ausstattung, Lage
     unit_pages, p = {}, first_unit_page
     for u in UNITS:
         unit_pages[u["n"]] = p
         p += 1 + len(u["plans"])
 
-    # 1 — Titel
+    # 1 — Titel: Straßenseite mit Eingang am Abend, randabfallend, Schrift weiß auf Verlauf
     d.add(
-        '<img class="bleed-top" src="assets/img/haus-titel.jpg" alt="" '
-        'style="top:auto;bottom:0;height:157.5mm">'
-        '<div style="position:absolute;left:22mm;right:18mm;top:18mm" class="kicker">Exposé zur Vermietung</div>'
-        '<div style="position:absolute;left:22mm;top:58mm;width:150mm">'
-        '<h1 class="display" style="font-size:54pt;line-height:56pt;letter-spacing:-0.02em">Altenbaunaer<br>Straße 26</h1>'
-        f'<p class="lead" style="margin-top:9mm">{CITY}</p>'
-        f'<p class="lead" style="color:var(--graphite)">Fünf Mietwohnungen von 33 bis 65{NB}m², '
-        f'Erstbezug ab {MOVE_IN}</p></div>'
-        '<div class="rule-accent" style="position:absolute;left:22mm;width:14.5mm;top:52mm"></div>'
-        '<div class="caption" style="position:absolute;right:18mm;bottom:160.5mm;text-align:right">'
-        'Außenansicht. Visualisierung</div>',
+        '<img class="cover-img" src="assets/img/haus-titel.jpg" alt="">'
+        '<div class="cover-shade"></div>'
+        '<div class="kicker cover-top" style="left:22mm">Exposé zur Vermietung</div>'
+        '<div class="caption cover-top" style="right:18mm;text-align:right">Straßenseite mit Hauseingang. Visualisierung</div>'
+        '<div class="cover-text">'
+        '<div class="rule-accent cover-rule"></div>'
+        f'<div class="kicker cover-city">{CITY}</div>'
+        '<h1 class="display cover-title">Altenbaunaer<br>Straße 26</h1>'
+        f'<div class="cover-meta"><p class="lead">Fünf Mietwohnungen von 33 bis 65{NB}m²</p>'
+        f'<p class="lead">Erstbezug ab {MOVE_IN}</p></div></div>',
         folio=False)
 
-    # 2 — Auf einen Blick
+    # 2 — Das Haus: die drei weiteren Abendansichten
+    d.add(
+        '<img class="bleed-top" src="assets/img/haus-hof.jpg" alt="" style="height:157.5mm">',
+        content=(
+            '<p class="caption" style="grid-column:1/13"><b>Hof- und Gartenseite.</b> Visualisierung</p>'
+            '<figure class="gallery-fig" style="grid-column:1/7"><img src="assets/img/haus-strasse.jpg" alt="">'
+            '<figcaption class="caption"><b>Straßenseite.</b> Visualisierung</figcaption></figure>'
+            '<figure class="gallery-fig" style="grid-column:7/13"><img src="assets/img/haus-garten.jpg" alt="">'
+            '<figcaption class="caption"><b>Gartenseite.</b> Visualisierung</figcaption></figure>'),
+        content_style="top:160.5mm;row-gap:6.5mm")
+
+    # 3 — Auf einen Blick
     parking_row = (f'<tr><td class="unit">Stellplätze</td><td>4 Stellplätze zu vermieten, mit Wallbox für E-Autos möglich</td><td>–</td>'
                    f'<td class="r">–</td><td class="r num">{eur(PARKING)}</td><td></td></tr>')
     rows = "".join(
@@ -255,7 +265,7 @@ def build(variant="hell"):
         '<p class="small" style="grid-column:1/9;margin-top:4mm">Flächen laut Planung, die Terrasse der '
         'Wohnung 2. Obergeschoss ist in der Wohnfläche enthalten. Kaltmieten zuzüglich Nebenkosten.</p>'))
 
-    # 3 — Ausstattung
+    # 4 — Ausstattung
     feats = [('Küche', 'Neue Einbauküche mit Backofen, Cerankochfeld, großem Kühlschrank, Geschirrspülmaschine und Abzugshaube'), ('Bad', 'Bodengleiche Dusche, Handtuchheizkörper, 6 Steckdosen über der Ablage'), ('Heizung', 'Fußbodenheizung mit Einzelraumsteuerung in allen Räumen, Wohnungsstation mit Ablesemöglichkeit zur Kostenminimierung'), ('Fenster', 'Dreifachverglasung, elektrische Rollläden, außenliegende Jalousien, einzeln steuerbar'), ('Netz', 'Glasfaser-Internet, WLAN in jedem Raum, mehrere LAN-Anschlüsse pro Raum'), ('Elektro', 'Zeitgemäße Unterverteilung, überdurchschnittlich viele Steckdosen')]
     feat_html = "".join(
         f'<div class="feat-item"><span class="no">{i:02d}</span><div><div class="kicker">{k}</div>'
@@ -284,11 +294,11 @@ def build(variant="hell"):
         f'<dl class="spec spec-house" style="grid-column:1/13">{house_html}</dl>'),
         bottom_style="align-items:start")
 
-    # 4 — Lage und Energieeffizienz
+    # 5 — Lage und Energieeffizienz
     d.add(
         '<img class="bleed-top" src="assets/img/haus-detail.jpg" alt="" style="height:95mm">',
         content=(
-        '<p class="caption" style="grid-column:1/13"><b>Außenansicht, obere Geschosse.</b> Visualisierung</p>'
+        '<p class="caption" style="grid-column:1/13"><b>Straßenseite mit Straßenbahngleisen.</b> Visualisierung</p>'
         '<div class="kicker" style="grid-column:1/13;margin-top:10mm">Umgebung und Haustechnik</div>'
         '<h1 class="display" style="grid-column:1/11;margin-top:5mm">Lage und Energieeffizienz</h1>'),
         content_style="top:98mm",

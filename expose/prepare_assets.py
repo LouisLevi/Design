@@ -238,17 +238,31 @@ def prepare_dark():
     print("Dunkle Variante vorbereitet")
 
 
+AUSSEN = ROOT.parent / "renderings" / "aussenansichten" / "hochskaliert"
+# Außenansichten am Abend (hochskaliert) → Bilder im Exposé:
+# Datei: (Quelle, Format B:H in mm, Lage des Ausschnitts waagerecht/senkrecht 0…1, Breite in px oder None)
+EXTERIOR = {
+    "haus-titel.jpg": ("Aussenansicht_Abend_Strasse_frontal.jpg", (210, 297), (0.5, 0.5), None),     # Seite 1
+    "haus-hof.jpg": ("Aussenansicht_Abend_Hof_schraeg.jpg", (210, 157.5), (0.5, 0.5), 2480),          # Seite 2 oben
+    "haus-strasse.jpg": ("Aussenansicht_Abend_Strasse_schraeg.jpg", (83, 96), (0.5, 0.5), 1240),      # Seite 2 links
+    "haus-garten.jpg": ("Aussenansicht_Abend_Gartenseite.jpg", (83, 96), (0.5, 0.5), 1240),           # Seite 2 rechts
+    "haus-detail.jpg": ("Aussenansicht_Abend_Strasse_schraeg.jpg", (210, 95), (0.5, 0.68), None),     # Lage: Straße
+}
+
+
 def prepare_exterior():
-    """Titelbild und Ausschnitt für Seite 4 aus der neuen Außenansicht mit realer Umgebung."""
-    src = ROOT.parent / "renderings" / "fotorealistisch" / "Aussenansicht Umgebung.jpg"
-    im = Image.open(src).convert("RGB")
-    im.save(ASSETS / "img" / "haus-titel.jpg", quality=92, subsampling=0)
-    w, h = im.size
-    x0, x1 = round(w * 0.20), round(w * 0.83)
-    y0 = round(h * 0.12)
-    im.crop((x0, y0, x1, y0 + round((x1 - x0) * 95 / 210))).save(
-        ASSETS / "img" / "haus-detail.jpg", quality=92, subsampling=0)
-    print("Außenansicht vorbereitet")
+    """Titelbild, Galerieseite und Ausschnitt für „Lage“ aus den vier Abendansichten."""
+    for name, (src, (fw, fh), (fx, fy), width) in EXTERIOR.items():
+        im = Image.open(AUSSEN / src).convert("RGB")
+        w, h = im.size
+        cw, ch = (w, round(w * fh / fw)) if w / h < fw / fh else (round(h * fw / fh), h)
+        x0, y0 = round((w - cw) * fx), round((h - ch) * fy)
+        im = im.crop((x0, y0, x0 + cw, y0 + ch))
+        if width and width < cw:
+            im = im.resize((width, round(width * fh / fw)), Image.LANCZOS)
+        im.save(ASSETS / "img" / name, quality=92, subsampling=0)
+        print(f"{name}: {im.width}×{im.height} aus {src}")
+    print("Außenansichten vorbereitet")
 
 
 if __name__ == "__main__":
